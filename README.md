@@ -1,2 +1,2 @@
 # campusParkingMap
-A Python tool designed to mitigate parking issues on campuses. 
+A Folium web app designed to mitigate parking issues on campuses. 
