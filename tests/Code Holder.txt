@@ -1,6 +1,4 @@
-import json
-
-# This opens a specefic JSON File and changes some data
+# This opens a specific JSON File and changes some data
 with open("/home/carter/PycharmProjects/campusParkingMap/Resources/GeoJSON/Commuter Lots/G2a.json5", "r+") as jsonFile:
     data = json.load(jsonFile)
 
@@ -11,5 +9,3 @@ with open("/home/carter/PycharmProjects/campusParkingMap/Resources/GeoJSON/Commu
     jsonFile.seek(0)
     json.dump(data, jsonFile)
     jsonFile.truncate()
-
-

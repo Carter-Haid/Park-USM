@@ -4,11 +4,13 @@
 # In[ ]:
 
 
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request
+from flaskr.GetMap import getmap
 import pyrebase
-import GetMap
 
-app = Flask(__name__)
+app = Flask(__name__,
+            static_folder="/home/carter/PycharmProjects/campusParkingMap/flaskr/static",
+            template_folder="/home/carter/PycharmProjects/campusParkingMap/flaskr/templates")
 
 config = {
     "apiKey": "AIzaSyCXlNX11kHA9eXg_iGSfVrYniNLLNUF3nc",
@@ -46,8 +48,13 @@ def login():
 
 @app.route('/')
 def home():
-    GetMap.getmap()
-    return render_template('GorhamMap.html')
+    getmap()
+    return render_template('index.html')
+
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 
 if __name__ == '__main__':

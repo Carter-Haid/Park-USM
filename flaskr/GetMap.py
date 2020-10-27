@@ -3,7 +3,6 @@
 
 # In[1]:
 
-
 def getmap():
     import folium
     import os
@@ -15,14 +14,14 @@ def getmap():
                    prefer_canvas=True
                    )
 
-    residentiallots = r"/home/carter/PycharmProjects/campusParkingMap/Resources/GeoJSON/Residential Lots"
-    commuterlots = r"/home/carter/PycharmProjects/campusParkingMap/Resources/GeoJSON/Commuter Lots"
-    stafflots = r"/home/carter/PycharmProjects/campusParkingMap/Resources/GeoJSON/Staff Lots"
+    residentiallots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Residential Lots"
+    commuterlots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Residential Lots"
+    stafflots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Staff Lots"
 
     commuterstyle = {'fillColor': 'red', 'color': 'black', 'fillOpacity': '0.4'}
     residentialstyle = {'fillColor': 'green', 'color': 'black', 'fillOpacity': '0.4'}
     staffstyle = {'fillColor': 'blue', 'color': 'black', 'fillOpacity': '0.4'}
-    closedlots = {'fillColor': 'black', 'color': 'black', 'fillOpacity': '0.4'}
+    closedstyle = {'fillColor': 'black', 'color': 'black', 'fillOpacity': '0.4'}
 
     # Residential Lots
     resdirectory = os.fsencode(residentiallots)
@@ -69,7 +68,7 @@ def getmap():
             ).add_to(m)
         continue
 
-    m.save(r"/home/carter/PycharmProjects/campusParkingMap/templates/GorhamMap.html")
+    m.save("/home/carter/PycharmProjects/campusParkingMap/flaskr/static/GorhamMap.html")
 
 # In[ ]:
 
