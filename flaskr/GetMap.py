@@ -6,7 +6,6 @@
 def getmap():
     import folium
     import os
-    import json
 
     m = folium.Map(location=[43.6819, -70.4490],
                    tiles='OpenStreetMap',
@@ -15,7 +14,7 @@ def getmap():
                    )
 
     residentiallots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Residential Lots"
-    commuterlots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Residential Lots"
+    commuterlots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Commuter Lots"
     stafflots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Staff Lots"
 
     commuterstyle = {'fillColor': 'red', 'color': 'black', 'fillOpacity': '0.4'}

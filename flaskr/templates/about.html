@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
     <title>About Us</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" media="screen,projection" href="{{ url_for('static', filename='css/materialize.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <meta name="theme-color" content="#B71C1C">
 </head>
-<body>
+<body style="display: flex; min-height: 100vh;flex-direction: column;">
+<main style="flex: 1 0 auto;">
+    <div class="navbar-fixed">
+        <nav class="indigo darken-1" role="navigation">
+            <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">Map</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/admin">Admin</a></li>
+                </ul>
 
+                <ul id="nav-mobile" class="side-nav" class="edge left" class="draggable true">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="./about/about.html">About Us</a></li>
+                    <li><a href="/admin">Admin</a></li>
+                </ul>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </div>
+</main>
 </body>
+<footer class="page-footer-fixed indigo darken-1">
+    <div class="footer-copyright">
+        <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+    </div>
+</footer>
 </html>

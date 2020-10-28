@@ -4,9 +4,10 @@
 # In[ ]:
 
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_from_directory
 from flaskr.GetMap import getmap
 import pyrebase
+import os
 
 app = Flask(__name__,
             static_folder="/home/carter/PycharmProjects/campusParkingMap/flaskr/static",
@@ -28,6 +29,7 @@ auth = firebase.auth()
 app.config['ENV'] = 'development'
 app.config['DEBUG'] = True
 app.config['TESTING'] = True
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 
 @app.route("/admin", methods=['GET', 'POST'])
@@ -55,6 +57,11 @@ def home():
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+
+@app.route('/favicon.ico')
+def favicon():
+    return app.send_static_file("favicon.ico")
 
 
 if __name__ == '__main__':
