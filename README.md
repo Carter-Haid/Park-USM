@@ -31,7 +31,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The campus parking project began as an Advanced Python Programming course project at the University of Southern Maine. At the time many students were frusturated with the communication from the university about what lots were closed during snow storms or large campus events. The lack of communication led to many students cars being ticketed, booted, or even towed. 
+The campus parking project began as an Advanced Python Programming course assignemnt at the University of Southern Maine. At the time many students were frusturated with the communication from the university about what lots were closed during snow storms or large campus events. The lack of communication led to many students cars being ticketed, booted, or even towed. 
 
 Why Campus Parking Project Works:
 * Shows which lots are closed using an easy to visualize map. 
