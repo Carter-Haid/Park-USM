@@ -31,20 +31,20 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+The campus parking project began as an Advanced Python Programming course project at the University of Southern Maine. At the time many students were frusturated with the communication from the university about what lots were closed during snow storms or large campus events. The lack of communication led to many students cars being ticketed, booted, or even towed. 
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+Why Campus Parking Project Works:
+* Shows which lots are closed using an easy to visualize map. 
+* Can inform students of city/town parking bans so they will know to avoid street parking. 
+* Integrates with any campus alert system for real time closure information via text.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
+Of course, no solution can ever be perfect. That's why the Campus Parking Project continues to add additional features, make changes, and fix bugs to give the user the best experience possible. 
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+If you'd like to be part of the free beta and try Campus Parking Project for your business, city, or company please reach out using the information provided in the contact section below. 
 
 ### Built With
+Some of the major technologies we used to build the project. The web app can also be hosted on any dynamic web host. (GitHub Pages will not work! SORRY!) 
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [Python](https://www.python.org/)
 * [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 * [Folium](https://python-visualization.github.io/folium/)
