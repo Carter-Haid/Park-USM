@@ -55,7 +55,7 @@ Some of the major technologies we used to build the project. The web app can als
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Once the project has a fully running and stable version there will be a video here that walks through all aspects. Check back later for more info!
 
 
 <!-- ROADMAP -->
