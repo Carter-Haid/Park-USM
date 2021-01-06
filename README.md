@@ -43,16 +43,14 @@ Of course, no solution can ever be perfect. That's why the Campus Parking Projec
 If you'd like to be part of the free beta and try Campus Parking Project for your business, city, or company please reach out using the information provided in the contact section below. 
 
 ### Built With
-Some of the major technologies we used to build the project. The web app can also be hosted on any dynamic web host. 
-
-(GitHub Pages will not work! SORRY!) 
-
 * [Python](https://www.python.org/)
 * [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 * [Folium](https://python-visualization.github.io/folium/)
 * [Google Firebase](https://firebase.google.com/)
 
+Some of the major technologies we used to build the project. The web app can also be hosted on any dynamic web host. 
 
+(GitHub Pages will not work! SORRY!) 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
