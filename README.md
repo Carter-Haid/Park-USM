@@ -3,9 +3,8 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[![MIT License][license-shield]][license-url] 
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
 
 
 <!-- PROJECT LOGO -->
@@ -20,11 +19,11 @@
   <p align="center">
     A project developed to help mitigate parking issues on campuses. 
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://github.com/Carter-Haid/campusParkingMap">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/Carter-Haid/campusParkingMap/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/Carter-Haid/campusParkingMap/issues">Request Feature</a>
   </p>
 </p>
 
@@ -69,7 +68,7 @@ See the [open issues](https://github.com/Carter-Haid/campusParkingMap/issues) fo
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**. Thank you for helping to make the project better! #opensource
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -89,7 +88,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@icansecurethat](https://twitter.com/icansecurethat) - carter.haid@maine.edu
+Carter Haid - [@icansecurethat](https://twitter.com/icansecurethat) - carter.haid@maine.edu
 
 Project Link: [https://github.com/Carter-Haid/campusParkingMap](https://github.com/Carter-Haid/campusParkingMap)
 
