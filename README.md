@@ -88,23 +88,23 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Carter Haid - [@icansecurethat](https://twitter.com/icansecurethat) - carter.haid@maine.edu
+Carter Haid - [@icansecurethat](https://twitter.com/icansecurethat) - carter.haid@maine.edu - [CarterHaid.com](https://carterhaid.com)
 
 Project Link: [https://github.com/Carter-Haid/campusParkingMap](https://github.com/Carter-Haid/campusParkingMap)
-
+ 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
 [contributors-url]: https://github.com/Carter-Haid/campusParkingMap/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/Carter-Haid/campusParkingMap.svg?style=for-the-badge
 [forks-url]: https://github.com/Carter-Haid/campusParkingMap/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/Carter-Haid/campusParkingMap.svg?style=for-the-badge
 [stars-url]: https://github.com/Carter-Haid/campusParkingMap/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/Carter-Haid/campusParkingMap.svg?style=for-the-badge
 [issues-url]: https://github.com/Carter-Haid/campusParkingMap/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[license-shield]: https://img.shields.io/github/license/Carter-Haid/campusParkingMap.svg?style=for-the-badge
+[license-url]: https://github.com/Carter-Haid/campusParkingMap/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/carterhaid/
 [product-screenshot]: images/screenshot.png
