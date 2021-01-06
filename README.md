@@ -104,7 +104,7 @@ Project Link: [https://github.com/Carter-Haid/campusParkingMap](https://github.c
 [issues-shield]: https://img.shields.io/github/issues/Carter-Haid/campusParkingMap.svg?style=for-the-badge
 [issues-url]: https://github.com/Carter-Haid/campusParkingMap/issues
 [license-shield]: https://img.shields.io/github/license/Carter-Haid/campusParkingMap.svg?style=for-the-badge
-[license-url]: https://github.com/Carter-Haid/campusParkingMap/blob/master/LICENSE.txt
+[license-url]: https://github.com/Carter-Haid/campusParkingMap/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/carterhaid/
 [product-screenshot]: images/screenshot.png
