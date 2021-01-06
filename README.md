@@ -95,7 +95,7 @@ Project Link: [https://github.com/Carter-Haid/campusParkingMap](https://github.c
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/Carter-Haid/campusParkingMap.svg?style=for-the-badge
 [contributors-url]: https://github.com/Carter-Haid/campusParkingMap/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/Carter-Haid/campusParkingMap.svg?style=for-the-badge
 [forks-url]: https://github.com/Carter-Haid/campusParkingMap/network/members
