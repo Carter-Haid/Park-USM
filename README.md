@@ -20,7 +20,6 @@
   <p align="center">
     A project developed to help mitigate parking issues on campuses. 
     <br />
-    <br />
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
     ·
     <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
@@ -32,8 +31,6 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
@@ -61,14 +58,11 @@ This section should list any major frameworks that you built your project using.
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/Carter-Haid/campusParkingMap/issues) for a list of proposed features (and known issues).
 
 
 
@@ -95,28 +89,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Your Name - [@icansecurethat](https://twitter.com/icansecurethat) - carter.haid@maine.edu
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
-
-
-
+Project Link: [https://github.com/Carter-Haid/campusParkingMap](https://github.com/Carter-Haid/campusParkingMap)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -132,5 +107,5 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
+[linkedin-url]: https://www.linkedin.com/in/carterhaid/
 [product-screenshot]: images/screenshot.png
