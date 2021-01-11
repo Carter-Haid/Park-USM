@@ -4,10 +4,10 @@
 # In[ ]:
 
 
-from flask import Flask, render_template, request, send_from_directory
-from flaskr.GetMap import getmap
+from flask import Flask, render_template, request
+from flaskr.GorhamMap import gorhammap
+from flaskr.PortlandMap import portlandmap
 import pyrebase
-import os
 
 app = Flask(__name__,
             static_folder="/home/carter/PycharmProjects/campusParkingMap/flaskr/static",
@@ -50,8 +50,14 @@ def login():
 
 @app.route('/')
 def home():
-    getmap()
+    gorhammap()
     return render_template('index.html')
+
+
+@app.route('/portland')
+def portland():
+    portlandmap()
+    return render_template('PortlandMap.html')
 
 
 @app.route('/about')
@@ -59,9 +65,9 @@ def about():
     return render_template('about.html')
 
 
-@app.route('/favicon.ico')
-def favicon():
-    return app.send_static_file("favicon.ico")
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
 
 
 if __name__ == '__main__':

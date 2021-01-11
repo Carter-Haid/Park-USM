@@ -3,7 +3,7 @@
 
 # In[1]:
 
-def getmap():
+def gorhammap():
     import folium
     import os
 
@@ -13,9 +13,9 @@ def getmap():
                    prefer_canvas=True
                    )
 
-    residentiallots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Residential Lots"
-    commuterlots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Commuter Lots"
-    stafflots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Staff Lots"
+    residentiallots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Gorham/Residential Lots"
+    commuterlots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Gorham/Commuter Lots"
+    stafflots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Gorham/Staff Lots"
 
     commuterstyle = {'fillColor': 'red', 'color': 'black', 'fillOpacity': '0.4'}
     residentialstyle = {'fillColor': 'green', 'color': 'black', 'fillOpacity': '0.4'}
@@ -70,4 +70,3 @@ def getmap():
     m.save("/home/carter/PycharmProjects/campusParkingMap/flaskr/static/GorhamMap.html")
 
 # In[ ]:
-

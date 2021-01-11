@@ -59,7 +59,12 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "lot_id": "0010",
+        "lot_name": "g12a",
+        "lot_type": "residential",
+        "lot_status": "open"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [

@@ -55,6 +55,6 @@ def getmaptest():
                                                              class_name="staffpopup")
                                    ).add_to(m)
 
-    m.save(r"/home/carter/PycharmProjects/campusParkingMap/templates/TestMap.html")
+    m.save(r"/home/carter/PycharmProjects/campusParkingMap/tests/TestMap.html")
 
 # In[ ]:

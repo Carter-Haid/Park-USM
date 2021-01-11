@@ -95,7 +95,7 @@ html, body {
 }
 .demo-layout .demo-navigation .mdl-navigation__link:hover {
   background-color: #00BCD4;
-  color: #37474F;
+  color: #3949AA;
 }
 .demo-navigation .mdl-navigation__link .material-icons {
   font-size: 24px;
@@ -146,7 +146,6 @@ _:-ms-input-placeholder, :root .demo-graphs {
 _:-ms-input-placeholder, :root .demo-graph {
   max-height: 300px;
 }
-/* TODO end */
 .demo-graph:nth-child(1) {
   color: #00b9d8;
 }
