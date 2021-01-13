@@ -89,7 +89,7 @@
         <header class="demo-drawer-header">
           <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
           <div class="demo-avatar-dropdown">
-            <span>hello@example.com</span>
+            <span>{{useremail}}</span>
             <div class="mdl-layout-spacer"></div>
             <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
               <i class="material-icons" role="presentation">arrow_drop_down</i>
@@ -97,7 +97,7 @@
             </button>
             <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
               <li class="mdl-menu__item"><i class="material-icons">settings</i>Account Settings</li>
-              <li  onclick="location.href='/';" class="mdl-menu__item"><i class="material-icons">cached</i>Switch to User View</li>
+              <li  onclick="location.href='/';" class="mdl-menu__item"><i class="material-icons">cached</i>Logout</li>
             </ul>
           </div>
         </header>

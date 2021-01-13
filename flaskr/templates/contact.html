@@ -1,10 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
     <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" media="screen,projection" href="{{ url_for('static', filename='css/materialize.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <meta name="theme-color" content="#B71C1C">
 </head>
-<body>
+<body style="display: flex; min-height: 100vh;flex-direction: column;">
+<main style="flex: 1 0 auto;">
+    <div class="navbar-fixed">
+        <nav class="indigo darken-1" role="navigation">
+            <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">Campus Parking Map</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/login">Admin</a></li>
+                </ul>
 
+                <ul id="nav-mobile" class="side-nav" class="edge left" class="draggable true">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/login">Admin</a></li>
+                </ul>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </div>
+    <main>
+        <center>
+            <div class="section"></div>
+
+            <h5 class="indigo-text">Feel free to contact us!</h5>
+            <div class="section"></div>
+
+            <div class="container">
+                <div class="z-depth-1 grey lighten-4 row"
+                     style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+
+                    <form class="col s12" method="post">
+                        <div class='row'>
+                            <div class='col s12'>
+                            </div>
+                        </div>
+
+                        <div class='row'>
+                            <div class='input-field col s12'>
+                                <input class='validate' type='text' name='firstname' id='firstname'/>
+                                <label for='firstname'>First Name:</label>
+                            </div>
+                            <div class='input-field col s12'>
+                                <input class='validate' type='text' name='lastname' id='lastname'/>
+                                <label for='lastname'>Last Name:</label>
+                            </div>
+                        </div>
+
+                        <div class='row'>
+                            <div class='input-field col s12'>
+                                <input class='validate' type='text' name='email' id='email'/>
+                                <label for='email'>Email:</label>
+                            </div>
+                        </div>
+
+                        <div class='row'>
+                            <div class='input-field col s12'>
+                                <input class='validate' type='text' name='message' id='message'/>
+                                <label for='email'>Message:</label>
+                            </div>
+                        </div>
+
+                        <br/>
+                        <center>
+                            <div class='row'>
+                                <button type='submit' name='btn_login'
+                                        class='col s12 btn btn-large waves-effect indigo'>Submit
+                                </button>
+                            </div>
+                        </center>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Compiled and minified CSS -->
+            <link rel="stylesheet"
+                  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+            <!-- Compiled and minified JavaScript -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+        </center>
+
+        <div class="section"></div>
+        <div class="section"></div>
+    </main>
+</main>
 </body>
+<footer class="page-footer-fixed indigo darken-1">
+    <div class="footer-copyright">
+        <div class="container" style="color:#cfd8dc">
+            © 2020 Carter Haid
+            <a class="grey-text text-lighten-4 right" href="https://www.linkedin.com/in/carterhaid/">| Linkedin</a>
+            <a class="grey-text text-lighten-4 right" href="https://github.com/Carter-Haid">| Github&nbsp</a>
+            <a class="grey-text text-lighten-4 right" href="https://carterhaid.com">Personal Website&nbsp</a>
+        </div>
+        </div>
+    </div>
+</footer>
 </html>

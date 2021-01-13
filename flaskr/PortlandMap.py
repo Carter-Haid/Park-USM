@@ -7,7 +7,7 @@ def portlandmap():
     import folium
     import os
 
-    m = folium.Map(location=[43.6819, -70.4490],
+    m = folium.Map(location=[43.6622, -70.2755],
                    tiles='OpenStreetMap',
                    zoom_start=17,
                    prefer_canvas=True

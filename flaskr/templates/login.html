@@ -1,52 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-    <title>Admin Login</title>
+    <title>Login</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" media="screen,projection" href="{{ url_for('static', filename='css/materialize.css') }}">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
     <meta name="theme-color" content="#B71C1C">
-    <style>
-    body {
-      display: flex;
-      min-height: 100vh;
-      flex-direction: column;
-    }
-
-    main {
-      flex: 1 0 auto;
-    }
-
-    body {
-      background: #fff;
-    }
-
-    .input-field input[type=date]:focus + label,
-    .input-field input[type=text]:focus + label,
-    .input-field input[type=email]:focus + label,
-    .input-field input[type=password]:focus + label {
-      color: #e91e63;
-    }
-
-    .input-field input[type=date]:focus,
-    .input-field input[type=text]:focus,
-    .input-field input[type=email]:focus,
-    .input-field input[type=password]:focus {
-      border-bottom: 2px solid #e91e63;
-      box-shadow: none;
-    }
-
-
-
-
-    </style>
 </head>
-
+<body style="display: flex; min-height: 100vh;flex-direction: column;">
 <main style="flex: 1 0 auto;">
     <div class="navbar-fixed">
         <nav class="indigo darken-1" role="navigation">
@@ -54,20 +17,20 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>
-                    <li><a href="/admin">Admin</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/login">Admin</a></li>
                 </ul>
 
                 <ul id="nav-mobile" class="side-nav" class="edge left" class="draggable true">
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/contact">Contact</a></li>
-                    <li><a href="/admin">Admin</a></li>
+                    <li><a href="/login">Admin</a></li>
                 </ul>
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
             </div>
         </nav>
     </div>
-    <div class="section"></div>
     <main>
         <center>
             <div class="section"></div>
@@ -98,7 +61,7 @@
                                 <label for='password'>Enter your password</label>
                             </div>
                             <label style='float: right;'>
-                                <a class='pink-text' href='#!'><b>Forgot Password?</b></a>
+                                <a class='pink-text' href='/passwordreset'><b>Forgot Password?</b></a>
                             </label>
                         </div>
 
@@ -125,19 +88,17 @@
         <div class="section"></div>
         <div class="section"></div>
     </main>
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
-    <script type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-
-   <footer class="page-footer-fixed indigo darken-1">
+</main>
+</body>
+<footer class="page-footer-fixed indigo darken-1">
     <div class="footer-copyright">
-        <div class="container">
+        <div class="container" style="color:#cfd8dc">
             © 2020 Carter Haid
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            <a class="grey-text text-lighten-4 right" href="https://www.linkedin.com/in/carterhaid/">| Linkedin</a>
+            <a class="grey-text text-lighten-4 right" href="https://github.com/Carter-Haid">| Github&nbsp</a>
+            <a class="grey-text text-lighten-4 right" href="https://carterhaid.com">Personal Website&nbsp</a>
+        </div>
         </div>
     </div>
 </footer>
-    </div>
-</main>
 </html>

@@ -4,10 +4,11 @@
 # In[ ]:
 
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from flaskr.GorhamMap import gorhammap
 from flaskr.PortlandMap import portlandmap
 import pyrebase
+
 
 app = Flask(__name__,
             static_folder="/home/carter/PycharmProjects/campusParkingMap/flaskr/static",
@@ -32,19 +33,17 @@ app.config['TESTING'] = True
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 
-@app.route("/admin", methods=['GET', 'POST'])
+@app.route("/login", methods=['GET', 'POST'])
 def login():
-    unsuccessful = 'Please check your credentials'
-    successful = 'Login successful'
     if request.method == 'POST':
         email = request.form['name']
         password = request.form['pass']
         try:
-            auth.sign_in_with_email_and_password(email, password)
-            return render_template('AdminControls.html', s=successful)
+            global user
+            user = auth.sign_in_with_email_and_password(email, password)
+            return redirect('/admincontrols')
         except:
-            return render_template('login.html', us=unsuccessful)
-
+            return render_template('login.html')
     return render_template('login.html')
 
 
@@ -57,7 +56,7 @@ def home():
 @app.route('/portland')
 def portland():
     portlandmap()
-    return render_template('PortlandMap.html')
+    return render_template('portlandmap.html')
 
 
 @app.route('/about')
@@ -70,8 +69,26 @@ def contact():
     return render_template('contact.html')
 
 
+@app.route('/passwordreset', methods=['GET', 'POST'])
+def passwordreset():
+    if request.method == 'POST':
+        email = request.form['name']
+        try:
+            auth.send_password_reset_email(email)
+        except:
+            print("null")
+    return render_template('forgotPassword.html')
+
+
+@app.route('/admincontrols')
+def admincontrols():
+    test = auth.get_account_info(user['idToken'])
+    print(test)
+    return render_template('AdminControls.html')
+    # TODO: Verify the user is logged in before rendering this page.
+
+
 if __name__ == '__main__':
     app.run()
-
 
 # In[ ]:
