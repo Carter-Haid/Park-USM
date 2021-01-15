@@ -9,8 +9,27 @@ def pogo_status(location):
     return weatherstatus
 
 
-status = pogo_status("University of Southern Maine")
-print(status)
+baninfo = pogo_status("University of Southern Maine")
+if not baninfo:
+    status = "USM Gorham Campus is Open"
+else:
+    status = "USM Gorham Campus is Closed"
+print(status + str(baninfo))
+
+
+def pogo_status(location):
+    res = requests.get("https://www.wmtw.com/weather/closings", headers={'user-agent': 'Mozilla 5.0'})
+    html = fromstring(res.text)
+    weatherstatus = html.xpath("//*[contains(text(),'{}')]/following-sibling::div[contains(@class,'status')]/ul/li/text()".format(location))
+    return weatherstatus
+
+
+baninfo = pogo_status("University of Southern Maine")
+if not baninfo:
+    status = "USM Portland Campus is Open"
+else:
+    status = "USM Portland Campus is Closed"
+print(status + str(baninfo))
 
 
 def lac_status(location):
@@ -20,9 +39,12 @@ def lac_status(location):
     return weatherstatus
 
 
-status = lac_status("University of Southern Maine, L-A")
-print(status)
-
+baninfo = lac_status("University of Southern Maine, L-A")
+if not baninfo:
+    status = "USM Lewiston Campus is Open"
+else:
+    status = "USM Lewiston Campus is Closed"
+print(status + str(baninfo))
 
 
 def gorham_status(location):
@@ -32,8 +54,12 @@ def gorham_status(location):
     return weatherstatus
 
 
-status = gorham_status("Gorham Parking Ban")
-print(status)
+baninfo = gorham_status("Gorham Parking Ban")
+if not baninfo:
+    status = "No Gorham Parking Ban In Effect"
+else:
+    status = "Gorham Parking Ban In Effect"
+print(status + str(baninfo))
 
 
 def portland_status(location):
@@ -43,8 +69,12 @@ def portland_status(location):
     return weatherstatus
 
 
-status = portland_status("Portland Parking Ban")
-print(status)
+baninfo = portland_status("Portland Parking Ban")
+if not baninfo:
+    status = "No Portland Parking Ban In Effect"
+else:
+    status = "Portland Parking Ban In Effect"
+print(status + str(baninfo))
 
 
 def lewiston_status(location):
@@ -54,5 +84,10 @@ def lewiston_status(location):
     return weatherstatus
 
 
-status = lewiston_status("Lewiston Parking Ban")
-print(status)
+baninfo = lewiston_status("Lewiston Parking Ban")
+if not baninfo:
+    status = "No Lewiston Parking Ban In Effect"
+else:
+    status = "Lewiston Parking Ban In Effect"
+print(status + str(baninfo))
+

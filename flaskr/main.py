@@ -36,6 +36,7 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
+        global email
         email = request.form['name']
         password = request.form['pass']
         try:
@@ -82,9 +83,7 @@ def passwordreset():
 
 @app.route('/admincontrols')
 def admincontrols():
-    test = auth.get_account_info(user['idToken'])
-    print(test)
-    return render_template('AdminControls.html')
+    return render_template('AdminControls.html', value=email)
     # TODO: Verify the user is logged in before rendering this page.
 
 
