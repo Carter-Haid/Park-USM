@@ -9,7 +9,6 @@ def gorhammap():
 
     m = folium.Map(location=[43.6819, -70.4490],
                    tiles='OpenStreetMap',
-                   zoom_start=17,
                    prefer_canvas=True
                    )
 
@@ -67,6 +66,7 @@ def gorhammap():
             ).add_to(m)
         continue
 
+    m.fit_bounds([[43.6785, -70.4521], [43.6856, -70.4455]])
     m.save("/home/carter/PycharmProjects/campusParkingMap/flaskr/static/GorhamMap.html")
 
 # In[ ]:

@@ -6,11 +6,12 @@
 def portlandmap():
     import folium
     import os
+    import numpy as np
+    import pandas as pd
 
     m = folium.Map(location=[43.6622, -70.2755],
                    tiles='OpenStreetMap',
-                   zoom_start=17,
-                   prefer_canvas=True
+                   prefer_canvas=True,
                    )
 
     residentiallots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Portland/Residential Lots"
@@ -67,6 +68,7 @@ def portlandmap():
             ).add_to(m)
         continue
 
+    m.fit_bounds([[43.6596, -70.2782], [43.6649, -70.27445]])
     m.save("/home/carter/PycharmProjects/campusParkingMap/flaskr/static/PortlandMap.html")
 
 # In[ ]:

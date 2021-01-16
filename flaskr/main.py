@@ -8,7 +8,7 @@ from flask import Flask, render_template, request, redirect
 from flaskr.GorhamMap import gorhammap
 from flaskr.PortlandMap import portlandmap
 import pyrebase
-
+import smtplib
 
 app = Flask(__name__,
             static_folder="/home/carter/PycharmProjects/campusParkingMap/flaskr/static",
@@ -65,7 +65,7 @@ def about():
     return render_template('about.html')
 
 
-@app.route('/contact')
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
     return render_template('contact.html')
 

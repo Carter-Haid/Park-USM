@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_2b2738ca34b74b0e94cfabf86a500ed2 {
+                #map_9ebd77f5f96f469eb18b2c835a71cd2a {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -419,17 +419,17 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_2b2738ca34b74b0e94cfabf86a500ed2" ></div>
+            <div class="folium-map" id="map_9ebd77f5f96f469eb18b2c835a71cd2a" ></div>
         
 </body>
 <script>    
     
-            var map_2b2738ca34b74b0e94cfabf86a500ed2 = L.map(
-                "map_2b2738ca34b74b0e94cfabf86a500ed2",
+            var map_9ebd77f5f96f469eb18b2c835a71cd2a = L.map(
+                "map_9ebd77f5f96f469eb18b2c835a71cd2a",
                 {
                     center: [43.6819, -70.449],
                     crs: L.CRS.EPSG3857,
-                    zoom: 17,
+                    zoom: 10,
                     zoomControl: true,
                     preferCanvas: true,
                 }
@@ -439,50 +439,50 @@
 
         
     
-            var tile_layer_e4b65c2aaca14d21a7f9ce6ac612fdf4 = L.tileLayer(
+            var tile_layer_82177b33442e416081c6a43c02f7b25e = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_2b2738ca34b74b0e94cfabf86a500ed2);
+            ).addTo(map_9ebd77f5f96f469eb18b2c835a71cd2a);
         
     
-        function geo_json_176aa56959ee4ebf9a58cf8e9020c679_styler(feature) {
+        function geo_json_5647b524e2c94a298b0735b491d837ef_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "black", "fillColor": "green", "fillOpacity": "0.4"};
             }
         }
-        function geo_json_176aa56959ee4ebf9a58cf8e9020c679_highlighter(feature) {
+        function geo_json_5647b524e2c94a298b0735b491d837ef_highlighter(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "green", "fillColor": "grey", "weight": 3};
             }
         }
-        function geo_json_176aa56959ee4ebf9a58cf8e9020c679_onEachFeature(feature, layer) {
+        function geo_json_5647b524e2c94a298b0735b491d837ef_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
-                    geo_json_176aa56959ee4ebf9a58cf8e9020c679.resetStyle(e.target);
+                    geo_json_5647b524e2c94a298b0735b491d837ef.resetStyle(e.target);
                 },
                 mouseover: function(e) {
-                    e.target.setStyle(geo_json_176aa56959ee4ebf9a58cf8e9020c679_highlighter(e.target.feature));
+                    e.target.setStyle(geo_json_5647b524e2c94a298b0735b491d837ef_highlighter(e.target.feature));
                 },
             });
         };
-        var geo_json_176aa56959ee4ebf9a58cf8e9020c679 = L.geoJson(null, {
-                onEachFeature: geo_json_176aa56959ee4ebf9a58cf8e9020c679_onEachFeature,
+        var geo_json_5647b524e2c94a298b0735b491d837ef = L.geoJson(null, {
+                onEachFeature: geo_json_5647b524e2c94a298b0735b491d837ef_onEachFeature,
             
-                style: geo_json_176aa56959ee4ebf9a58cf8e9020c679_styler,
+                style: geo_json_5647b524e2c94a298b0735b491d837ef_styler,
         });
 
-        function geo_json_176aa56959ee4ebf9a58cf8e9020c679_add (data) {
-            geo_json_176aa56959ee4ebf9a58cf8e9020c679
+        function geo_json_5647b524e2c94a298b0735b491d837ef_add (data) {
+            geo_json_5647b524e2c94a298b0735b491d837ef
                 .addData(data)
-                .addTo(map_2b2738ca34b74b0e94cfabf86a500ed2);
+                .addTo(map_9ebd77f5f96f469eb18b2c835a71cd2a);
         }
-            geo_json_176aa56959ee4ebf9a58cf8e9020c679_add({"features": [{"geometry": {"coordinates": [[[-70.4442447423935, 43.68168027817631], [-70.44455051422119, 43.68155225510711], [-70.44460415840149, 43.68136603924602], [-70.4448401927948, 43.68128844913331], [-70.4447329044342, 43.68104403962242], [-70.44467389583588, 43.68106343723903], [-70.44429838657379, 43.681160425227986], [-70.44435203075409, 43.68132336469644], [-70.44407844543457, 43.68140483426475], [-70.4442447423935, 43.68168027817631]]], "type": "Polygon"}, "id": "0", "properties": {"lot_id": "0010", "lot_name": "g12a", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}, {"geometry": {"coordinates": [[[-70.4466587305069, 43.68393809468359], [-70.44654071331024, 43.68373248948055], [-70.44611692428589, 43.68384499052802], [-70.44623494148254, 43.684050595345475], [-70.4466587305069, 43.68393809468359]]], "type": "Polygon"}, "id": "1", "properties": {"lot_id": "0010", "lot_name": "g12a", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_5647b524e2c94a298b0735b491d837ef_add({"features": [{"geometry": {"coordinates": [[[-70.4442447423935, 43.68168027817631], [-70.44455051422119, 43.68155225510711], [-70.44460415840149, 43.68136603924602], [-70.4448401927948, 43.68128844913331], [-70.4447329044342, 43.68104403962242], [-70.44467389583588, 43.68106343723903], [-70.44429838657379, 43.681160425227986], [-70.44435203075409, 43.68132336469644], [-70.44407844543457, 43.68140483426475], [-70.4442447423935, 43.68168027817631]]], "type": "Polygon"}, "id": "0", "properties": {"lot_id": "0010", "lot_name": "g12a", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}, {"geometry": {"coordinates": [[[-70.4466587305069, 43.68393809468359], [-70.44654071331024, 43.68373248948055], [-70.44611692428589, 43.68384499052802], [-70.44623494148254, 43.684050595345475], [-70.4466587305069, 43.68393809468359]]], "type": "Polygon"}, "id": "1", "properties": {"lot_id": "0010", "lot_name": "g12a", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_176aa56959ee4ebf9a58cf8e9020c679.bindPopup(
+    geo_json_5647b524e2c94a298b0735b491d837ef.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -506,44 +506,44 @@
     ,{"className": "respopup"});
                      
     
-        function geo_json_48d7e7836fda4d1aa160b6fc583c8859_styler(feature) {
+        function geo_json_7500f19d89144536993e3e59757e44be_styler(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "black", "fillColor": "green", "fillOpacity": "0.4"};
             }
         }
-        function geo_json_48d7e7836fda4d1aa160b6fc583c8859_highlighter(feature) {
+        function geo_json_7500f19d89144536993e3e59757e44be_highlighter(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "green", "fillColor": "grey", "weight": 3};
             }
         }
-        function geo_json_48d7e7836fda4d1aa160b6fc583c8859_onEachFeature(feature, layer) {
+        function geo_json_7500f19d89144536993e3e59757e44be_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
-                    geo_json_48d7e7836fda4d1aa160b6fc583c8859.resetStyle(e.target);
+                    geo_json_7500f19d89144536993e3e59757e44be.resetStyle(e.target);
                 },
                 mouseover: function(e) {
-                    e.target.setStyle(geo_json_48d7e7836fda4d1aa160b6fc583c8859_highlighter(e.target.feature));
+                    e.target.setStyle(geo_json_7500f19d89144536993e3e59757e44be_highlighter(e.target.feature));
                 },
             });
         };
-        var geo_json_48d7e7836fda4d1aa160b6fc583c8859 = L.geoJson(null, {
-                onEachFeature: geo_json_48d7e7836fda4d1aa160b6fc583c8859_onEachFeature,
+        var geo_json_7500f19d89144536993e3e59757e44be = L.geoJson(null, {
+                onEachFeature: geo_json_7500f19d89144536993e3e59757e44be_onEachFeature,
             
-                style: geo_json_48d7e7836fda4d1aa160b6fc583c8859_styler,
+                style: geo_json_7500f19d89144536993e3e59757e44be_styler,
         });
 
-        function geo_json_48d7e7836fda4d1aa160b6fc583c8859_add (data) {
-            geo_json_48d7e7836fda4d1aa160b6fc583c8859
+        function geo_json_7500f19d89144536993e3e59757e44be_add (data) {
+            geo_json_7500f19d89144536993e3e59757e44be
                 .addData(data)
-                .addTo(map_2b2738ca34b74b0e94cfabf86a500ed2);
+                .addTo(map_9ebd77f5f96f469eb18b2c835a71cd2a);
         }
-            geo_json_48d7e7836fda4d1aa160b6fc583c8859_add({"features": [{"geometry": {"coordinates": [[[-70.45082151889801, 43.68109835293312], [-70.45059084892273, 43.6806444473251], [-70.44994175434113, 43.680787990495475], [-70.45020997524261, 43.68128456962505], [-70.45082151889801, 43.68109835293312]]], "type": "Polygon"}, "properties": {"lot_id": "0001", "lot_name": "g2b", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_7500f19d89144536993e3e59757e44be_add({"features": [{"geometry": {"coordinates": [[[-70.45082151889801, 43.68109835293312], [-70.45059084892273, 43.6806444473251], [-70.44994175434113, 43.680787990495475], [-70.45020997524261, 43.68128456962505], [-70.45082151889801, 43.68109835293312]]], "type": "Polygon"}, "properties": {"lot_id": "0001", "lot_name": "g2b", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_48d7e7836fda4d1aa160b6fc583c8859.bindPopup(
+    geo_json_7500f19d89144536993e3e59757e44be.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -567,44 +567,44 @@
     ,{"className": "respopup"});
                      
     
-        function geo_json_983f80d8f8af43719757ada8a0c42ff6_styler(feature) {
+        function geo_json_3665bff43ee648e6b15ec8fe3c34c63c_styler(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "black", "fillColor": "green", "fillOpacity": "0.4"};
             }
         }
-        function geo_json_983f80d8f8af43719757ada8a0c42ff6_highlighter(feature) {
+        function geo_json_3665bff43ee648e6b15ec8fe3c34c63c_highlighter(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "green", "fillColor": "grey", "weight": 3};
             }
         }
-        function geo_json_983f80d8f8af43719757ada8a0c42ff6_onEachFeature(feature, layer) {
+        function geo_json_3665bff43ee648e6b15ec8fe3c34c63c_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
-                    geo_json_983f80d8f8af43719757ada8a0c42ff6.resetStyle(e.target);
+                    geo_json_3665bff43ee648e6b15ec8fe3c34c63c.resetStyle(e.target);
                 },
                 mouseover: function(e) {
-                    e.target.setStyle(geo_json_983f80d8f8af43719757ada8a0c42ff6_highlighter(e.target.feature));
+                    e.target.setStyle(geo_json_3665bff43ee648e6b15ec8fe3c34c63c_highlighter(e.target.feature));
                 },
             });
         };
-        var geo_json_983f80d8f8af43719757ada8a0c42ff6 = L.geoJson(null, {
-                onEachFeature: geo_json_983f80d8f8af43719757ada8a0c42ff6_onEachFeature,
+        var geo_json_3665bff43ee648e6b15ec8fe3c34c63c = L.geoJson(null, {
+                onEachFeature: geo_json_3665bff43ee648e6b15ec8fe3c34c63c_onEachFeature,
             
-                style: geo_json_983f80d8f8af43719757ada8a0c42ff6_styler,
+                style: geo_json_3665bff43ee648e6b15ec8fe3c34c63c_styler,
         });
 
-        function geo_json_983f80d8f8af43719757ada8a0c42ff6_add (data) {
-            geo_json_983f80d8f8af43719757ada8a0c42ff6
+        function geo_json_3665bff43ee648e6b15ec8fe3c34c63c_add (data) {
+            geo_json_3665bff43ee648e6b15ec8fe3c34c63c
                 .addData(data)
-                .addTo(map_2b2738ca34b74b0e94cfabf86a500ed2);
+                .addTo(map_9ebd77f5f96f469eb18b2c835a71cd2a);
         }
-            geo_json_983f80d8f8af43719757ada8a0c42ff6_add({"features": [{"geometry": {"coordinates": [[[-70.44663459062576, 43.68475468952332], [-70.44688135385513, 43.68435512194071], [-70.44628322124481, 43.68419800968653], [-70.44611155986786, 43.684492837281866], [-70.4464790225029, 43.684585940432], [-70.44641733169556, 43.684686802014916], [-70.44663459062576, 43.68475468952332]]], "type": "Polygon"}, "properties": {"lot_id": "0016", "lot_name": "gs2", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_3665bff43ee648e6b15ec8fe3c34c63c_add({"features": [{"geometry": {"coordinates": [[[-70.44663459062576, 43.68475468952332], [-70.44688135385513, 43.68435512194071], [-70.44628322124481, 43.68419800968653], [-70.44611155986786, 43.684492837281866], [-70.4464790225029, 43.684585940432], [-70.44641733169556, 43.684686802014916], [-70.44663459062576, 43.68475468952332]]], "type": "Polygon"}, "properties": {"lot_id": "0016", "lot_name": "gs2", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_983f80d8f8af43719757ada8a0c42ff6.bindPopup(
+    geo_json_3665bff43ee648e6b15ec8fe3c34c63c.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -628,44 +628,44 @@
     ,{"className": "respopup"});
                      
     
-        function geo_json_6eaa7cf75b9046a98525819eb3779a89_styler(feature) {
+        function geo_json_332fe62c2c214e65ace1a1515a0ddc6e_styler(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "black", "fillColor": "green", "fillOpacity": "0.4"};
             }
         }
-        function geo_json_6eaa7cf75b9046a98525819eb3779a89_highlighter(feature) {
+        function geo_json_332fe62c2c214e65ace1a1515a0ddc6e_highlighter(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "green", "fillColor": "grey", "weight": 3};
             }
         }
-        function geo_json_6eaa7cf75b9046a98525819eb3779a89_onEachFeature(feature, layer) {
+        function geo_json_332fe62c2c214e65ace1a1515a0ddc6e_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
-                    geo_json_6eaa7cf75b9046a98525819eb3779a89.resetStyle(e.target);
+                    geo_json_332fe62c2c214e65ace1a1515a0ddc6e.resetStyle(e.target);
                 },
                 mouseover: function(e) {
-                    e.target.setStyle(geo_json_6eaa7cf75b9046a98525819eb3779a89_highlighter(e.target.feature));
+                    e.target.setStyle(geo_json_332fe62c2c214e65ace1a1515a0ddc6e_highlighter(e.target.feature));
                 },
             });
         };
-        var geo_json_6eaa7cf75b9046a98525819eb3779a89 = L.geoJson(null, {
-                onEachFeature: geo_json_6eaa7cf75b9046a98525819eb3779a89_onEachFeature,
+        var geo_json_332fe62c2c214e65ace1a1515a0ddc6e = L.geoJson(null, {
+                onEachFeature: geo_json_332fe62c2c214e65ace1a1515a0ddc6e_onEachFeature,
             
-                style: geo_json_6eaa7cf75b9046a98525819eb3779a89_styler,
+                style: geo_json_332fe62c2c214e65ace1a1515a0ddc6e_styler,
         });
 
-        function geo_json_6eaa7cf75b9046a98525819eb3779a89_add (data) {
-            geo_json_6eaa7cf75b9046a98525819eb3779a89
+        function geo_json_332fe62c2c214e65ace1a1515a0ddc6e_add (data) {
+            geo_json_332fe62c2c214e65ace1a1515a0ddc6e
                 .addData(data)
-                .addTo(map_2b2738ca34b74b0e94cfabf86a500ed2);
+                .addTo(map_9ebd77f5f96f469eb18b2c835a71cd2a);
         }
-            geo_json_6eaa7cf75b9046a98525819eb3779a89_add({"features": [{"geometry": {"coordinates": [[[-70.44657289981842, 43.68273936763441], [-70.44609546661377, 43.68190916722532], [-70.44597744941711, 43.68180830097236], [-70.44565558433533, 43.681792783072225], [-70.44625103473663, 43.68268893522701], [-70.44648706912994, 43.682785920588195], [-70.44657289981842, 43.68273936763441]]], "type": "Polygon"}, "properties": {"lot_id": "0008", "lot_name": "g11", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_332fe62c2c214e65ace1a1515a0ddc6e_add({"features": [{"geometry": {"coordinates": [[[-70.44657289981842, 43.68273936763441], [-70.44609546661377, 43.68190916722532], [-70.44597744941711, 43.68180830097236], [-70.44565558433533, 43.681792783072225], [-70.44625103473663, 43.68268893522701], [-70.44648706912994, 43.682785920588195], [-70.44657289981842, 43.68273936763441]]], "type": "Polygon"}, "properties": {"lot_id": "0008", "lot_name": "g11", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_6eaa7cf75b9046a98525819eb3779a89.bindPopup(
+    geo_json_332fe62c2c214e65ace1a1515a0ddc6e.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -689,44 +689,44 @@
     ,{"className": "respopup"});
                      
     
-        function geo_json_78343a360cf2460b97f52f0c12cf6ce9_styler(feature) {
+        function geo_json_57b46ad149474f65bb499839730e951e_styler(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "black", "fillColor": "green", "fillOpacity": "0.4"};
             }
         }
-        function geo_json_78343a360cf2460b97f52f0c12cf6ce9_highlighter(feature) {
+        function geo_json_57b46ad149474f65bb499839730e951e_highlighter(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "green", "fillColor": "grey", "weight": 3};
             }
         }
-        function geo_json_78343a360cf2460b97f52f0c12cf6ce9_onEachFeature(feature, layer) {
+        function geo_json_57b46ad149474f65bb499839730e951e_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
-                    geo_json_78343a360cf2460b97f52f0c12cf6ce9.resetStyle(e.target);
+                    geo_json_57b46ad149474f65bb499839730e951e.resetStyle(e.target);
                 },
                 mouseover: function(e) {
-                    e.target.setStyle(geo_json_78343a360cf2460b97f52f0c12cf6ce9_highlighter(e.target.feature));
+                    e.target.setStyle(geo_json_57b46ad149474f65bb499839730e951e_highlighter(e.target.feature));
                 },
             });
         };
-        var geo_json_78343a360cf2460b97f52f0c12cf6ce9 = L.geoJson(null, {
-                onEachFeature: geo_json_78343a360cf2460b97f52f0c12cf6ce9_onEachFeature,
+        var geo_json_57b46ad149474f65bb499839730e951e = L.geoJson(null, {
+                onEachFeature: geo_json_57b46ad149474f65bb499839730e951e_onEachFeature,
             
-                style: geo_json_78343a360cf2460b97f52f0c12cf6ce9_styler,
+                style: geo_json_57b46ad149474f65bb499839730e951e_styler,
         });
 
-        function geo_json_78343a360cf2460b97f52f0c12cf6ce9_add (data) {
-            geo_json_78343a360cf2460b97f52f0c12cf6ce9
+        function geo_json_57b46ad149474f65bb499839730e951e_add (data) {
+            geo_json_57b46ad149474f65bb499839730e951e
                 .addData(data)
-                .addTo(map_2b2738ca34b74b0e94cfabf86a500ed2);
+                .addTo(map_9ebd77f5f96f469eb18b2c835a71cd2a);
         }
-            geo_json_78343a360cf2460b97f52f0c12cf6ce9_add({"features": [{"geometry": {"coordinates": [[[-70.44854700565338, 43.681788903596576], [-70.4487293958664, 43.68173459091105], [-70.44842898845673, 43.68120697940697], [-70.44821977615356, 43.68127293109873], [-70.44854700565338, 43.681788903596576]]], "type": "Polygon"}, "properties": {"lot_id": "0007", "lot_name": "g7", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_57b46ad149474f65bb499839730e951e_add({"features": [{"geometry": {"coordinates": [[[-70.44854700565338, 43.681788903596576], [-70.4487293958664, 43.68173459091105], [-70.44842898845673, 43.68120697940697], [-70.44821977615356, 43.68127293109873], [-70.44854700565338, 43.681788903596576]]], "type": "Polygon"}, "properties": {"lot_id": "0007", "lot_name": "g7", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_78343a360cf2460b97f52f0c12cf6ce9.bindPopup(
+    geo_json_57b46ad149474f65bb499839730e951e.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -750,44 +750,44 @@
     ,{"className": "respopup"});
                      
     
-        function geo_json_ef3c6c1971d84dada1f8891309e7942b_styler(feature) {
+        function geo_json_1ded2fce9af7436697f59447f661fce4_styler(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "black", "fillColor": "green", "fillOpacity": "0.4"};
             }
         }
-        function geo_json_ef3c6c1971d84dada1f8891309e7942b_highlighter(feature) {
+        function geo_json_1ded2fce9af7436697f59447f661fce4_highlighter(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "green", "fillColor": "grey", "weight": 3};
             }
         }
-        function geo_json_ef3c6c1971d84dada1f8891309e7942b_onEachFeature(feature, layer) {
+        function geo_json_1ded2fce9af7436697f59447f661fce4_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
-                    geo_json_ef3c6c1971d84dada1f8891309e7942b.resetStyle(e.target);
+                    geo_json_1ded2fce9af7436697f59447f661fce4.resetStyle(e.target);
                 },
                 mouseover: function(e) {
-                    e.target.setStyle(geo_json_ef3c6c1971d84dada1f8891309e7942b_highlighter(e.target.feature));
+                    e.target.setStyle(geo_json_1ded2fce9af7436697f59447f661fce4_highlighter(e.target.feature));
                 },
             });
         };
-        var geo_json_ef3c6c1971d84dada1f8891309e7942b = L.geoJson(null, {
-                onEachFeature: geo_json_ef3c6c1971d84dada1f8891309e7942b_onEachFeature,
+        var geo_json_1ded2fce9af7436697f59447f661fce4 = L.geoJson(null, {
+                onEachFeature: geo_json_1ded2fce9af7436697f59447f661fce4_onEachFeature,
             
-                style: geo_json_ef3c6c1971d84dada1f8891309e7942b_styler,
+                style: geo_json_1ded2fce9af7436697f59447f661fce4_styler,
         });
 
-        function geo_json_ef3c6c1971d84dada1f8891309e7942b_add (data) {
-            geo_json_ef3c6c1971d84dada1f8891309e7942b
+        function geo_json_1ded2fce9af7436697f59447f661fce4_add (data) {
+            geo_json_1ded2fce9af7436697f59447f661fce4
                 .addData(data)
-                .addTo(map_2b2738ca34b74b0e94cfabf86a500ed2);
+                .addTo(map_9ebd77f5f96f469eb18b2c835a71cd2a);
         }
-            geo_json_ef3c6c1971d84dada1f8891309e7942b_add({"features": [{"geometry": {"coordinates": [[[-70.45172274112701, 43.680997485317], [-70.45271515846252, 43.680683242810424], [-70.45216262340546, 43.67984913434764], [-70.45156717300415, 43.68005863244738], [-70.45135259628296, 43.68041555345106], [-70.45172274112701, 43.680997485317]]], "type": "Polygon"}, "properties": {"lot_id": "0014", "lot_name": "g20", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_1ded2fce9af7436697f59447f661fce4_add({"features": [{"geometry": {"coordinates": [[[-70.45172274112701, 43.680997485317], [-70.45271515846252, 43.680683242810424], [-70.45216262340546, 43.67984913434764], [-70.45156717300415, 43.68005863244738], [-70.45135259628296, 43.68041555345106], [-70.45172274112701, 43.680997485317]]], "type": "Polygon"}, "properties": {"lot_id": "0014", "lot_name": "g20", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_ef3c6c1971d84dada1f8891309e7942b.bindPopup(
+    geo_json_1ded2fce9af7436697f59447f661fce4.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -811,44 +811,44 @@
     ,{"className": "respopup"});
                      
     
-        function geo_json_9a6e740f470245cd8ac014fde2047c78_styler(feature) {
+        function geo_json_35ee84d907b648a297c1790a77098dc8_styler(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "black", "fillColor": "green", "fillOpacity": "0.4"};
             }
         }
-        function geo_json_9a6e740f470245cd8ac014fde2047c78_highlighter(feature) {
+        function geo_json_35ee84d907b648a297c1790a77098dc8_highlighter(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "green", "fillColor": "grey", "weight": 3};
             }
         }
-        function geo_json_9a6e740f470245cd8ac014fde2047c78_onEachFeature(feature, layer) {
+        function geo_json_35ee84d907b648a297c1790a77098dc8_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
-                    geo_json_9a6e740f470245cd8ac014fde2047c78.resetStyle(e.target);
+                    geo_json_35ee84d907b648a297c1790a77098dc8.resetStyle(e.target);
                 },
                 mouseover: function(e) {
-                    e.target.setStyle(geo_json_9a6e740f470245cd8ac014fde2047c78_highlighter(e.target.feature));
+                    e.target.setStyle(geo_json_35ee84d907b648a297c1790a77098dc8_highlighter(e.target.feature));
                 },
             });
         };
-        var geo_json_9a6e740f470245cd8ac014fde2047c78 = L.geoJson(null, {
-                onEachFeature: geo_json_9a6e740f470245cd8ac014fde2047c78_onEachFeature,
+        var geo_json_35ee84d907b648a297c1790a77098dc8 = L.geoJson(null, {
+                onEachFeature: geo_json_35ee84d907b648a297c1790a77098dc8_onEachFeature,
             
-                style: geo_json_9a6e740f470245cd8ac014fde2047c78_styler,
+                style: geo_json_35ee84d907b648a297c1790a77098dc8_styler,
         });
 
-        function geo_json_9a6e740f470245cd8ac014fde2047c78_add (data) {
-            geo_json_9a6e740f470245cd8ac014fde2047c78
+        function geo_json_35ee84d907b648a297c1790a77098dc8_add (data) {
+            geo_json_35ee84d907b648a297c1790a77098dc8
                 .addData(data)
-                .addTo(map_2b2738ca34b74b0e94cfabf86a500ed2);
+                .addTo(map_9ebd77f5f96f469eb18b2c835a71cd2a);
         }
-            geo_json_9a6e740f470245cd8ac014fde2047c78_add({"features": [{"geometry": {"coordinates": [[[-70.45066595077515, 43.68413206121029], [-70.45066595077515, 43.68391869799644], [-70.45024752616882, 43.68386826658046], [-70.44978082180023, 43.68391869799644], [-70.44975399971008, 43.68424844082529], [-70.45066595077515, 43.68413206121029]]], "type": "Polygon"}, "properties": {"lot_id": "0011", "lot_name": "g13a", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_35ee84d907b648a297c1790a77098dc8_add({"features": [{"geometry": {"coordinates": [[[-70.45066595077515, 43.68413206121029], [-70.45066595077515, 43.68391869799644], [-70.45024752616882, 43.68386826658046], [-70.44978082180023, 43.68391869799644], [-70.44975399971008, 43.68424844082529], [-70.45066595077515, 43.68413206121029]]], "type": "Polygon"}, "properties": {"lot_id": "0011", "lot_name": "g13a", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_9a6e740f470245cd8ac014fde2047c78.bindPopup(
+    geo_json_35ee84d907b648a297c1790a77098dc8.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -872,44 +872,44 @@
     ,{"className": "respopup"});
                      
     
-        function geo_json_26a16de1b9ea47e499d617bbfee73155_styler(feature) {
+        function geo_json_9ac6159b50a7434ab0678709853407af_styler(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "black", "fillColor": "green", "fillOpacity": "0.4"};
             }
         }
-        function geo_json_26a16de1b9ea47e499d617bbfee73155_highlighter(feature) {
+        function geo_json_9ac6159b50a7434ab0678709853407af_highlighter(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "green", "fillColor": "grey", "weight": 3};
             }
         }
-        function geo_json_26a16de1b9ea47e499d617bbfee73155_onEachFeature(feature, layer) {
+        function geo_json_9ac6159b50a7434ab0678709853407af_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
-                    geo_json_26a16de1b9ea47e499d617bbfee73155.resetStyle(e.target);
+                    geo_json_9ac6159b50a7434ab0678709853407af.resetStyle(e.target);
                 },
                 mouseover: function(e) {
-                    e.target.setStyle(geo_json_26a16de1b9ea47e499d617bbfee73155_highlighter(e.target.feature));
+                    e.target.setStyle(geo_json_9ac6159b50a7434ab0678709853407af_highlighter(e.target.feature));
                 },
             });
         };
-        var geo_json_26a16de1b9ea47e499d617bbfee73155 = L.geoJson(null, {
-                onEachFeature: geo_json_26a16de1b9ea47e499d617bbfee73155_onEachFeature,
+        var geo_json_9ac6159b50a7434ab0678709853407af = L.geoJson(null, {
+                onEachFeature: geo_json_9ac6159b50a7434ab0678709853407af_onEachFeature,
             
-                style: geo_json_26a16de1b9ea47e499d617bbfee73155_styler,
+                style: geo_json_9ac6159b50a7434ab0678709853407af_styler,
         });
 
-        function geo_json_26a16de1b9ea47e499d617bbfee73155_add (data) {
-            geo_json_26a16de1b9ea47e499d617bbfee73155
+        function geo_json_9ac6159b50a7434ab0678709853407af_add (data) {
+            geo_json_9ac6159b50a7434ab0678709853407af
                 .addData(data)
-                .addTo(map_2b2738ca34b74b0e94cfabf86a500ed2);
+                .addTo(map_9ebd77f5f96f469eb18b2c835a71cd2a);
         }
-            geo_json_26a16de1b9ea47e499d617bbfee73155_add({"features": [{"geometry": {"coordinates": [[[-70.45145452022552, 43.68401180203764], [-70.45122385025023, 43.68395749136448], [-70.45061767101288, 43.68424068219132], [-70.44970035552979, 43.68432602710986], [-70.44968962669373, 43.684508354483604], [-70.4506766796112, 43.68440361329408], [-70.45145452022552, 43.68401180203764]]], "type": "Polygon"}, "properties": {"lot_id": "0012", "lot_name": "g13b", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_9ac6159b50a7434ab0678709853407af_add({"features": [{"geometry": {"coordinates": [[[-70.45145452022552, 43.68401180203764], [-70.45122385025023, 43.68395749136448], [-70.45061767101288, 43.68424068219132], [-70.44970035552979, 43.68432602710986], [-70.44968962669373, 43.684508354483604], [-70.4506766796112, 43.68440361329408], [-70.45145452022552, 43.68401180203764]]], "type": "Polygon"}, "properties": {"lot_id": "0012", "lot_name": "g13b", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_26a16de1b9ea47e499d617bbfee73155.bindPopup(
+    geo_json_9ac6159b50a7434ab0678709853407af.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -933,44 +933,44 @@
     ,{"className": "respopup"});
                      
     
-        function geo_json_6ccf756d0a76444791e8986f260e8b59_styler(feature) {
+        function geo_json_27ad70d2c6384d1895d81a9325507aeb_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "black", "fillColor": "green", "fillOpacity": "0.4"};
             }
         }
-        function geo_json_6ccf756d0a76444791e8986f260e8b59_highlighter(feature) {
+        function geo_json_27ad70d2c6384d1895d81a9325507aeb_highlighter(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "green", "fillColor": "grey", "weight": 3};
             }
         }
-        function geo_json_6ccf756d0a76444791e8986f260e8b59_onEachFeature(feature, layer) {
+        function geo_json_27ad70d2c6384d1895d81a9325507aeb_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
-                    geo_json_6ccf756d0a76444791e8986f260e8b59.resetStyle(e.target);
+                    geo_json_27ad70d2c6384d1895d81a9325507aeb.resetStyle(e.target);
                 },
                 mouseover: function(e) {
-                    e.target.setStyle(geo_json_6ccf756d0a76444791e8986f260e8b59_highlighter(e.target.feature));
+                    e.target.setStyle(geo_json_27ad70d2c6384d1895d81a9325507aeb_highlighter(e.target.feature));
                 },
             });
         };
-        var geo_json_6ccf756d0a76444791e8986f260e8b59 = L.geoJson(null, {
-                onEachFeature: geo_json_6ccf756d0a76444791e8986f260e8b59_onEachFeature,
+        var geo_json_27ad70d2c6384d1895d81a9325507aeb = L.geoJson(null, {
+                onEachFeature: geo_json_27ad70d2c6384d1895d81a9325507aeb_onEachFeature,
             
-                style: geo_json_6ccf756d0a76444791e8986f260e8b59_styler,
+                style: geo_json_27ad70d2c6384d1895d81a9325507aeb_styler,
         });
 
-        function geo_json_6ccf756d0a76444791e8986f260e8b59_add (data) {
-            geo_json_6ccf756d0a76444791e8986f260e8b59
+        function geo_json_27ad70d2c6384d1895d81a9325507aeb_add (data) {
+            geo_json_27ad70d2c6384d1895d81a9325507aeb
                 .addData(data)
-                .addTo(map_2b2738ca34b74b0e94cfabf86a500ed2);
+                .addTo(map_9ebd77f5f96f469eb18b2c835a71cd2a);
         }
-            geo_json_6ccf756d0a76444791e8986f260e8b59_add({"features": [{"geometry": {"coordinates": [[[-70.44825196266174, 43.68462473336858], [-70.44850945472717, 43.684364820214505], [-70.44718980789185, 43.68384499052802], [-70.44692158699036, 43.684101026608175], [-70.44825196266174, 43.68462473336858]]], "type": "Polygon"}, "id": "0", "properties": {"lot_id": "0013", "lot_name": "g13c", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}, {"geometry": {"coordinates": [[[-70.45152425765991, 43.68404671601581], [-70.45064985752106, 43.684434647739664], [-70.44989883899689, 43.68449671658268], [-70.449920296669, 43.684694560591204], [-70.45081615447998, 43.68460145760964], [-70.45162618160246, 43.68422904423847], [-70.45152425765991, 43.68404671601581]]], "type": "Polygon"}, "id": "1", "properties": {"lot_id": "0013", "lot_name": "g13c", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_27ad70d2c6384d1895d81a9325507aeb_add({"features": [{"geometry": {"coordinates": [[[-70.44825196266174, 43.68462473336858], [-70.44850945472717, 43.684364820214505], [-70.44718980789185, 43.68384499052802], [-70.44692158699036, 43.684101026608175], [-70.44825196266174, 43.68462473336858]]], "type": "Polygon"}, "id": "0", "properties": {"lot_id": "0013", "lot_name": "g13c", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}, {"geometry": {"coordinates": [[[-70.45152425765991, 43.68404671601581], [-70.45064985752106, 43.684434647739664], [-70.44989883899689, 43.68449671658268], [-70.449920296669, 43.684694560591204], [-70.45081615447998, 43.68460145760964], [-70.45162618160246, 43.68422904423847], [-70.45152425765991, 43.68404671601581]]], "type": "Polygon"}, "id": "1", "properties": {"lot_id": "0013", "lot_name": "g13c", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_6ccf756d0a76444791e8986f260e8b59.bindPopup(
+    geo_json_27ad70d2c6384d1895d81a9325507aeb.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -994,44 +994,44 @@
     ,{"className": "respopup"});
                      
     
-        function geo_json_532728861a2d44948ac006dd71603af6_styler(feature) {
+        function geo_json_38a2f9bcfd944a3fb9c7243ea35e2106_styler(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "black", "fillColor": "green", "fillOpacity": "0.4"};
             }
         }
-        function geo_json_532728861a2d44948ac006dd71603af6_highlighter(feature) {
+        function geo_json_38a2f9bcfd944a3fb9c7243ea35e2106_highlighter(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "green", "fillColor": "grey", "weight": 3};
             }
         }
-        function geo_json_532728861a2d44948ac006dd71603af6_onEachFeature(feature, layer) {
+        function geo_json_38a2f9bcfd944a3fb9c7243ea35e2106_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
-                    geo_json_532728861a2d44948ac006dd71603af6.resetStyle(e.target);
+                    geo_json_38a2f9bcfd944a3fb9c7243ea35e2106.resetStyle(e.target);
                 },
                 mouseover: function(e) {
-                    e.target.setStyle(geo_json_532728861a2d44948ac006dd71603af6_highlighter(e.target.feature));
+                    e.target.setStyle(geo_json_38a2f9bcfd944a3fb9c7243ea35e2106_highlighter(e.target.feature));
                 },
             });
         };
-        var geo_json_532728861a2d44948ac006dd71603af6 = L.geoJson(null, {
-                onEachFeature: geo_json_532728861a2d44948ac006dd71603af6_onEachFeature,
+        var geo_json_38a2f9bcfd944a3fb9c7243ea35e2106 = L.geoJson(null, {
+                onEachFeature: geo_json_38a2f9bcfd944a3fb9c7243ea35e2106_onEachFeature,
             
-                style: geo_json_532728861a2d44948ac006dd71603af6_styler,
+                style: geo_json_38a2f9bcfd944a3fb9c7243ea35e2106_styler,
         });
 
-        function geo_json_532728861a2d44948ac006dd71603af6_add (data) {
-            geo_json_532728861a2d44948ac006dd71603af6
+        function geo_json_38a2f9bcfd944a3fb9c7243ea35e2106_add (data) {
+            geo_json_38a2f9bcfd944a3fb9c7243ea35e2106
                 .addData(data)
-                .addTo(map_2b2738ca34b74b0e94cfabf86a500ed2);
+                .addTo(map_9ebd77f5f96f469eb18b2c835a71cd2a);
         }
-            geo_json_532728861a2d44948ac006dd71603af6_add({"features": [{"geometry": {"coordinates": [[[-70.44825196266174, 43.68462473336858], [-70.44850945472717, 43.684364820214505], [-70.44718980789185, 43.68384499052802], [-70.44692158699036, 43.684101026608175], [-70.44825196266174, 43.68462473336858]]], "type": "Polygon"}, "properties": {"lot_id": "0009", "lot_name": "g12", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_38a2f9bcfd944a3fb9c7243ea35e2106_add({"features": [{"geometry": {"coordinates": [[[-70.44825196266174, 43.68462473336858], [-70.44850945472717, 43.684364820214505], [-70.44718980789185, 43.68384499052802], [-70.44692158699036, 43.684101026608175], [-70.44825196266174, 43.68462473336858]]], "type": "Polygon"}, "properties": {"lot_id": "0009", "lot_name": "g12", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_532728861a2d44948ac006dd71603af6.bindPopup(
+    geo_json_38a2f9bcfd944a3fb9c7243ea35e2106.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -1055,44 +1055,44 @@
     ,{"className": "respopup"});
                      
     
-        function geo_json_3c51cc3e952d49a489a3bcf8d830e757_styler(feature) {
+        function geo_json_9c7caceb5b444313b0ee939815df0cb2_styler(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "black", "fillColor": "green", "fillOpacity": "0.4"};
             }
         }
-        function geo_json_3c51cc3e952d49a489a3bcf8d830e757_highlighter(feature) {
+        function geo_json_9c7caceb5b444313b0ee939815df0cb2_highlighter(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "green", "fillColor": "grey", "weight": 3};
             }
         }
-        function geo_json_3c51cc3e952d49a489a3bcf8d830e757_onEachFeature(feature, layer) {
+        function geo_json_9c7caceb5b444313b0ee939815df0cb2_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
-                    geo_json_3c51cc3e952d49a489a3bcf8d830e757.resetStyle(e.target);
+                    geo_json_9c7caceb5b444313b0ee939815df0cb2.resetStyle(e.target);
                 },
                 mouseover: function(e) {
-                    e.target.setStyle(geo_json_3c51cc3e952d49a489a3bcf8d830e757_highlighter(e.target.feature));
+                    e.target.setStyle(geo_json_9c7caceb5b444313b0ee939815df0cb2_highlighter(e.target.feature));
                 },
             });
         };
-        var geo_json_3c51cc3e952d49a489a3bcf8d830e757 = L.geoJson(null, {
-                onEachFeature: geo_json_3c51cc3e952d49a489a3bcf8d830e757_onEachFeature,
+        var geo_json_9c7caceb5b444313b0ee939815df0cb2 = L.geoJson(null, {
+                onEachFeature: geo_json_9c7caceb5b444313b0ee939815df0cb2_onEachFeature,
             
-                style: geo_json_3c51cc3e952d49a489a3bcf8d830e757_styler,
+                style: geo_json_9c7caceb5b444313b0ee939815df0cb2_styler,
         });
 
-        function geo_json_3c51cc3e952d49a489a3bcf8d830e757_add (data) {
-            geo_json_3c51cc3e952d49a489a3bcf8d830e757
+        function geo_json_9c7caceb5b444313b0ee939815df0cb2_add (data) {
+            geo_json_9c7caceb5b444313b0ee939815df0cb2
                 .addData(data)
-                .addTo(map_2b2738ca34b74b0e94cfabf86a500ed2);
+                .addTo(map_9ebd77f5f96f469eb18b2c835a71cd2a);
         }
-            geo_json_3c51cc3e952d49a489a3bcf8d830e757_add({"features": [{"geometry": {"coordinates": [[[-70.4442447423935, 43.68168027817631], [-70.44455051422119, 43.68155225510711], [-70.44460415840149, 43.68136603924602], [-70.4448401927948, 43.68128844913331], [-70.4447329044342, 43.68104403962242], [-70.44467389583588, 43.68106343723903], [-70.44429838657379, 43.681160425227986], [-70.44435203075409, 43.68132336469644], [-70.44407844543457, 43.68140483426475], [-70.4442447423935, 43.68168027817631]]], "type": "Polygon"}, "properties": {"lot_id": "0015", "lot_name": "gs1", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_9c7caceb5b444313b0ee939815df0cb2_add({"features": [{"geometry": {"coordinates": [[[-70.4442447423935, 43.68168027817631], [-70.44455051422119, 43.68155225510711], [-70.44460415840149, 43.68136603924602], [-70.4448401927948, 43.68128844913331], [-70.4447329044342, 43.68104403962242], [-70.44467389583588, 43.68106343723903], [-70.44429838657379, 43.681160425227986], [-70.44435203075409, 43.68132336469644], [-70.44407844543457, 43.68140483426475], [-70.4442447423935, 43.68168027817631]]], "type": "Polygon"}, "properties": {"lot_id": "0015", "lot_name": "gs1", "lot_status": "open", "lot_type": "residential"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_3c51cc3e952d49a489a3bcf8d830e757.bindPopup(
+    geo_json_9c7caceb5b444313b0ee939815df0cb2.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -1116,44 +1116,44 @@
     ,{"className": "respopup"});
                      
     
-        function geo_json_40a27e1d1350428d88052e5bcc739c98_styler(feature) {
+        function geo_json_7ad740b4a0ed4c4fb7471c19c68c38d9_styler(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "black", "fillColor": "red", "fillOpacity": "0.4"};
             }
         }
-        function geo_json_40a27e1d1350428d88052e5bcc739c98_highlighter(feature) {
+        function geo_json_7ad740b4a0ed4c4fb7471c19c68c38d9_highlighter(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "red", "fillColor": "grey", "weight": 3};
             }
         }
-        function geo_json_40a27e1d1350428d88052e5bcc739c98_onEachFeature(feature, layer) {
+        function geo_json_7ad740b4a0ed4c4fb7471c19c68c38d9_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
-                    geo_json_40a27e1d1350428d88052e5bcc739c98.resetStyle(e.target);
+                    geo_json_7ad740b4a0ed4c4fb7471c19c68c38d9.resetStyle(e.target);
                 },
                 mouseover: function(e) {
-                    e.target.setStyle(geo_json_40a27e1d1350428d88052e5bcc739c98_highlighter(e.target.feature));
+                    e.target.setStyle(geo_json_7ad740b4a0ed4c4fb7471c19c68c38d9_highlighter(e.target.feature));
                 },
             });
         };
-        var geo_json_40a27e1d1350428d88052e5bcc739c98 = L.geoJson(null, {
-                onEachFeature: geo_json_40a27e1d1350428d88052e5bcc739c98_onEachFeature,
+        var geo_json_7ad740b4a0ed4c4fb7471c19c68c38d9 = L.geoJson(null, {
+                onEachFeature: geo_json_7ad740b4a0ed4c4fb7471c19c68c38d9_onEachFeature,
             
-                style: geo_json_40a27e1d1350428d88052e5bcc739c98_styler,
+                style: geo_json_7ad740b4a0ed4c4fb7471c19c68c38d9_styler,
         });
 
-        function geo_json_40a27e1d1350428d88052e5bcc739c98_add (data) {
-            geo_json_40a27e1d1350428d88052e5bcc739c98
+        function geo_json_7ad740b4a0ed4c4fb7471c19c68c38d9_add (data) {
+            geo_json_7ad740b4a0ed4c4fb7471c19c68c38d9
                 .addData(data)
-                .addTo(map_2b2738ca34b74b0e94cfabf86a500ed2);
+                .addTo(map_9ebd77f5f96f469eb18b2c835a71cd2a);
         }
-            geo_json_40a27e1d1350428d88052e5bcc739c98_add({"features": [{"geometry": {"coordinates": [[[-70.44853627681732, 43.679969401864696], [-70.4483699798584, 43.67969395009844], [-70.44779598712921, 43.679841375144704], [-70.44796764850616, 43.680132344567774], [-70.44853627681732, 43.679969401864696]]], "type": "Polygon"}, "properties": {"lot_id": "0003", "lot_name": "g4", "lot_status": "open", "lot_type": "commuter"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_7ad740b4a0ed4c4fb7471c19c68c38d9_add({"features": [{"geometry": {"coordinates": [[[-70.44853627681732, 43.679969401864696], [-70.4483699798584, 43.67969395009844], [-70.44779598712921, 43.679841375144704], [-70.44796764850616, 43.680132344567774], [-70.44853627681732, 43.679969401864696]]], "type": "Polygon"}, "properties": {"lot_id": "0003", "lot_name": "g4", "lot_status": "open", "lot_type": "commuter"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_40a27e1d1350428d88052e5bcc739c98.bindPopup(
+    geo_json_7ad740b4a0ed4c4fb7471c19c68c38d9.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -1177,44 +1177,44 @@
     ,{"className": "commpopup"});
                      
     
-        function geo_json_6787fccd49484c67b6a32908c3ce3883_styler(feature) {
+        function geo_json_697c44182b2f4e9eaf7400e9fdfdb452_styler(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "black", "fillColor": "red", "fillOpacity": "0.4"};
             }
         }
-        function geo_json_6787fccd49484c67b6a32908c3ce3883_highlighter(feature) {
+        function geo_json_697c44182b2f4e9eaf7400e9fdfdb452_highlighter(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "red", "fillColor": "grey", "weight": 3};
             }
         }
-        function geo_json_6787fccd49484c67b6a32908c3ce3883_onEachFeature(feature, layer) {
+        function geo_json_697c44182b2f4e9eaf7400e9fdfdb452_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
-                    geo_json_6787fccd49484c67b6a32908c3ce3883.resetStyle(e.target);
+                    geo_json_697c44182b2f4e9eaf7400e9fdfdb452.resetStyle(e.target);
                 },
                 mouseover: function(e) {
-                    e.target.setStyle(geo_json_6787fccd49484c67b6a32908c3ce3883_highlighter(e.target.feature));
+                    e.target.setStyle(geo_json_697c44182b2f4e9eaf7400e9fdfdb452_highlighter(e.target.feature));
                 },
             });
         };
-        var geo_json_6787fccd49484c67b6a32908c3ce3883 = L.geoJson(null, {
-                onEachFeature: geo_json_6787fccd49484c67b6a32908c3ce3883_onEachFeature,
+        var geo_json_697c44182b2f4e9eaf7400e9fdfdb452 = L.geoJson(null, {
+                onEachFeature: geo_json_697c44182b2f4e9eaf7400e9fdfdb452_onEachFeature,
             
-                style: geo_json_6787fccd49484c67b6a32908c3ce3883_styler,
+                style: geo_json_697c44182b2f4e9eaf7400e9fdfdb452_styler,
         });
 
-        function geo_json_6787fccd49484c67b6a32908c3ce3883_add (data) {
-            geo_json_6787fccd49484c67b6a32908c3ce3883
+        function geo_json_697c44182b2f4e9eaf7400e9fdfdb452_add (data) {
+            geo_json_697c44182b2f4e9eaf7400e9fdfdb452
                 .addData(data)
-                .addTo(map_2b2738ca34b74b0e94cfabf86a500ed2);
+                .addTo(map_9ebd77f5f96f469eb18b2c835a71cd2a);
         }
-            geo_json_6787fccd49484c67b6a32908c3ce3883_add({"features": [{"geometry": {"coordinates": [[[-70.45167982578278, 43.681497942207336], [-70.45159935951233, 43.68133112370773], [-70.45014023780823, 43.681773385691436], [-70.45023143291473, 43.68192856456219], [-70.45167982578278, 43.681497942207336]]], "type": "Polygon"}, "properties": {"lot_id": "0006", "lot_name": "g19", "lot_status": "open", "lot_type": "commuter"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_697c44182b2f4e9eaf7400e9fdfdb452_add({"features": [{"geometry": {"coordinates": [[[-70.45167982578278, 43.681497942207336], [-70.45159935951233, 43.68133112370773], [-70.45014023780823, 43.681773385691436], [-70.45023143291473, 43.68192856456219], [-70.45167982578278, 43.681497942207336]]], "type": "Polygon"}, "properties": {"lot_id": "0006", "lot_name": "g19", "lot_status": "open", "lot_type": "commuter"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_6787fccd49484c67b6a32908c3ce3883.bindPopup(
+    geo_json_697c44182b2f4e9eaf7400e9fdfdb452.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -1238,44 +1238,44 @@
     ,{"className": "commpopup"});
                      
     
-        function geo_json_fcf0c519181e40919e42a172367e213c_styler(feature) {
+        function geo_json_15d8c536598a49128e2674db48b698d1_styler(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "black", "fillColor": "red", "fillOpacity": "0.4"};
             }
         }
-        function geo_json_fcf0c519181e40919e42a172367e213c_highlighter(feature) {
+        function geo_json_15d8c536598a49128e2674db48b698d1_highlighter(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "red", "fillColor": "grey", "weight": 3};
             }
         }
-        function geo_json_fcf0c519181e40919e42a172367e213c_onEachFeature(feature, layer) {
+        function geo_json_15d8c536598a49128e2674db48b698d1_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
-                    geo_json_fcf0c519181e40919e42a172367e213c.resetStyle(e.target);
+                    geo_json_15d8c536598a49128e2674db48b698d1.resetStyle(e.target);
                 },
                 mouseover: function(e) {
-                    e.target.setStyle(geo_json_fcf0c519181e40919e42a172367e213c_highlighter(e.target.feature));
+                    e.target.setStyle(geo_json_15d8c536598a49128e2674db48b698d1_highlighter(e.target.feature));
                 },
             });
         };
-        var geo_json_fcf0c519181e40919e42a172367e213c = L.geoJson(null, {
-                onEachFeature: geo_json_fcf0c519181e40919e42a172367e213c_onEachFeature,
+        var geo_json_15d8c536598a49128e2674db48b698d1 = L.geoJson(null, {
+                onEachFeature: geo_json_15d8c536598a49128e2674db48b698d1_onEachFeature,
             
-                style: geo_json_fcf0c519181e40919e42a172367e213c_styler,
+                style: geo_json_15d8c536598a49128e2674db48b698d1_styler,
         });
 
-        function geo_json_fcf0c519181e40919e42a172367e213c_add (data) {
-            geo_json_fcf0c519181e40919e42a172367e213c
+        function geo_json_15d8c536598a49128e2674db48b698d1_add (data) {
+            geo_json_15d8c536598a49128e2674db48b698d1
                 .addData(data)
-                .addTo(map_2b2738ca34b74b0e94cfabf86a500ed2);
+                .addTo(map_9ebd77f5f96f469eb18b2c835a71cd2a);
         }
-            geo_json_fcf0c519181e40919e42a172367e213c_add({"features": [{"geometry": {"coordinates": [[[-70.45082151889801, 43.68050866292892], [-70.45054793357849, 43.68003923450592], [-70.44988811016083, 43.68021769533088], [-70.45009732246399, 43.6807297973597], [-70.45082151889801, 43.68050866292892]]], "type": "Polygon"}, "properties": {"lot_id": "0001", "lot_name": "g2a", "lot_status": "open", "lot_type": "commuter"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_15d8c536598a49128e2674db48b698d1_add({"features": [{"geometry": {"coordinates": [[[-70.45082151889801, 43.68050866292892], [-70.45054793357849, 43.68003923450592], [-70.44988811016083, 43.68021769533088], [-70.45009732246399, 43.6807297973597], [-70.45082151889801, 43.68050866292892]]], "type": "Polygon"}, "properties": {"lot_id": "0001", "lot_name": "g2a", "lot_status": "open", "lot_type": "commuter"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_fcf0c519181e40919e42a172367e213c.bindPopup(
+    geo_json_15d8c536598a49128e2674db48b698d1.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -1299,44 +1299,44 @@
     ,{"className": "commpopup"});
                      
     
-        function geo_json_e55980ba527344bfaaecd845baf55fad_styler(feature) {
+        function geo_json_14f1daff166f45469f4664d711a8d3ca_styler(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "black", "fillColor": "red", "fillOpacity": "0.4"};
             }
         }
-        function geo_json_e55980ba527344bfaaecd845baf55fad_highlighter(feature) {
+        function geo_json_14f1daff166f45469f4664d711a8d3ca_highlighter(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "red", "fillColor": "grey", "weight": 3};
             }
         }
-        function geo_json_e55980ba527344bfaaecd845baf55fad_onEachFeature(feature, layer) {
+        function geo_json_14f1daff166f45469f4664d711a8d3ca_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
-                    geo_json_e55980ba527344bfaaecd845baf55fad.resetStyle(e.target);
+                    geo_json_14f1daff166f45469f4664d711a8d3ca.resetStyle(e.target);
                 },
                 mouseover: function(e) {
-                    e.target.setStyle(geo_json_e55980ba527344bfaaecd845baf55fad_highlighter(e.target.feature));
+                    e.target.setStyle(geo_json_14f1daff166f45469f4664d711a8d3ca_highlighter(e.target.feature));
                 },
             });
         };
-        var geo_json_e55980ba527344bfaaecd845baf55fad = L.geoJson(null, {
-                onEachFeature: geo_json_e55980ba527344bfaaecd845baf55fad_onEachFeature,
+        var geo_json_14f1daff166f45469f4664d711a8d3ca = L.geoJson(null, {
+                onEachFeature: geo_json_14f1daff166f45469f4664d711a8d3ca_onEachFeature,
             
-                style: geo_json_e55980ba527344bfaaecd845baf55fad_styler,
+                style: geo_json_14f1daff166f45469f4664d711a8d3ca_styler,
         });
 
-        function geo_json_e55980ba527344bfaaecd845baf55fad_add (data) {
-            geo_json_e55980ba527344bfaaecd845baf55fad
+        function geo_json_14f1daff166f45469f4664d711a8d3ca_add (data) {
+            geo_json_14f1daff166f45469f4664d711a8d3ca
                 .addData(data)
-                .addTo(map_2b2738ca34b74b0e94cfabf86a500ed2);
+                .addTo(map_9ebd77f5f96f469eb18b2c835a71cd2a);
         }
-            geo_json_e55980ba527344bfaaecd845baf55fad_add({"features": [{"geometry": {"coordinates": [[[-70.45024752616882, 43.682304871656946], [-70.44998466968536, 43.68175010882619], [-70.44911026954651, 43.681994515460744], [-70.4494321346283, 43.68255315545795], [-70.45024752616882, 43.682304871656946]]], "type": "Polygon"}, "properties": {"lot_id": "0004", "lot_name": "g16", "lot_status": "open", "lot_type": "commuter"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_14f1daff166f45469f4664d711a8d3ca_add({"features": [{"geometry": {"coordinates": [[[-70.45024752616882, 43.682304871656946], [-70.44998466968536, 43.68175010882619], [-70.44911026954651, 43.681994515460744], [-70.4494321346283, 43.68255315545795], [-70.45024752616882, 43.682304871656946]]], "type": "Polygon"}, "properties": {"lot_id": "0004", "lot_name": "g16", "lot_status": "open", "lot_type": "commuter"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_e55980ba527344bfaaecd845baf55fad.bindPopup(
+    geo_json_14f1daff166f45469f4664d711a8d3ca.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -1360,44 +1360,44 @@
     ,{"className": "commpopup"});
                      
     
-        function geo_json_bcef7e880c9d4bec94e0dafc89b7f17d_styler(feature) {
+        function geo_json_76ab105117734938839ae3cfcb1f1003_styler(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "black", "fillColor": "red", "fillOpacity": "0.4"};
             }
         }
-        function geo_json_bcef7e880c9d4bec94e0dafc89b7f17d_highlighter(feature) {
+        function geo_json_76ab105117734938839ae3cfcb1f1003_highlighter(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "red", "fillColor": "grey", "weight": 3};
             }
         }
-        function geo_json_bcef7e880c9d4bec94e0dafc89b7f17d_onEachFeature(feature, layer) {
+        function geo_json_76ab105117734938839ae3cfcb1f1003_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
-                    geo_json_bcef7e880c9d4bec94e0dafc89b7f17d.resetStyle(e.target);
+                    geo_json_76ab105117734938839ae3cfcb1f1003.resetStyle(e.target);
                 },
                 mouseover: function(e) {
-                    e.target.setStyle(geo_json_bcef7e880c9d4bec94e0dafc89b7f17d_highlighter(e.target.feature));
+                    e.target.setStyle(geo_json_76ab105117734938839ae3cfcb1f1003_highlighter(e.target.feature));
                 },
             });
         };
-        var geo_json_bcef7e880c9d4bec94e0dafc89b7f17d = L.geoJson(null, {
-                onEachFeature: geo_json_bcef7e880c9d4bec94e0dafc89b7f17d_onEachFeature,
+        var geo_json_76ab105117734938839ae3cfcb1f1003 = L.geoJson(null, {
+                onEachFeature: geo_json_76ab105117734938839ae3cfcb1f1003_onEachFeature,
             
-                style: geo_json_bcef7e880c9d4bec94e0dafc89b7f17d_styler,
+                style: geo_json_76ab105117734938839ae3cfcb1f1003_styler,
         });
 
-        function geo_json_bcef7e880c9d4bec94e0dafc89b7f17d_add (data) {
-            geo_json_bcef7e880c9d4bec94e0dafc89b7f17d
+        function geo_json_76ab105117734938839ae3cfcb1f1003_add (data) {
+            geo_json_76ab105117734938839ae3cfcb1f1003
                 .addData(data)
-                .addTo(map_2b2738ca34b74b0e94cfabf86a500ed2);
+                .addTo(map_9ebd77f5f96f469eb18b2c835a71cd2a);
         }
-            geo_json_bcef7e880c9d4bec94e0dafc89b7f17d_add({"features": [{"geometry": {"coordinates": [[[-70.45200169086456, 43.68222728275842], [-70.45191049575806, 43.68206046628678], [-70.45090734958649, 43.68236694270353], [-70.45100390911102, 43.682522120039025], [-70.45200169086456, 43.68222728275842]]], "type": "Polygon"}, "properties": {"lot_id": "0005", "lot_name": "g17", "lot_status": "open", "lot_type": "commuter"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_76ab105117734938839ae3cfcb1f1003_add({"features": [{"geometry": {"coordinates": [[[-70.45200169086456, 43.68222728275842], [-70.45191049575806, 43.68206046628678], [-70.45090734958649, 43.68236694270353], [-70.45100390911102, 43.682522120039025], [-70.45200169086456, 43.68222728275842]]], "type": "Polygon"}, "properties": {"lot_id": "0005", "lot_name": "g17", "lot_status": "open", "lot_type": "commuter"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_bcef7e880c9d4bec94e0dafc89b7f17d.bindPopup(
+    geo_json_76ab105117734938839ae3cfcb1f1003.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -1421,44 +1421,44 @@
     ,{"className": "commpopup"});
                      
     
-        function geo_json_7a5d94dfb68241e9a8850e555746569e_styler(feature) {
+        function geo_json_76e5abfdb8cf450fa7feef54b5632d09_styler(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "black", "fillColor": "blue", "fillOpacity": "0.4"};
             }
         }
-        function geo_json_7a5d94dfb68241e9a8850e555746569e_highlighter(feature) {
+        function geo_json_76e5abfdb8cf450fa7feef54b5632d09_highlighter(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "blue", "fillColor": "grey", "weight": 3};
             }
         }
-        function geo_json_7a5d94dfb68241e9a8850e555746569e_onEachFeature(feature, layer) {
+        function geo_json_76e5abfdb8cf450fa7feef54b5632d09_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
-                    geo_json_7a5d94dfb68241e9a8850e555746569e.resetStyle(e.target);
+                    geo_json_76e5abfdb8cf450fa7feef54b5632d09.resetStyle(e.target);
                 },
                 mouseover: function(e) {
-                    e.target.setStyle(geo_json_7a5d94dfb68241e9a8850e555746569e_highlighter(e.target.feature));
+                    e.target.setStyle(geo_json_76e5abfdb8cf450fa7feef54b5632d09_highlighter(e.target.feature));
                 },
             });
         };
-        var geo_json_7a5d94dfb68241e9a8850e555746569e = L.geoJson(null, {
-                onEachFeature: geo_json_7a5d94dfb68241e9a8850e555746569e_onEachFeature,
+        var geo_json_76e5abfdb8cf450fa7feef54b5632d09 = L.geoJson(null, {
+                onEachFeature: geo_json_76e5abfdb8cf450fa7feef54b5632d09_onEachFeature,
             
-                style: geo_json_7a5d94dfb68241e9a8850e555746569e_styler,
+                style: geo_json_76e5abfdb8cf450fa7feef54b5632d09_styler,
         });
 
-        function geo_json_7a5d94dfb68241e9a8850e555746569e_add (data) {
-            geo_json_7a5d94dfb68241e9a8850e555746569e
+        function geo_json_76e5abfdb8cf450fa7feef54b5632d09_add (data) {
+            geo_json_76e5abfdb8cf450fa7feef54b5632d09
                 .addData(data)
-                .addTo(map_2b2738ca34b74b0e94cfabf86a500ed2);
+                .addTo(map_9ebd77f5f96f469eb18b2c835a71cd2a);
         }
-            geo_json_7a5d94dfb68241e9a8850e555746569e_add({"features": [{"geometry": {"coordinates": [[[-70.44728636741638, 43.68057849494247], [-70.4472005367279, 43.68043107170742], [-70.44695913791656, 43.68049314469264], [-70.44703423976897, 43.680640567775185], [-70.44728636741638, 43.68057849494247]]], "type": "Polygon"}, "properties": {"lot_id": "0018", "lot_name": "g6", "lot_status": "open", "lot_type": "staff"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_76e5abfdb8cf450fa7feef54b5632d09_add({"features": [{"geometry": {"coordinates": [[[-70.44728636741638, 43.68057849494247], [-70.4472005367279, 43.68043107170742], [-70.44695913791656, 43.68049314469264], [-70.44703423976897, 43.680640567775185], [-70.44728636741638, 43.68057849494247]]], "type": "Polygon"}, "properties": {"lot_id": "0018", "lot_name": "g6", "lot_status": "open", "lot_type": "staff"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_7a5d94dfb68241e9a8850e555746569e.bindPopup(
+    geo_json_76e5abfdb8cf450fa7feef54b5632d09.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -1482,44 +1482,44 @@
     ,{"className": "staffpopup"});
                      
     
-        function geo_json_3e03c2125f124bcd8877702d5f11db00_styler(feature) {
+        function geo_json_8e6221c986f344528da408c7b007dbef_styler(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "black", "fillColor": "blue", "fillOpacity": "0.4"};
             }
         }
-        function geo_json_3e03c2125f124bcd8877702d5f11db00_highlighter(feature) {
+        function geo_json_8e6221c986f344528da408c7b007dbef_highlighter(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "blue", "fillColor": "grey", "weight": 3};
             }
         }
-        function geo_json_3e03c2125f124bcd8877702d5f11db00_onEachFeature(feature, layer) {
+        function geo_json_8e6221c986f344528da408c7b007dbef_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
-                    geo_json_3e03c2125f124bcd8877702d5f11db00.resetStyle(e.target);
+                    geo_json_8e6221c986f344528da408c7b007dbef.resetStyle(e.target);
                 },
                 mouseover: function(e) {
-                    e.target.setStyle(geo_json_3e03c2125f124bcd8877702d5f11db00_highlighter(e.target.feature));
+                    e.target.setStyle(geo_json_8e6221c986f344528da408c7b007dbef_highlighter(e.target.feature));
                 },
             });
         };
-        var geo_json_3e03c2125f124bcd8877702d5f11db00 = L.geoJson(null, {
-                onEachFeature: geo_json_3e03c2125f124bcd8877702d5f11db00_onEachFeature,
+        var geo_json_8e6221c986f344528da408c7b007dbef = L.geoJson(null, {
+                onEachFeature: geo_json_8e6221c986f344528da408c7b007dbef_onEachFeature,
             
-                style: geo_json_3e03c2125f124bcd8877702d5f11db00_styler,
+                style: geo_json_8e6221c986f344528da408c7b007dbef_styler,
         });
 
-        function geo_json_3e03c2125f124bcd8877702d5f11db00_add (data) {
-            geo_json_3e03c2125f124bcd8877702d5f11db00
+        function geo_json_8e6221c986f344528da408c7b007dbef_add (data) {
+            geo_json_8e6221c986f344528da408c7b007dbef
                 .addData(data)
-                .addTo(map_2b2738ca34b74b0e94cfabf86a500ed2);
+                .addTo(map_9ebd77f5f96f469eb18b2c835a71cd2a);
         }
-            geo_json_3e03c2125f124bcd8877702d5f11db00_add({"features": [{"geometry": {"coordinates": [[[-70.44895470142365, 43.68230875109923], [-70.44887959957123, 43.68211089922245], [-70.44824659824371, 43.68226607722024], [-70.44832706451416, 43.68248720517353], [-70.44895470142365, 43.68230875109923]]], "type": "Polygon"}, "properties": {"lot_id": "0020", "lot_name": "g15", "lot_status": "open", "lot_type": "staff"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_8e6221c986f344528da408c7b007dbef_add({"features": [{"geometry": {"coordinates": [[[-70.44895470142365, 43.68230875109923], [-70.44887959957123, 43.68211089922245], [-70.44824659824371, 43.68226607722024], [-70.44832706451416, 43.68248720517353], [-70.44895470142365, 43.68230875109923]]], "type": "Polygon"}, "properties": {"lot_id": "0020", "lot_name": "g15", "lot_status": "open", "lot_type": "staff"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_3e03c2125f124bcd8877702d5f11db00.bindPopup(
+    geo_json_8e6221c986f344528da408c7b007dbef.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -1543,44 +1543,44 @@
     ,{"className": "staffpopup"});
                      
     
-        function geo_json_5bca385029fa47f8b22598d802880907_styler(feature) {
+        function geo_json_22be5cb62c73452f8e9bc15f6fc52108_styler(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "black", "fillColor": "blue", "fillOpacity": "0.4"};
             }
         }
-        function geo_json_5bca385029fa47f8b22598d802880907_highlighter(feature) {
+        function geo_json_22be5cb62c73452f8e9bc15f6fc52108_highlighter(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "blue", "fillColor": "grey", "weight": 3};
             }
         }
-        function geo_json_5bca385029fa47f8b22598d802880907_onEachFeature(feature, layer) {
+        function geo_json_22be5cb62c73452f8e9bc15f6fc52108_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
-                    geo_json_5bca385029fa47f8b22598d802880907.resetStyle(e.target);
+                    geo_json_22be5cb62c73452f8e9bc15f6fc52108.resetStyle(e.target);
                 },
                 mouseover: function(e) {
-                    e.target.setStyle(geo_json_5bca385029fa47f8b22598d802880907_highlighter(e.target.feature));
+                    e.target.setStyle(geo_json_22be5cb62c73452f8e9bc15f6fc52108_highlighter(e.target.feature));
                 },
             });
         };
-        var geo_json_5bca385029fa47f8b22598d802880907 = L.geoJson(null, {
-                onEachFeature: geo_json_5bca385029fa47f8b22598d802880907_onEachFeature,
+        var geo_json_22be5cb62c73452f8e9bc15f6fc52108 = L.geoJson(null, {
+                onEachFeature: geo_json_22be5cb62c73452f8e9bc15f6fc52108_onEachFeature,
             
-                style: geo_json_5bca385029fa47f8b22598d802880907_styler,
+                style: geo_json_22be5cb62c73452f8e9bc15f6fc52108_styler,
         });
 
-        function geo_json_5bca385029fa47f8b22598d802880907_add (data) {
-            geo_json_5bca385029fa47f8b22598d802880907
+        function geo_json_22be5cb62c73452f8e9bc15f6fc52108_add (data) {
+            geo_json_22be5cb62c73452f8e9bc15f6fc52108
                 .addData(data)
-                .addTo(map_2b2738ca34b74b0e94cfabf86a500ed2);
+                .addTo(map_9ebd77f5f96f469eb18b2c835a71cd2a);
         }
-            geo_json_5bca385029fa47f8b22598d802880907_add({"features": [{"geometry": {"coordinates": [[[-70.44780671596527, 43.68172683195195], [-70.44777989387512, 43.68150570119603], [-70.44765651226044, 43.681544496124424], [-70.44747412204742, 43.68156389357923], [-70.44729709625244, 43.6815134601837], [-70.44724345207214, 43.68152509866336], [-70.44742047786713, 43.681835457287924], [-70.44780671596527, 43.68172683195195]]], "type": "Polygon"}, "properties": {"lot_id": "0018", "lot_name": "g6", "lot_status": "open", "lot_type": "staff"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_22be5cb62c73452f8e9bc15f6fc52108_add({"features": [{"geometry": {"coordinates": [[[-70.44780671596527, 43.68172683195195], [-70.44777989387512, 43.68150570119603], [-70.44765651226044, 43.681544496124424], [-70.44747412204742, 43.68156389357923], [-70.44729709625244, 43.6815134601837], [-70.44724345207214, 43.68152509866336], [-70.44742047786713, 43.681835457287924], [-70.44780671596527, 43.68172683195195]]], "type": "Polygon"}, "properties": {"lot_id": "0018", "lot_name": "g6", "lot_status": "open", "lot_type": "staff"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_5bca385029fa47f8b22598d802880907.bindPopup(
+    geo_json_22be5cb62c73452f8e9bc15f6fc52108.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -1604,44 +1604,44 @@
     ,{"className": "staffpopup"});
                      
     
-        function geo_json_e077b4ca5d524d6d83de62ab507e555e_styler(feature) {
+        function geo_json_48889792cd4d44f99c91ce310cdffbef_styler(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "black", "fillColor": "blue", "fillOpacity": "0.4"};
             }
         }
-        function geo_json_e077b4ca5d524d6d83de62ab507e555e_highlighter(feature) {
+        function geo_json_48889792cd4d44f99c91ce310cdffbef_highlighter(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "blue", "fillColor": "grey", "weight": 3};
             }
         }
-        function geo_json_e077b4ca5d524d6d83de62ab507e555e_onEachFeature(feature, layer) {
+        function geo_json_48889792cd4d44f99c91ce310cdffbef_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
-                    geo_json_e077b4ca5d524d6d83de62ab507e555e.resetStyle(e.target);
+                    geo_json_48889792cd4d44f99c91ce310cdffbef.resetStyle(e.target);
                 },
                 mouseover: function(e) {
-                    e.target.setStyle(geo_json_e077b4ca5d524d6d83de62ab507e555e_highlighter(e.target.feature));
+                    e.target.setStyle(geo_json_48889792cd4d44f99c91ce310cdffbef_highlighter(e.target.feature));
                 },
             });
         };
-        var geo_json_e077b4ca5d524d6d83de62ab507e555e = L.geoJson(null, {
-                onEachFeature: geo_json_e077b4ca5d524d6d83de62ab507e555e_onEachFeature,
+        var geo_json_48889792cd4d44f99c91ce310cdffbef = L.geoJson(null, {
+                onEachFeature: geo_json_48889792cd4d44f99c91ce310cdffbef_onEachFeature,
             
-                style: geo_json_e077b4ca5d524d6d83de62ab507e555e_styler,
+                style: geo_json_48889792cd4d44f99c91ce310cdffbef_styler,
         });
 
-        function geo_json_e077b4ca5d524d6d83de62ab507e555e_add (data) {
-            geo_json_e077b4ca5d524d6d83de62ab507e555e
+        function geo_json_48889792cd4d44f99c91ce310cdffbef_add (data) {
+            geo_json_48889792cd4d44f99c91ce310cdffbef
                 .addData(data)
-                .addTo(map_2b2738ca34b74b0e94cfabf86a500ed2);
+                .addTo(map_9ebd77f5f96f469eb18b2c835a71cd2a);
         }
-            geo_json_e077b4ca5d524d6d83de62ab507e555e_add({"features": [{"geometry": {"coordinates": [[[-70.44883131980896, 43.68036511909025], [-70.44870257377625, 43.68008966914069], [-70.44795155525208, 43.68023321363838], [-70.4481017589569, 43.68058237449641], [-70.44883131980896, 43.68036511909025]]], "type": "Polygon"}, "properties": {"lot_id": "0017", "lot_name": "g3", "lot_status": "open", "lot_type": "staff"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_48889792cd4d44f99c91ce310cdffbef_add({"features": [{"geometry": {"coordinates": [[[-70.44883131980896, 43.68036511909025], [-70.44870257377625, 43.68008966914069], [-70.44795155525208, 43.68023321363838], [-70.4481017589569, 43.68058237449641], [-70.44883131980896, 43.68036511909025]]], "type": "Polygon"}, "properties": {"lot_id": "0017", "lot_name": "g3", "lot_status": "open", "lot_type": "staff"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_e077b4ca5d524d6d83de62ab507e555e.bindPopup(
+    geo_json_48889792cd4d44f99c91ce310cdffbef.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -1665,44 +1665,44 @@
     ,{"className": "staffpopup"});
                      
     
-        function geo_json_c07f3fd470674a109a1eb07b1364c4df_styler(feature) {
+        function geo_json_0ceb19545d164f08ae30d9c51d9200a7_styler(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "black", "fillColor": "blue", "fillOpacity": "0.4"};
             }
         }
-        function geo_json_c07f3fd470674a109a1eb07b1364c4df_highlighter(feature) {
+        function geo_json_0ceb19545d164f08ae30d9c51d9200a7_highlighter(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "blue", "fillColor": "grey", "weight": 3};
             }
         }
-        function geo_json_c07f3fd470674a109a1eb07b1364c4df_onEachFeature(feature, layer) {
+        function geo_json_0ceb19545d164f08ae30d9c51d9200a7_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
-                    geo_json_c07f3fd470674a109a1eb07b1364c4df.resetStyle(e.target);
+                    geo_json_0ceb19545d164f08ae30d9c51d9200a7.resetStyle(e.target);
                 },
                 mouseover: function(e) {
-                    e.target.setStyle(geo_json_c07f3fd470674a109a1eb07b1364c4df_highlighter(e.target.feature));
+                    e.target.setStyle(geo_json_0ceb19545d164f08ae30d9c51d9200a7_highlighter(e.target.feature));
                 },
             });
         };
-        var geo_json_c07f3fd470674a109a1eb07b1364c4df = L.geoJson(null, {
-                onEachFeature: geo_json_c07f3fd470674a109a1eb07b1364c4df_onEachFeature,
+        var geo_json_0ceb19545d164f08ae30d9c51d9200a7 = L.geoJson(null, {
+                onEachFeature: geo_json_0ceb19545d164f08ae30d9c51d9200a7_onEachFeature,
             
-                style: geo_json_c07f3fd470674a109a1eb07b1364c4df_styler,
+                style: geo_json_0ceb19545d164f08ae30d9c51d9200a7_styler,
         });
 
-        function geo_json_c07f3fd470674a109a1eb07b1364c4df_add (data) {
-            geo_json_c07f3fd470674a109a1eb07b1364c4df
+        function geo_json_0ceb19545d164f08ae30d9c51d9200a7_add (data) {
+            geo_json_0ceb19545d164f08ae30d9c51d9200a7
                 .addData(data)
-                .addTo(map_2b2738ca34b74b0e94cfabf86a500ed2);
+                .addTo(map_9ebd77f5f96f469eb18b2c835a71cd2a);
         }
-            geo_json_c07f3fd470674a109a1eb07b1364c4df_add({"features": [{"geometry": {"coordinates": [[[-70.44818222522734, 43.67959308012122], [-70.4481017589569, 43.6794262563252], [-70.44788181781769, 43.679468932224154], [-70.44798374176025, 43.67966679281356], [-70.44818222522734, 43.67959308012122]]], "type": "Polygon"}, "properties": {"lot_id": "0022", "lot_name": "gc3", "lot_status": "open", "lot_type": "staff"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_0ceb19545d164f08ae30d9c51d9200a7_add({"features": [{"geometry": {"coordinates": [[[-70.44818222522734, 43.67959308012122], [-70.4481017589569, 43.6794262563252], [-70.44788181781769, 43.679468932224154], [-70.44798374176025, 43.67966679281356], [-70.44818222522734, 43.67959308012122]]], "type": "Polygon"}, "properties": {"lot_id": "0022", "lot_name": "gc3", "lot_status": "open", "lot_type": "staff"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_c07f3fd470674a109a1eb07b1364c4df.bindPopup(
+    geo_json_0ceb19545d164f08ae30d9c51d9200a7.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -1726,44 +1726,44 @@
     ,{"className": "staffpopup"});
                      
     
-        function geo_json_549c3099638545fd9d0e98a7e4225914_styler(feature) {
+        function geo_json_56ea68abf1974d3fb8f4ca975800b843_styler(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "black", "fillColor": "blue", "fillOpacity": "0.4"};
             }
         }
-        function geo_json_549c3099638545fd9d0e98a7e4225914_highlighter(feature) {
+        function geo_json_56ea68abf1974d3fb8f4ca975800b843_highlighter(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "blue", "fillColor": "grey", "weight": 3};
             }
         }
-        function geo_json_549c3099638545fd9d0e98a7e4225914_onEachFeature(feature, layer) {
+        function geo_json_56ea68abf1974d3fb8f4ca975800b843_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
-                    geo_json_549c3099638545fd9d0e98a7e4225914.resetStyle(e.target);
+                    geo_json_56ea68abf1974d3fb8f4ca975800b843.resetStyle(e.target);
                 },
                 mouseover: function(e) {
-                    e.target.setStyle(geo_json_549c3099638545fd9d0e98a7e4225914_highlighter(e.target.feature));
+                    e.target.setStyle(geo_json_56ea68abf1974d3fb8f4ca975800b843_highlighter(e.target.feature));
                 },
             });
         };
-        var geo_json_549c3099638545fd9d0e98a7e4225914 = L.geoJson(null, {
-                onEachFeature: geo_json_549c3099638545fd9d0e98a7e4225914_onEachFeature,
+        var geo_json_56ea68abf1974d3fb8f4ca975800b843 = L.geoJson(null, {
+                onEachFeature: geo_json_56ea68abf1974d3fb8f4ca975800b843_onEachFeature,
             
-                style: geo_json_549c3099638545fd9d0e98a7e4225914_styler,
+                style: geo_json_56ea68abf1974d3fb8f4ca975800b843_styler,
         });
 
-        function geo_json_549c3099638545fd9d0e98a7e4225914_add (data) {
-            geo_json_549c3099638545fd9d0e98a7e4225914
+        function geo_json_56ea68abf1974d3fb8f4ca975800b843_add (data) {
+            geo_json_56ea68abf1974d3fb8f4ca975800b843
                 .addData(data)
-                .addTo(map_2b2738ca34b74b0e94cfabf86a500ed2);
+                .addTo(map_9ebd77f5f96f469eb18b2c835a71cd2a);
         }
-            geo_json_549c3099638545fd9d0e98a7e4225914_add({"features": [{"geometry": {"coordinates": [[[-70.44691622257233, 43.6848167580352], [-70.44714689254761, 43.68445501408585], [-70.44688403606415, 43.68437063917804], [-70.44668287038803, 43.6847566291653], [-70.44691622257233, 43.6848167580352]]], "type": "Polygon"}, "properties": {"lot_id": "0016", "lot_name": "UNKNOWN", "lot_status": "open", "lot_type": "staff"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_56ea68abf1974d3fb8f4ca975800b843_add({"features": [{"geometry": {"coordinates": [[[-70.44691622257233, 43.6848167580352], [-70.44714689254761, 43.68445501408585], [-70.44688403606415, 43.68437063917804], [-70.44668287038803, 43.6847566291653], [-70.44691622257233, 43.6848167580352]]], "type": "Polygon"}, "properties": {"lot_id": "0016", "lot_name": "UNKNOWN", "lot_status": "open", "lot_type": "staff"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_549c3099638545fd9d0e98a7e4225914.bindPopup(
+    geo_json_56ea68abf1974d3fb8f4ca975800b843.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -1787,44 +1787,44 @@
     ,{"className": "staffpopup"});
                      
     
-        function geo_json_17a47616fd29427fbb2601e7d76a80a9_styler(feature) {
+        function geo_json_19812f9cdd4d4b5c91ff3e6e163634e1_styler(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "black", "fillColor": "blue", "fillOpacity": "0.4"};
             }
         }
-        function geo_json_17a47616fd29427fbb2601e7d76a80a9_highlighter(feature) {
+        function geo_json_19812f9cdd4d4b5c91ff3e6e163634e1_highlighter(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "blue", "fillColor": "grey", "weight": 3};
             }
         }
-        function geo_json_17a47616fd29427fbb2601e7d76a80a9_onEachFeature(feature, layer) {
+        function geo_json_19812f9cdd4d4b5c91ff3e6e163634e1_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
-                    geo_json_17a47616fd29427fbb2601e7d76a80a9.resetStyle(e.target);
+                    geo_json_19812f9cdd4d4b5c91ff3e6e163634e1.resetStyle(e.target);
                 },
                 mouseover: function(e) {
-                    e.target.setStyle(geo_json_17a47616fd29427fbb2601e7d76a80a9_highlighter(e.target.feature));
+                    e.target.setStyle(geo_json_19812f9cdd4d4b5c91ff3e6e163634e1_highlighter(e.target.feature));
                 },
             });
         };
-        var geo_json_17a47616fd29427fbb2601e7d76a80a9 = L.geoJson(null, {
-                onEachFeature: geo_json_17a47616fd29427fbb2601e7d76a80a9_onEachFeature,
+        var geo_json_19812f9cdd4d4b5c91ff3e6e163634e1 = L.geoJson(null, {
+                onEachFeature: geo_json_19812f9cdd4d4b5c91ff3e6e163634e1_onEachFeature,
             
-                style: geo_json_17a47616fd29427fbb2601e7d76a80a9_styler,
+                style: geo_json_19812f9cdd4d4b5c91ff3e6e163634e1_styler,
         });
 
-        function geo_json_17a47616fd29427fbb2601e7d76a80a9_add (data) {
-            geo_json_17a47616fd29427fbb2601e7d76a80a9
+        function geo_json_19812f9cdd4d4b5c91ff3e6e163634e1_add (data) {
+            geo_json_19812f9cdd4d4b5c91ff3e6e163634e1
                 .addData(data)
-                .addTo(map_2b2738ca34b74b0e94cfabf86a500ed2);
+                .addTo(map_9ebd77f5f96f469eb18b2c835a71cd2a);
         }
-            geo_json_17a47616fd29427fbb2601e7d76a80a9_add({"features": [{"geometry": {"coordinates": [[[-70.45197486877441, 43.67984913434764], [-70.45186221599579, 43.67950772846958], [-70.45194268226624, 43.67947669147525], [-70.45188367366791, 43.67932926553288], [-70.45157790184021, 43.679457293345635], [-70.45161008834839, 43.67950384884615], [-70.45172274112701, 43.67950384884615], [-70.45184075832367, 43.679724986980375], [-70.4517012834549, 43.67975602384628], [-70.45166909694672, 43.679721107371016], [-70.4514867067337, 43.679759903453395], [-70.45142233371735, 43.67989956914221], [-70.45149207115173, 43.67999655901263], [-70.45197486877441, 43.67984913434764]]], "type": "Polygon"}, "properties": {"lot_id": "0016", "lot_name": "g1", "lot_status": "open", "lot_type": "staff"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_19812f9cdd4d4b5c91ff3e6e163634e1_add({"features": [{"geometry": {"coordinates": [[[-70.45197486877441, 43.67984913434764], [-70.45186221599579, 43.67950772846958], [-70.45194268226624, 43.67947669147525], [-70.45188367366791, 43.67932926553288], [-70.45157790184021, 43.679457293345635], [-70.45161008834839, 43.67950384884615], [-70.45172274112701, 43.67950384884615], [-70.45184075832367, 43.679724986980375], [-70.4517012834549, 43.67975602384628], [-70.45166909694672, 43.679721107371016], [-70.4514867067337, 43.679759903453395], [-70.45142233371735, 43.67989956914221], [-70.45149207115173, 43.67999655901263], [-70.45197486877441, 43.67984913434764]]], "type": "Polygon"}, "properties": {"lot_id": "0016", "lot_name": "g1", "lot_status": "open", "lot_type": "staff"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_17a47616fd29427fbb2601e7d76a80a9.bindPopup(
+    geo_json_19812f9cdd4d4b5c91ff3e6e163634e1.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -1848,44 +1848,44 @@
     ,{"className": "staffpopup"});
                      
     
-        function geo_json_c982fb344d9444a7a33ccf7a938d34fb_styler(feature) {
+        function geo_json_03e9d60c20db44b8a1012fe9e51b6bf6_styler(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "black", "fillColor": "blue", "fillOpacity": "0.4"};
             }
         }
-        function geo_json_c982fb344d9444a7a33ccf7a938d34fb_highlighter(feature) {
+        function geo_json_03e9d60c20db44b8a1012fe9e51b6bf6_highlighter(feature) {
             switch(feature.properties.lot_id) {
                 default:
                     return {"color": "blue", "fillColor": "grey", "weight": 3};
             }
         }
-        function geo_json_c982fb344d9444a7a33ccf7a938d34fb_onEachFeature(feature, layer) {
+        function geo_json_03e9d60c20db44b8a1012fe9e51b6bf6_onEachFeature(feature, layer) {
             layer.on({
                 mouseout: function(e) {
-                    geo_json_c982fb344d9444a7a33ccf7a938d34fb.resetStyle(e.target);
+                    geo_json_03e9d60c20db44b8a1012fe9e51b6bf6.resetStyle(e.target);
                 },
                 mouseover: function(e) {
-                    e.target.setStyle(geo_json_c982fb344d9444a7a33ccf7a938d34fb_highlighter(e.target.feature));
+                    e.target.setStyle(geo_json_03e9d60c20db44b8a1012fe9e51b6bf6_highlighter(e.target.feature));
                 },
             });
         };
-        var geo_json_c982fb344d9444a7a33ccf7a938d34fb = L.geoJson(null, {
-                onEachFeature: geo_json_c982fb344d9444a7a33ccf7a938d34fb_onEachFeature,
+        var geo_json_03e9d60c20db44b8a1012fe9e51b6bf6 = L.geoJson(null, {
+                onEachFeature: geo_json_03e9d60c20db44b8a1012fe9e51b6bf6_onEachFeature,
             
-                style: geo_json_c982fb344d9444a7a33ccf7a938d34fb_styler,
+                style: geo_json_03e9d60c20db44b8a1012fe9e51b6bf6_styler,
         });
 
-        function geo_json_c982fb344d9444a7a33ccf7a938d34fb_add (data) {
-            geo_json_c982fb344d9444a7a33ccf7a938d34fb
+        function geo_json_03e9d60c20db44b8a1012fe9e51b6bf6_add (data) {
+            geo_json_03e9d60c20db44b8a1012fe9e51b6bf6
                 .addData(data)
-                .addTo(map_2b2738ca34b74b0e94cfabf86a500ed2);
+                .addTo(map_9ebd77f5f96f469eb18b2c835a71cd2a);
         }
-            geo_json_c982fb344d9444a7a33ccf7a938d34fb_add({"features": [{"geometry": {"coordinates": [[[-70.44544637203217, 43.68054357894585], [-70.44540345668793, 43.68042331257972], [-70.44532299041748, 43.68043495127087], [-70.4452210664749, 43.680279768536856], [-70.44507622718811, 43.680310805115774], [-70.445237159729, 43.68060565181469], [-70.44544637203217, 43.68054357894585]]], "type": "Polygon"}, "properties": {"lot_id": "0021", "lot_name": "gc2", "lot_status": "open", "lot_type": "staff"}, "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_03e9d60c20db44b8a1012fe9e51b6bf6_add({"features": [{"geometry": {"coordinates": [[[-70.44544637203217, 43.68054357894585], [-70.44540345668793, 43.68042331257972], [-70.44532299041748, 43.68043495127087], [-70.4452210664749, 43.680279768536856], [-70.44507622718811, 43.680310805115774], [-70.445237159729, 43.68060565181469], [-70.44544637203217, 43.68054357894585]]], "type": "Polygon"}, "properties": {"lot_id": "0021", "lot_name": "gc2", "lot_status": "open", "lot_type": "staff"}, "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-    geo_json_c982fb344d9444a7a33ccf7a938d34fb.bindPopup(
+    geo_json_03e9d60c20db44b8a1012fe9e51b6bf6.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -1908,4 +1908,10 @@
     }
     ,{"className": "staffpopup"});
                      
+    
+            map_9ebd77f5f96f469eb18b2c835a71cd2a.fitBounds(
+                [[43.6785, -70.4521], [43.6856, -70.4455]],
+                {}
+            );
+        
 </script>

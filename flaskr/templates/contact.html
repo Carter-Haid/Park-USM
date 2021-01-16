@@ -13,7 +13,7 @@
 <main style="flex: 1 0 auto;">
     <div class="navbar-fixed">
         <nav class="indigo darken-1" role="navigation">
-            <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">Campus Parking Map</a>
+            <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">Park USM</a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>
@@ -61,15 +61,15 @@
 
                         <div class='row'>
                             <div class='input-field col s12'>
-                                <input class='validate' type='text' name='email' id='email'/>
-                                <label for='email'>Email:</label>
+                                <input class='validate' type='email' name='contactemail' id='contactemail'/>
+                                <label for='contactemail'>Email:</label>
                             </div>
                         </div>
 
                         <div class='row'>
                             <div class='input-field col s12'>
                                 <input class='validate' type='text' name='message' id='message'/>
-                                <label for='email'>Message:</label>
+                                <label for='message'>Message:</label>
                             </div>
                         </div>
 
@@ -104,9 +104,13 @@
             © 2020 Carter Haid
             <a class="grey-text text-lighten-4 right" href="https://www.linkedin.com/in/carterhaid/">| Linkedin</a>
             <a class="grey-text text-lighten-4 right" href="https://github.com/Carter-Haid">| Github&nbsp</a>
-            <a class="grey-text text-lighten-4 right" href="https://carterhaid.com">Personal Website&nbsp</a>
+            <a class="grey-text text-lighten-4 right" href="https://carterhaid.com">Website&nbsp</a>
         </div>
         </div>
     </div>
 </footer>
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="{{url_for('static', filename='js/materialize.js')}}"></script>
+<script src="{{url_for('static', filename='js/init.js')}}"></script>
 </html>
