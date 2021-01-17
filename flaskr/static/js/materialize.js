@@ -521,6 +521,7 @@ if (jQuery) {
 
   $(document).ready(function(){
     $('.collapsible').collapsible();
+    $(".dropdown-trigger").dropdown({ hover: false });
   });
 }( jQuery ));;(function ($) {
 

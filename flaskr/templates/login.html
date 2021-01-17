@@ -10,12 +10,17 @@
     <meta name="theme-color" content="#B71C1C">
 </head>
 <body style="display: flex; min-height: 100vh;flex-direction: column;">
+<ul id="dropdown1" class="dropdown-content">
+    <li><a href="/portland">Portland</a></li>
+    <li><a href="/">Gorham</a></li>
+</ul>
 <main style="flex: 1 0 auto;">
     <div class="navbar-fixed">
         <nav class="indigo darken-1" role="navigation">
             <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">Park USM</a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="/">Home</a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-activates="dropdown1">Select Campus<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/contact">Contact</a></li>
                     <li><a href="/login">Admin</a></li>
@@ -76,10 +81,6 @@
                     </form>
                 </div>
             </div>
-
-            <!-- Compiled and minified CSS -->
-            <link rel="stylesheet"
-                  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 
             <!-- Compiled and minified JavaScript -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>

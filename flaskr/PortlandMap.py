@@ -68,7 +68,7 @@ def portlandmap():
             ).add_to(m)
         continue
 
-    m.fit_bounds([[43.6596, -70.2782], [43.6649, -70.27445]])
+    m.fit_bounds([[43.6589, -70.2777], [43.6656, -70.27427]])
     m.save("/home/carter/PycharmProjects/campusParkingMap/flaskr/static/PortlandMap.html")
 
 # In[ ]:
