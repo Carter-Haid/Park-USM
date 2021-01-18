@@ -5,3 +5,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('.carousel').carousel();
   });
+$(document).ready(function(){
+    $('.dropdown-trigger').dropdown({ hover: false });
+  });
+}

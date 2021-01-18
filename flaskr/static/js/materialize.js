@@ -521,7 +521,8 @@ if (jQuery) {
 
   $(document).ready(function(){
     $('.collapsible').collapsible();
-    $(".dropdown-trigger").dropdown({ hover: false });
+    $('.dropdown-trigger').dropdown({ hover: false });
+    $(".dropdown-button").dropdown({ hover: false });
   });
 }( jQuery ));;(function ($) {
 
@@ -786,6 +787,7 @@ if (jQuery) {
 
   $(document).ready(function(){
     $('.dropdown-button').dropdown();
+    $('.modal').modal();
   });
 }( jQuery ));
 ;(function($) {

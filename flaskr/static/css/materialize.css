@@ -6941,7 +6941,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .side-nav a {
-  color: rgba(0, 0, 0, 0.87);
+  color: #3949AC;
   display: block;
   font-size: 14px;
   font-weight: 500;

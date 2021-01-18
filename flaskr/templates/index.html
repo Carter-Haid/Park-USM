@@ -14,6 +14,10 @@
     <li><a href="/portland">Portland</a></li>
     <li><a href="/">Gorham</a></li>
 </ul>
+<ul id="dropdown2" class="dropdown-content">
+    <li><a href="/portland">Portland</a></li>
+    <li><a href="/">Gorham</a></li>
+</ul>
 <main style="flex: 1 0 auto;">
     <div class="navbar-fixed">
         <nav class="indigo darken-1" role="navigation">
@@ -27,7 +31,8 @@
                 </ul>
 
                 <ul id="nav-mobile" class="side-nav" class="edge left" class="draggable true">
-                    <li><a href="/">Home</a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-activates="dropdown2">Select Campus<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/contact">Contact</a></li>
                     <li><a href="/login">Admin</a></li>
@@ -38,6 +43,34 @@
     </div>
     <object data="{{url_for('static', filename='GorhamMap.html')}}"
             style="width:100%;height:100%;margin:0;position: fixed;flex-direction: column; z-index:3"></object>
+    <!-- Modal Trigger -->
+    <a style="position:fixed; z-index:3" class="waves-effect waves-light btn modal-trigger indigo darken-1" href="#modal_box">Current Closings & Parking Bans</a>
+
+    <!-- Modal Structure -->
+    <div id="modal_box" class="modal bottom-sheet">
+        <div class="modal-content">
+            <h5>Closings and Parking Bans</h5>
+            <ul class="collection">
+                <li class="collection-item avatar">
+                    <img src="images/Gorham.png" alt="" class="circle">
+                    <span class="title">Gorham</span>
+                    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                </li>
+                <li class="collection-item avatar">
+                    <img src="http://www.freetimelearning.com/images/V-V-Ramana-Reddy.jpg" alt="" class="circle">
+                    <span class="title">Portland</span>
+                    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                </li>
+                <li class="collection-item avatar">
+                    <i class="material-icons circle green">account_circle</i>
+                    <span class="title">Lewiston</span>
+                    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
 </main>
 </body>
 <footer style="z-index:3" class="page-footer-fixed indigo darken-1">
