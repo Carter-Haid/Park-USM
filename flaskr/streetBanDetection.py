@@ -11,10 +11,14 @@ def pogo_status(location):
 
 baninfo = pogo_status("University of Southern Maine")
 if not baninfo:
-    status = "USM Gorham Campus is Open"
+    status = "Open"
+    usmgorhamtextcolor = "green"
+    usmgorhamicon = "check_circle_outline"
 else:
-    status = "USM Gorham Campus is Closed"
-print(status + str(baninfo))
+    status = "Closed"
+    usmgorhamtextcolor = "red"
+    usmgorhamicon = "warning"
+gorhamopen = status
 
 
 def pogo_status(location):
@@ -26,10 +30,14 @@ def pogo_status(location):
 
 baninfo = pogo_status("University of Southern Maine")
 if not baninfo:
-    status = "USM Portland Campus is Open"
+    status = "Open"
+    usmportlandtextcolor = "green"
+    usmportlandicon = "check_circle_outline"
 else:
-    status = "USM Portland Campus is Closed"
-print(status + str(baninfo))
+    status = "Closed"
+    usmportlandtextcolor = "red"
+    usmportlandicon = "warning"
+portlandopen = status
 
 
 def lac_status(location):
@@ -41,10 +49,14 @@ def lac_status(location):
 
 baninfo = lac_status("University of Southern Maine, L-A")
 if not baninfo:
-    status = "USM Lewiston Campus is Open"
+    status = "Open"
+    usmlewistontextcolor = "green"
+    usmlewistonicon = "check_circle_outline"
 else:
-    status = "USM Lewiston Campus is Closed"
-print(status + str(baninfo))
+    status = "Closed"
+    usmlewistontextcolor = "red"
+    usmlewistonicon = "warning"
+lewistonopen = status
 
 
 def gorham_status(location):
@@ -56,10 +68,14 @@ def gorham_status(location):
 
 baninfo = gorham_status("Gorham Parking Ban")
 if not baninfo:
-    status = "No Gorham Parking Ban In Effect"
+    status = "Not In Effect"
+    gorhamtextcolor = "green"
+    gorhamicon = "check_circle_outline"
 else:
-    status = "Gorham Parking Ban In Effect"
-print(status + str(baninfo))
+    status = "In Effect"
+    gorhamtextcolor = "red"
+    gorhamicon = "warning"
+gorhamstreetstatus = status
 
 
 def portland_status(location):
@@ -71,10 +87,14 @@ def portland_status(location):
 
 baninfo = portland_status("Portland Parking Ban")
 if not baninfo:
-    status = "No Portland Parking Ban In Effect"
+    status = "Not In Effect"
+    portlandtextcolor = "green"
+    portlandicon = "check_circle_outline"
 else:
-    status = "Portland Parking Ban In Effect"
-print(status + str(baninfo))
+    status = "In Effect"
+    portlandtextcolor = "red"
+    portlandicon = "warning"
+portlandstreetstatus = status
 
 
 def lewiston_status(location):
@@ -86,8 +106,11 @@ def lewiston_status(location):
 
 baninfo = lewiston_status("Lewiston Parking Ban")
 if not baninfo:
-    status = "No Lewiston Parking Ban In Effect"
+    status = "Not In Effect"
+    lewistontextcolor = "green"
+    lewistonicon = "check_circle_outline"
 else:
-    status = "Lewiston Parking Ban In Effect"
-print(status + str(baninfo))
-
+    status = "In Effect"
+    lewistontextcolor = "red"
+    lewistonicon = "warning"
+lewistonstreetstatus = status

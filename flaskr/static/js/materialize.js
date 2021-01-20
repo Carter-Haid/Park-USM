@@ -788,6 +788,7 @@ if (jQuery) {
   $(document).ready(function(){
     $('.dropdown-button').dropdown();
     $('.modal').modal();
+    $('.fixed-action-btn').floatingActionButton();
   });
 }( jQuery ));
 ;(function($) {

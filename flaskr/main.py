@@ -7,8 +7,9 @@
 from flask import Flask, render_template, request, redirect
 from flaskr.GorhamMap import gorhammap
 from flaskr.PortlandMap import portlandmap
+from streetBanDetection import *
 import pyrebase
-import smtplib
+
 
 app = Flask(__name__,
             static_folder="/home/carter/PycharmProjects/campusParkingMap/flaskr/static",
@@ -51,13 +52,26 @@ def login():
 @app.route('/')
 def home():
     gorhammap()
-    return render_template('index.html')
-
+    return render_template('index.html', gorhamopen=gorhamopen, portlandopen=portlandopen, lewistonopen=lewistonopen,
+                           gorhamstreetstatus=gorhamstreetstatus, portlandstreetstatus=portlandstreetstatus,
+                           lewistonstreetstatus=lewistonstreetstatus, usmgorhamtextcolor=usmgorhamtextcolor,
+                           usmgorhamicon=usmgorhamicon, usmportlandtextcolor=usmportlandtextcolor,
+                           usmportlandicon=usmportlandicon, usmlewistontextcolor=usmlewistontextcolor,
+                           usmlewistonicon=usmlewistonicon, gorhamtextcolor=gorhamtextcolor, gorhamicon=gorhamicon,
+                           portlandtextcolor=portlandtextcolor, portlandicon=portlandicon,
+                           lewistontextcolor=lewistontextcolor, lewistonicon=lewistonicon)
 
 @app.route('/portland')
 def portland():
     portlandmap()
-    return render_template('portlandmap.html')
+    return render_template('portlandmap.html', gorhamopen=gorhamopen, portlandopen=portlandopen, lewistonopen=lewistonopen,
+                           gorhamstreetstatus=gorhamstreetstatus, portlandstreetstatus=portlandstreetstatus,
+                           lewistonstreetstatus=lewistonstreetstatus, usmgorhamtextcolor=usmgorhamtextcolor,
+                           usmgorhamicon=usmgorhamicon, usmportlandtextcolor=usmportlandtextcolor,
+                           usmportlandicon=usmportlandicon, usmlewistontextcolor=usmlewistontextcolor,
+                           usmlewistonicon=usmlewistonicon, gorhamtextcolor=gorhamtextcolor, gorhamicon=gorhamicon,
+                           portlandtextcolor=portlandtextcolor, portlandicon=portlandicon,
+                           lewistontextcolor=lewistontextcolor, lewistonicon=lewistonicon)
 
 
 @app.route('/about')
@@ -67,6 +81,14 @@ def about():
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
+    if request.method == 'POST':
+        firstname = request.form['firstname']
+        lastname = request.form['lastname']
+        contactemail = request.form['contactemail']
+        try:
+            print(firstname + " " + lastname + " " + contactemail)
+        except:
+            print("error")
     return render_template('contact.html')
 
 
