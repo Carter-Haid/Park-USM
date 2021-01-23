@@ -3,13 +3,10 @@
 
 # In[ ]:
 
-
+import pyrebase
 from flask import Flask, render_template, request, redirect
-from flaskr.GorhamMap import gorhammap
 from flaskr.PortlandMap import portlandmap
 from streetBanDetection import *
-import pyrebase
-
 
 app = Flask(__name__,
             static_folder="/home/carter/PycharmProjects/campusParkingMap/flaskr/static",
@@ -52,26 +49,19 @@ def login():
 @app.route('/')
 def home():
     gorhammap()
-    return render_template('index.html', gorhamopen=gorhamopen, portlandopen=portlandopen, lewistonopen=lewistonopen,
-                           gorhamstreetstatus=gorhamstreetstatus, portlandstreetstatus=portlandstreetstatus,
-                           lewistonstreetstatus=lewistonstreetstatus, usmgorhamtextcolor=usmgorhamtextcolor,
-                           usmgorhamicon=usmgorhamicon, usmportlandtextcolor=usmportlandtextcolor,
-                           usmportlandicon=usmportlandicon, usmlewistontextcolor=usmlewistontextcolor,
-                           usmlewistonicon=usmlewistonicon, gorhamtextcolor=gorhamtextcolor, gorhamicon=gorhamicon,
-                           portlandtextcolor=portlandtextcolor, portlandicon=portlandicon,
-                           lewistontextcolor=lewistontextcolor, lewistonicon=lewistonicon)
+    return render_template('index.html', gorhamopen=gorhamopen, portlandopen=portlandopen,
+                           lewistonopen=lewistonopen, gorhamstreetstatus=gorhamstreetstatus,
+                           portlandstreetstatus=portlandstreetstatus, lewistonstreetstatus=lewistonstreetstatus,
+                           gorhambancounter=gorhammap(), portlandbancounter=portlandmap())
+
 
 @app.route('/portland')
 def portland():
     portlandmap()
-    return render_template('portlandmap.html', gorhamopen=gorhamopen, portlandopen=portlandopen, lewistonopen=lewistonopen,
-                           gorhamstreetstatus=gorhamstreetstatus, portlandstreetstatus=portlandstreetstatus,
-                           lewistonstreetstatus=lewistonstreetstatus, usmgorhamtextcolor=usmgorhamtextcolor,
-                           usmgorhamicon=usmgorhamicon, usmportlandtextcolor=usmportlandtextcolor,
-                           usmportlandicon=usmportlandicon, usmlewistontextcolor=usmlewistontextcolor,
-                           usmlewistonicon=usmlewistonicon, gorhamtextcolor=gorhamtextcolor, gorhamicon=gorhamicon,
-                           portlandtextcolor=portlandtextcolor, portlandicon=portlandicon,
-                           lewistontextcolor=lewistontextcolor, lewistonicon=lewistonicon)
+    return render_template('portlandmap.html', gorhamopen=gorhamopen, portlandopen=portlandopen,
+                           lewistonopen=lewistonopen, gorhamstreetstatus=gorhamstreetstatus,
+                           portlandstreetstatus=portlandstreetstatus, lewistonstreetstatus=lewistonstreetstatus,
+                           gorhambancounter=gorhammap(), portlandbancounter=portlandmap())
 
 
 @app.route('/about')
