@@ -55,64 +55,64 @@
                          alt="" class="circle">
                     <span class="title"><u>Gorham Campus</u></span>
                     <p>- Campus is Currently:
-                        <span style="color: black"> {{ gorhamopen }} </span>
+                        <span style="color: {{ usmgorcolor }}"> {{ gorhamopen }} </span>
                     <p>- Parking Lots Closed:
-                        <span style="color:{{ gorhamlotcolor }}"> {{ gorhambancounter }} </span>
+                        <span style="color:{{ gorbancolor }}"> {{ gorhambancounter }} </span>
                     </p>
-                    <a href="#!" class="secondary-content"><i style="color:black"
-                                                              class="material-icons">check_circle_outline</i></a>
+                    <a href="#!" class="secondary-content"><i style="color: {{ usmgorhamiconcolor }}"
+                                                              class="material-icons">{{ usmgorhamicon }}</i></a>
                 </li>
                 <li class="collection-item avatar">
                     <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/USMPortland.png?raw=true"
                          alt="" class="circle">
                     <span class="title"><u>Portland Campus</u></span>
                     <p>- Campus is Currently:
-                        <span style="color:black"> {{ portlandopen }} </span>
+                        <span style="color:{{ usmporcolor }}"> {{ portlandopen }} </span>
                     </p>
                     <p>- Parking Lots Closed:
-                        <span style="color:black"> {{ portlandbancounter }} </span>
+                        <span style="color:{{ porbancolor }}"> {{ portlandbancounter }} </span>
                     </p>
-                    <a href="#!" class="secondary-content"><i style="color:black"
-                                                              class="material-icons">check_circle_outline</i></a>
+                    <a href="#!" class="secondary-content"><i style="color: {{ usmportlandiconcolor }}"
+                                                              class="material-icons">{{ usmportlandicon }}</i></a>
                 </li>
                 <li class="collection-item avatar">
                     <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/USMLewiston.png?raw=true"
                          alt="" class="circle">
                     <span class="title"><u>Lewiston Campus</u></span>
                     <p>- Campus is Currently:
-                        <span style="color:black"> {{ lewistonopen }} </span>
+                        <span style="color: {{usmlewcolor}}"> {{ lewistonopen }} </span>
                     <p>- Parking Lots Closed:
-                        <span style="color:black"> 0 </span>
+                        <span style="color: green"> 0 </span>
                     </p>
-                    <a href="#!" class="secondary-content"><i style="color:black"
-                                                              class="material-icons">check_circle_outline</i></a>
+                    <a href="#!" class="secondary-content"><i style="color: {{ usmlewistoniconcolor }}"
+                                                              class="material-icons">{{ usmlewistonicon }}</i></a>
                 </li>
                 <li class="collection-item avatar">
                     <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/Gorham.png?raw=true"
                          alt="" class="circle">
                     <span class="title"><u>Town of Gorham</u></span>
                     <p>- Parking Ban:
-                        <span style="color:black"> {{ gorhamstreetstatus }} </span></p>
-                    <a href="#!" class="secondary-content"><i style="color:black"
-                                                              class="material-icons">warning</i></a>
+                        <span style="color:{{ gorcolor }}"> {{ gorhamstreetstatus }} </span></p>
+                    <a href="#!" class="secondary-content"><i style="color: {{ gorhamstreeticoncolor}}"
+                                                              class="material-icons">{{ gorhamstreeticon }}</i></a>
                 </li>
                 <li class="collection-item avatar">
                     <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/Portland.png?raw=true"
                          alt="" class="circle">
                     <span class="title"><u>City of Portland</u></span>
                     <p>- Parking Ban:
-                        <span style="color:black"> {{ portlandstreetstatus }} </span></p>
-                    <a href="#!" class="secondary-content"><i style="color:black"
-                                                              class="material-icons">warning</i></a>
+                        <span style="color:{{ porcolor }}"> {{ portlandstreetstatus }} </span></p>
+                    <a href="#!" class="secondary-content"><i style="color: {{ portlandstreeticoncolor }}"
+                                                              class="material-icons">{{ portlandstreeticon }}</i></a>
                 </li>
                 <li class="collection-item avatar">
                     <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/Lewiston.png?raw=true"
                          alt="" class="circle">
                     <span class="title"><u>City of Lewiston</u></span>
                     <p>- Parking Ban:
-                        <span style="color:black"> {{ lewistonstreetstatus }} </span></p>
-                    <a href="#!" class="secondary-content"><i style="color:black"
-                                                              class="material-icons">warning</i></a>
+                        <span style="color: {{ lewcolor }}"> {{ lewistonstreetstatus }} </span></p>
+                    <a href="#!" class="secondary-content"><i style="color: {{ lewistonstreeticoncolor"
+                                                              class="material-icons">{{ lewistonstreeticon }} </i></a>
                 </li>
             </ul>
         </div>

@@ -7,6 +7,7 @@ import pyrebase
 from flask import Flask, render_template, request, redirect
 from flaskr.PortlandMap import portlandmap
 from streetBanDetection import *
+from ModalVariableStyle import *
 
 app = Flask(__name__,
             static_folder="/home/carter/PycharmProjects/campusParkingMap/flaskr/static",
@@ -52,7 +53,12 @@ def home():
     return render_template('index.html', gorhamopen=gorhamopen, portlandopen=portlandopen,
                            lewistonopen=lewistonopen, gorhamstreetstatus=gorhamstreetstatus,
                            portlandstreetstatus=portlandstreetstatus, lewistonstreetstatus=lewistonstreetstatus,
-                           gorhambancounter=gorhammap(), portlandbancounter=portlandmap())
+                           gorhambancounter=gorhammap(), portlandbancounter=portlandmap(), usmgorhamicon=usmgorhamicon,
+                           usmportlandicon=usmportlandicon, usmlewistonicon=usmlewistonicon,
+                           gorhamstreeticon=gorhamstreeticon, portlandstreeticon=portlandstreeticon,
+                           lewistonstreeticon=lewistonstreeticon, gorbancolor=gorbancolor, porbancolor=porbancolor,
+                           usmgorbancolor=usmgorcolor, usmgorcolor=usmgorcolor, usmporcolor=usmporcolor,
+                           usmlewcolor=usmlewcolor, gorcolor=gorcolor, porcolor=porcolor, lewcolor=lewcolor)
 
 
 @app.route('/portland')
@@ -61,7 +67,12 @@ def portland():
     return render_template('portlandmap.html', gorhamopen=gorhamopen, portlandopen=portlandopen,
                            lewistonopen=lewistonopen, gorhamstreetstatus=gorhamstreetstatus,
                            portlandstreetstatus=portlandstreetstatus, lewistonstreetstatus=lewistonstreetstatus,
-                           gorhambancounter=gorhammap(), portlandbancounter=portlandmap())
+                           gorhambancounter=gorhammap(), portlandbancounter=portlandmap(), usmgorhamicon=usmgorhamicon,
+                           usmportlandicon=usmportlandicon, usmlewistonicon=usmlewistonicon,
+                           gorhamstreeticon=gorhamstreeticon, portlandstreeticon=portlandstreeticon,
+                           lewistonstreeticon=lewistonstreeticon, gorbancolor=gorbancolor, porbancolor=porbancolor,
+                           usmgorbancolor=usmgorcolor, usmgorcolor=usmgorcolor, usmporcolor=usmporcolor,
+                           usmlewcolor=usmlewcolor, gorcolor=gorcolor, porcolor=porcolor, lewcolor=lewcolor)
 
 
 @app.route('/about')
