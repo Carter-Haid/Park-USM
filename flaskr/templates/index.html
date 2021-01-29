@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0"/>
+    <meta name="description" content="Interactive Campus Parking Map for The University of Southern Maine - Gorham">
     <title>Campus Parking Project</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" media="screen,projection" href="{{ url_for('static', filename='css/materialize.css') }}">
+    <link rel="preload" as="font" href="/static/fonts/roboto/Roboto-Medium.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/static/fonts/roboto/Roboto-Regular.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet preload" media="screen,projection" href="{{ url_for('static', filename='css/materialize.css') }}" as="style">
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap">
     <meta name="theme-color" content="#B71C1C">
 </head>
 <body style="display: flex; min-height: 100vh;flex-direction: column;">
@@ -42,7 +45,7 @@
         </nav>
     </div>
     <object data="{{url_for('static', filename='GorhamMap.html')}}"
-            style="width:100%;height:100%;margin:0;position: fixed;flex-direction: column; z-index:3"></object>
+            style="width:100%;height:100%;margin:0;position: fixed;flex-direction: column; z-index:3">Gorham Campus Map</object>
 
     <div class="fixed-action-btn">
         <a class="btn-floating btn-large indigo darken-1" href="#modal_box">
@@ -55,7 +58,7 @@
             <h4>Closings & Parking Bans:</h4>
             <ul class="collection">
                 <li class="collection-item avatar">
-                    <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/USMGorham.png?raw=true"
+                    <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/USMGorham.jp2?raw=true"
                          alt="" class="circle">
                     <span class="title"><u>Gorham Campus</u></span>
                     <p>- Campus is Currently:
@@ -67,7 +70,7 @@
                                                               class="material-icons">{{ usmgorhamicon }}</i></a>
                 </li>
                 <li class="collection-item avatar">
-                    <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/USMPortland.png?raw=true"
+                    <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/USMPortland.jp2?raw=true"
                          alt="" class="circle">
                     <span class="title"><u>Portland Campus</u></span>
                     <p>- Campus is Currently:
@@ -80,7 +83,7 @@
                                                               class="material-icons">{{ usmportlandicon }}</i></a>
                 </li>
                 <li class="collection-item avatar">
-                    <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/USMLewiston.png?raw=true"
+                    <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/USMLewiston.jp2?raw=true"
                          alt="" class="circle">
                     <span class="title"><u>Lewiston Campus</u></span>
                     <p>- Campus is Currently:
@@ -92,7 +95,7 @@
                                                               class="material-icons">{{ usmlewistonicon }}</i></a>
                 </li>
                 <li class="collection-item avatar">
-                    <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/Gorham.png?raw=true"
+                    <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/Gorham.jp2?raw=true"
                          alt="" class="circle">
                     <span class="title"><u>Town of Gorham</u></span>
                     <p>- Parking Ban:
@@ -101,7 +104,7 @@
                                                               class="material-icons">{{ gorhamstreeticon }}</i></a>
                 </li>
                 <li class="collection-item avatar">
-                    <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/Portland.png?raw=true"
+                    <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/Portland.jp2?raw=true"
                          alt="" class="circle">
                     <span class="title"><u>City of Portland</u></span>
                     <p>- Parking Ban:
@@ -110,12 +113,12 @@
                                                               class="material-icons">{{ portlandstreeticon }}</i></a>
                 </li>
                 <li class="collection-item avatar">
-                    <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/Lewiston.png?raw=true"
+                    <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/Lewiston.jp2?raw=true"
                          alt="" class="circle">
                     <span class="title"><u>City of Lewiston</u></span>
                     <p>- Parking Ban:
                         <span style="color: {{ lewcolor }}"> {{ lewistonstreetstatus }} </span></p>
-                    <a href="#!" class="secondary-content"><i style="color: {{ lewistonstreeticoncolor"
+                    <a href="#!" class="secondary-content"><i style="color: {{ lewistonstreeticoncolor }}"
                                                               class="material-icons">{{ lewistonstreeticon }} </i></a>
                 </li>
             </ul>
@@ -134,10 +137,7 @@
     </div>
 </footer>
 <!--  Scripts-->
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="{{url_for('static', filename='js/materialize.js')}}"></script>
 <script src="{{url_for('static', filename='js/init.js')}}"></script>
-</div>
-</div>
-</body>
 </html>

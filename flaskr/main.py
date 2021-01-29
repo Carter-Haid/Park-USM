@@ -4,14 +4,15 @@
 # In[ ]:
 
 import pyrebase
+from flask_compress import Compress
 from flask import Flask, render_template, request, redirect
-from flaskr.PortlandMap import portlandmap
-from streetBanDetection import *
 from ModalVariableStyle import *
+from flaskr.PortlandMap import portlandmap
 
 app = Flask(__name__,
             static_folder="/home/carter/PycharmProjects/campusParkingMap/flaskr/static",
             template_folder="/home/carter/PycharmProjects/campusParkingMap/flaskr/templates")
+Compress(app)
 
 config = {
     "apiKey": "AIzaSyCXlNX11kHA9eXg_iGSfVrYniNLLNUF3nc",
@@ -29,6 +30,7 @@ auth = firebase.auth()
 app.config['ENV'] = 'development'
 app.config['DEBUG'] = True
 app.config['TESTING'] = True
+app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 
@@ -50,29 +52,39 @@ def login():
 @app.route('/')
 def home():
     gorhammap()
-    return render_template('index.html', gorhamopen=gorhamopen, portlandopen=portlandopen,
-                           lewistonopen=lewistonopen, gorhamstreetstatus=gorhamstreetstatus,
-                           portlandstreetstatus=portlandstreetstatus, lewistonstreetstatus=lewistonstreetstatus,
-                           gorhambancounter=gorhammap(), portlandbancounter=portlandmap(), usmgorhamicon=usmgorhamicon,
-                           usmportlandicon=usmportlandicon, usmlewistonicon=usmlewistonicon,
-                           gorhamstreeticon=gorhamstreeticon, portlandstreeticon=portlandstreeticon,
-                           lewistonstreeticon=lewistonstreeticon, gorbancolor=gorbancolor, porbancolor=porbancolor,
-                           usmgorbancolor=usmgorcolor, usmgorcolor=usmgorcolor, usmporcolor=usmporcolor,
-                           usmlewcolor=usmlewcolor, gorcolor=gorcolor, porcolor=porcolor, lewcolor=lewcolor)
+    return render_template('index.html', gorhamopen=gorhamcampus()[3], portlandopen=portlandcampus()[3],
+                           lewistonopen=lewistoncampus()[3], gorhamstreetstatus=gorstreetbancolor()[2],
+                           portlandstreetstatus=porstreetbancolor()[2], lewistonstreetstatus=lewstreetbancolor()[3],
+                           gorhambancounter=gorhammap(), portlandbancounter=portlandmap(),
+                           usmgorhamicon=gorhamcampus()[1], usmportlandicon=portlandcampus()[1],
+                           usmlewistonicon=lewistoncampus()[1],
+                           gorhamstreeticon=gorstreetbancolor()[0], portlandstreeticon=porstreetbancolor()[0],
+                           lewistonstreeticon=lewstreetbancolor()[1], gorbancolor=gorbancolorfunction(),
+                           porbancolor=porbancolorfunction(), usmgorcolor=gorhamcampus()[0],
+                           usmporcolor=portlandcampus()[0], usmlewcolor=lewistoncampus()[0], gorcolor=gorstreetbancolor()[3],
+                           porcolor=porstreetbancolor()[3], lewcolor=lewstreetbancolor()[0],
+                           gorhamstreeticoncolor=gorstreetbancolor()[1], portlandstreeticoncolor=porstreetbancolor()[1],
+                           lewistonstreeticoncolor=lewstreetbancolor()[2], usmlewistoniconcolor=lewistoncampus()[2],
+                           usmportlandiconcolor=portlandcampus()[2], usmgorhamiconcolor=gorhamcampus()[2])
 
 
 @app.route('/portland')
 def portland():
     portlandmap()
-    return render_template('portlandmap.html', gorhamopen=gorhamopen, portlandopen=portlandopen,
-                           lewistonopen=lewistonopen, gorhamstreetstatus=gorhamstreetstatus,
-                           portlandstreetstatus=portlandstreetstatus, lewistonstreetstatus=lewistonstreetstatus,
-                           gorhambancounter=gorhammap(), portlandbancounter=portlandmap(), usmgorhamicon=usmgorhamicon,
-                           usmportlandicon=usmportlandicon, usmlewistonicon=usmlewistonicon,
-                           gorhamstreeticon=gorhamstreeticon, portlandstreeticon=portlandstreeticon,
-                           lewistonstreeticon=lewistonstreeticon, gorbancolor=gorbancolor, porbancolor=porbancolor,
-                           usmgorbancolor=usmgorcolor, usmgorcolor=usmgorcolor, usmporcolor=usmporcolor,
-                           usmlewcolor=usmlewcolor, gorcolor=gorcolor, porcolor=porcolor, lewcolor=lewcolor)
+    return render_template('portlandmap.html', gorhamopen=gorhamcampus()[3], portlandopen=portlandcampus()[3],
+                           lewistonopen=lewistoncampus()[3], gorhamstreetstatus=gorstreetbancolor()[2],
+                           portlandstreetstatus=porstreetbancolor()[2], lewistonstreetstatus=lewstreetbancolor()[3],
+                           gorhambancounter=gorhammap(), portlandbancounter=portlandmap(),
+                           usmgorhamicon=gorhamcampus()[1], usmportlandicon=portlandcampus()[1],
+                           usmlewistonicon=lewistoncampus()[1],
+                           gorhamstreeticon=gorstreetbancolor()[0], portlandstreeticon=porstreetbancolor()[0],
+                           lewistonstreeticon=lewstreetbancolor()[1], gorbancolor=gorbancolorfunction(),
+                           porbancolor=porbancolorfunction(), usmgorcolor=gorhamcampus()[0],
+                           usmporcolor=portlandcampus()[0], usmlewcolor=lewistoncampus()[0], gorcolor=gorstreetbancolor()[3],
+                           porcolor=porstreetbancolor()[3], lewcolor=lewstreetbancolor()[0],
+                           gorhamstreeticoncolor=gorstreetbancolor()[1], portlandstreeticoncolor=porstreetbancolor()[1],
+                           lewistonstreeticoncolor=lewstreetbancolor()[2], usmlewistoniconcolor=lewistoncampus()[2],
+                           usmportlandiconcolor=portlandcampus()[2], usmgorhamiconcolor=gorhamcampus()[2])
 
 
 @app.route('/about')
@@ -111,6 +123,7 @@ def admincontrols():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host="127.0.0.1", port=5000, threaded=True)
+
 
 # In[ ]:

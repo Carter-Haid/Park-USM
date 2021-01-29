@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0"/>
+    <meta name="description" content="Univeristy of Southern Maine - Campus Parking Project - Login">
     <title>Login</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" media="screen,projection" href="{{ url_for('static', filename='css/materialize.css') }}">
@@ -26,7 +27,7 @@
                     <li><a href="/login">Login</a></li>
                 </ul>
 
-                <ul id="nav-mobile" class="side-nav" class="edge left" class="draggable true">
+                <ul id="nav-mobile" class="side-nav edge left draggable true">
                     <li><a href="/">Gorham Campus</a></li>
                     <li><a href="/portland">Portland Campus</a></li>
                     <li><a href="/about">About</a></li>
@@ -101,10 +102,9 @@
             <a class="grey-text text-lighten-4 right" href="https://carterhaid.com">Website&nbsp</a>
         </div>
         </div>
-    </div>
 </footer>
 <!--  Scripts-->
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="{{url_for('static', filename='js/materialize.js')}}"></script>
 <script src="{{url_for('static', filename='js/init.js')}}"></script>
 </html>
