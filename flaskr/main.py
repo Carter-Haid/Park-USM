@@ -4,8 +4,9 @@
 # In[ ]:
 
 import pyrebase
+import ssl
 from flask_compress import Compress
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, make_response, send_from_directory
 from ModalVariableStyle import *
 from flaskr.PortlandMap import portlandmap
 
@@ -61,7 +62,8 @@ def home():
                            gorhamstreeticon=gorstreetbancolor()[0], portlandstreeticon=porstreetbancolor()[0],
                            lewistonstreeticon=lewstreetbancolor()[1], gorbancolor=gorbancolorfunction(),
                            porbancolor=porbancolorfunction(), usmgorcolor=gorhamcampus()[0],
-                           usmporcolor=portlandcampus()[0], usmlewcolor=lewistoncampus()[0], gorcolor=gorstreetbancolor()[3],
+                           usmporcolor=portlandcampus()[0], usmlewcolor=lewistoncampus()[0],
+                           gorcolor=gorstreetbancolor()[3],
                            porcolor=porstreetbancolor()[3], lewcolor=lewstreetbancolor()[0],
                            gorhamstreeticoncolor=gorstreetbancolor()[1], portlandstreeticoncolor=porstreetbancolor()[1],
                            lewistonstreeticoncolor=lewstreetbancolor()[2], usmlewistoniconcolor=lewistoncampus()[2],
@@ -80,7 +82,8 @@ def portland():
                            gorhamstreeticon=gorstreetbancolor()[0], portlandstreeticon=porstreetbancolor()[0],
                            lewistonstreeticon=lewstreetbancolor()[1], gorbancolor=gorbancolorfunction(),
                            porbancolor=porbancolorfunction(), usmgorcolor=gorhamcampus()[0],
-                           usmporcolor=portlandcampus()[0], usmlewcolor=lewistoncampus()[0], gorcolor=gorstreetbancolor()[3],
+                           usmporcolor=portlandcampus()[0], usmlewcolor=lewistoncampus()[0],
+                           gorcolor=gorstreetbancolor()[3],
                            porcolor=porstreetbancolor()[3], lewcolor=lewstreetbancolor()[0],
                            gorhamstreeticoncolor=gorstreetbancolor()[1], portlandstreeticoncolor=porstreetbancolor()[1],
                            lewistonstreeticoncolor=lewstreetbancolor()[2], usmlewistoniconcolor=lewistoncampus()[2],
@@ -122,8 +125,19 @@ def admincontrols():
     # TODO: Verify the user is logged in before rendering this page.
 
 
+@app.route('/sw.js')
+def sw():
+    return app.send_static_file('sw.js')
+
+
+@app.route('/asset-manifest.json')
+def manifest():
+    response = make_response(
+                     send_from_directory('static', filename='asset-manifest.json'))
+    return response
+
+
 if __name__ == '__main__':
     app.run(host="127.0.0.1", port=5000, threaded=True)
-
 
 # In[ ]:
