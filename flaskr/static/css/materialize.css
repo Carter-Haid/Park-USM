@@ -5017,7 +5017,7 @@ button.btn-floating {
 
 .fixed-action-btn {
   position: fixed;
-  right: 20px;
+  right: 16px;
   bottom: 40px;
   padding-top: 15px;
   margin-bottom: 0;
@@ -6943,7 +6943,7 @@ input[type=range]:focus::-ms-fill-upper {
 .side-nav a {
   color: #3949AC;
   display: block;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
   height: 48px;
   line-height: 48px;

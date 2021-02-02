@@ -1,5 +1,3 @@
-from flaskr.GorhamMap import gorhammap
-from flaskr.PortlandMap import portlandmap
 from lxml.html import fromstring
 import requests
 
@@ -42,4 +40,3 @@ def lewiston_status(location):
     weatherstatus = html.xpath(
         "//*[contains(text(),'{}')]/following-sibling::div[contains(@class,'status')]/ul/li/text()".format(location))
     return weatherstatus
-

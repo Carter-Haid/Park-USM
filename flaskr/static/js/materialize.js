@@ -784,7 +784,6 @@ if (jQuery) {
 
     });
   }; // End dropdown plugin
-
   $(document).ready(function(){
     $('.dropdown-button').dropdown();
     $('.modal').modal();

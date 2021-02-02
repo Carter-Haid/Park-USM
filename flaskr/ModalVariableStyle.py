@@ -1,4 +1,6 @@
-from streetBanDetection import *
+from banDetection import *
+from GorhamMap import *
+from PortlandMap import *
 
 
 # Color of "Parking Lots Closed: #" for Gorham Campus
@@ -35,7 +37,7 @@ def gorhamcampus():
         status = "Closed"
         usmgorcolor = "red"
         usmgorhamicon = "warning"
-        usmgorhamiconcolor = "green"
+        usmgorhamiconcolor = "red"
     gorhamopen = status
     return usmgorcolor, usmgorhamicon, usmgorhamiconcolor, gorhamopen
 
@@ -63,7 +65,7 @@ def portlandcampus():
 
 # Lewiston Campus Info
 def lewistoncampus():
-    baninfo = lac_status("University of Southern Maine, L-A")
+    baninfo = lac_status("University of Southern Maine")
     if not baninfo:
         status = "Open"
         usmlewcolor = "green"
@@ -107,7 +109,7 @@ def porstreetbancolor():
         status = "In Effect"
         porcolor = "red"
         portlandstreeticon = "warning"
-        portlandstreeticoncolor = "green"
+        portlandstreeticoncolor = "red"
     portlandstreetstatus = status
     return portlandstreeticon, portlandstreeticoncolor, portlandstreetstatus, porcolor
 

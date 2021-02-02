@@ -4,10 +4,10 @@
 # In[ ]:
 
 import pyrebase
-import ssl
 from flask_compress import Compress
 from flask import Flask, render_template, request, redirect, make_response, send_from_directory
 from ModalVariableStyle import *
+from contactForm import *
 from flaskr.PortlandMap import portlandmap
 
 app = Flask(__name__,
@@ -98,13 +98,12 @@ def about():
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
+        contactemail = request.form['contactemail']
+        message = request.form['message']
         firstname = request.form['firstname']
         lastname = request.form['lastname']
-        contactemail = request.form['contactemail']
-        try:
-            print(firstname + " " + lastname + " " + contactemail)
-        except:
-            print("error")
+        send_mail(text=firstname+' '+lastname+'\n'+contactemail+'\n'+message, subject="Contact Form",
+                  to_email="campusparkingproject@gmail.com")
     return render_template('contact.html')
 
 
@@ -133,11 +132,11 @@ def sw():
 @app.route('/asset-manifest.json')
 def manifest():
     response = make_response(
-                     send_from_directory('static', filename='asset-manifest.json'))
+        send_from_directory('static', filename='asset-manifest.json'))
     return response
 
 
 if __name__ == '__main__':
-    app.run(host="127.0.0.1", port=5000, threaded=True)
+    app.run(host="141.114.171.12", port=5000, threaded=True)
 
 # In[ ]:
