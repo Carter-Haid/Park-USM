@@ -19,7 +19,7 @@
   <p align="center">
     A project developed to help mitigate parking issues on campuses. 
     <br />
-    <a href="https://github.com/Carter-Haid/campusParkingMap">View Demo</a>
+    <a href="http://parkusm.com:5000/">View Demo</a>
     ·
     <a href="https://github.com/Carter-Haid/campusParkingMap/issues">Report Bug</a>
     ·
