@@ -522,7 +522,9 @@ if (jQuery) {
   $(document).ready(function(){
     $('.collapsible').collapsible();
     $('.dropdown-trigger').dropdown({ hover: false });
-    $(".dropdown-button").dropdown({ hover: false });
+    $('.dropdown-button').dropdown({ hover: false });
+    $('.modal').modal();
+    $('.tabs').tabs();
   });
 }( jQuery ));;(function ($) {
 
@@ -788,7 +790,9 @@ if (jQuery) {
     $('.dropdown-button').dropdown();
     $('.modal').modal();
     $('.fixed-action-btn').floatingActionButton();
+    $('.collapsible').collapsible();
   });
+
 }( jQuery ));
 ;(function($) {
   var _stack = 0,
@@ -2060,7 +2064,7 @@ $(document).ready(function(){
         container.appendChild(newToast);
     }
 
-    newToast.style.top = '35px';
+    newToast.style.top = '40px';
     newToast.style.opacity = 0;
 
     // Animate toast in

@@ -7,41 +7,41 @@ import requests
 def pogo_status(location):
     res = requests.get("https://www.wmtw.com/weather/closings", headers={'user-agent': 'Mozilla 5.0'})
     html = fromstring(res.text)
-    weatherstatus = html.xpath(
+    pogoweatherstatus = html.xpath(
         "//*[contains(text(),'{}')]/following-sibling::div[contains(@class,'status')]/ul/li/text()".format(location))
-    return weatherstatus
+    return pogoweatherstatus
 
 
 def lac_status(location):
     res = requests.get("https://www.wmtw.com/weather/closings", headers={'user-agent': 'Mozilla 5.0'})
     html = fromstring(res.text)
-    weatherstatus = html.xpath(
+    lacweatherstatus = html.xpath(
         "//*[contains(text(),'{}')]/following-sibling::div[contains(@class,'status')]/ul/li/text()".format(location))
-    return weatherstatus
+    return lacweatherstatus
 
 
 def gorham_status(location):
     res = requests.get("https://www.wmtw.com/weather/closings", headers={'user-agent': 'Mozilla 5.0'})
     html = fromstring(res.text)
-    weatherstatus = html.xpath(
+    gorhamweatherstatus = html.xpath(
         "//*[contains(text(),'{}')]/following-sibling::div[contains(@class,'status')]/ul/li/text()".format(location))
-    return weatherstatus
+    return gorhamweatherstatus
 
 
 def portland_status(location):
     res = requests.get("https://www.wmtw.com/weather/closings", headers={'user-agent': 'Mozilla 5.0'})
     html = fromstring(res.text)
-    weatherstatus = html.xpath(
+    portlandweatherstatus = html.xpath(
         "//*[contains(text(),'{}')]/following-sibling::div[contains(@class,'status')]/ul/li/text()".format(location))
-    return weatherstatus
+    return portlandweatherstatus
 
 
 def lewiston_status(location):
     res = requests.get("https://www.wmtw.com/weather/closings", headers={'user-agent': 'Mozilla 5.0'})
     html = fromstring(res.text)
-    weatherstatus = html.xpath(
+    lewistonweatherstatus = html.xpath(
         "//*[contains(text(),'{}')]/following-sibling::div[contains(@class,'status')]/ul/li/text()".format(location))
-    return weatherstatus
+    return lewistonweatherstatus
 
 
 host = 'imap.gmail.com'
@@ -53,17 +53,13 @@ def get_inbox():
     mail = imaplib.IMAP4_SSL(host)
     mail.login(username, password)
     mail.select("inbox")
-    _, search_data = mail.search(None, 'UNSEEN')
+    _, search_data = mail.search(None, '(FROM "email@blackboard.com")')
     my_message = []
     for num in search_data[0].split():
         email_data = {}
         _, data = mail.fetch(num, '(RFC822)')
-        # print(data[0])
         _, b = data[0]
         email_message = email.message_from_bytes(b)
-        for header in ['subject', 'to', 'from', 'date']:
-            print("{}: {}".format(header, email_message[header]))
-            email_data[header] = email_message[header]
         for part in email_message.walk():
             if part.get_content_type() == "text/plain":
                 body = part.get_payload(decode=True)
@@ -77,4 +73,6 @@ def get_inbox():
 
 if __name__ == "__main__":
     my_inbox = get_inbox()
+    with open("testing.txt", "w") as text_file:
+        text_file.write(str(my_inbox))
     print(my_inbox)

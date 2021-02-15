@@ -3061,10 +3061,6 @@ td, th {
   border-bottom: none;
 }
 
-.collection .collection-item.active {
-  background-color: #26a69a;
-  color: #eafaf9;
-}
 
 .collection .collection-item.active .secondary-content {
   color: #fff;
@@ -4247,7 +4243,7 @@ a {
 }
 
 html {
-  line-height: 1.5;
+  line-height: 2.7;
   font-family: "Roboto", sans-serif;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.87);
@@ -4255,7 +4251,7 @@ html {
 
 @media only screen and (min-width: 0) {
   html {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -4664,7 +4660,7 @@ small {
 #toast-container {
   display: block;
   position: fixed;
-  z-index: 10000;
+  z-index: 11001;
 }
 
 @media only screen and (max-width: 600px) {
@@ -5003,8 +4999,8 @@ small {
 }
 
 .btn-floating.btn-large {
-  width: 56px;
-  height: 56px;
+  width: 58px;
+  height: 58px;
 }
 
 .btn-floating.btn-large i {
@@ -5018,7 +5014,7 @@ button.btn-floating {
 .fixed-action-btn {
   position: fixed;
   right: 16px;
-  bottom: 40px;
+  bottom: 50px;
   padding-top: 15px;
   margin-bottom: 0;
   z-index: 998;
@@ -8553,4 +8549,33 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   main {
     flex: 1 0 auto;
   }
+}
+
+html {
+    height: 100%;
+}
+
+#fourzerofour{
+    display: table;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.fof{
+	  display: table-cell;
+	  vertical-align: middle;
+}
+
+.fof h1{
+	  font-size: 100px;
+	  display: inline-block;
+	  padding-right: 12px;
+	  animation: type .5s alternate infinite;
+}
+
+@keyframes type{
+	  from{box-shadow: inset -3px 0px 0px #888;}
+	  to{box-shadow: inset -3px 0px 0px transparent;}
 }

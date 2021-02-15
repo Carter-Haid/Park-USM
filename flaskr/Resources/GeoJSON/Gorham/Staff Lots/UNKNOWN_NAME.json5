@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "lot_id": "0016",
-        "lot_name": "UNKNOWN",
+        "lot_name": "gs2",
         "lot_type": "staff",
         "lot_status": "open"
       },

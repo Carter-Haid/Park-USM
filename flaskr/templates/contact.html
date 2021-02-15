@@ -3,15 +3,24 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0"/>
-    <meta name="description" content="Univeristy of Southern Maine - Campus Parking Project - Contact Us">
-    <title>Contact Us</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" media="screen,projection" href="{{ url_for('static', filename='css/materialize.css') }}">
+    <meta name="description" content="Interactive Campus Parking Map for The University of Southern Maine - Gorham">
+    <title>Campus Parking Project</title>
+    <link rel="preload" as="font" href="/static/fonts/roboto/Roboto-Medium.woff2" type="font/woff2"
+          crossorigin="anonymous">
+    <link rel="preload" as="font" href="/static/fonts/roboto/Roboto-Regular.woff2" type="font/woff2"
+          crossorigin="anonymous">
+    <link rel="stylesheet preload" media="screen,projection"
+          href="{{ url_for('static', filename='css/materialize.css') }}" as="style">
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons&display=swap">
+    <link rel="manifest" href="/asset-manifest.json">
     <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/apple-touch-icon-iphone-60x60.png') }}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{ url_for('static', filename='images/apple-touch-icon-ipad-76x76.png') }}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ url_for('static', filename='images/apple-touch-icon-ipad-retina-152x152.png') }}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ url_for('static', filename='images/apple-touch-icon-iphone-retina-120x120.png') }}">
+    <link rel="apple-touch-icon" sizes="60x60"
+          href="{{ url_for('static', filename='images/apple-touch-icon-ipad-76x76.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114"
+          href="{{ url_for('static', filename='images/apple-touch-icon-ipad-retina-152x152.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144"
+          href="{{ url_for('static', filename='images/apple-touch-icon-iphone-retina-120x120.png') }}">
     <meta name="theme-color" content="#B71C1C">
 </head>
 <body style="display: flex; min-height: 100vh;flex-direction: column;">
@@ -52,41 +61,41 @@
                 <div class="z-depth-1 grey lighten-4 row"
                      style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
 
-                    <form class="col s12" method="post">
+                    <form class="col s12" method="post" autocomplete="off" onsubmit="">
                         <div class='row'>
                             <div class='col s12'>
                             </div>
                         </div>
-
                         <div class='row'>
                             <div class='input-field col s12'>
-                                <input class='validate' type='text' name='firstname' id='firstname'/>
+                                <input class='validate' type='text' name='firstname' id='firstname'
+                                       autocomplete="one-time-code"/>
                                 <label for='firstname'>First Name:</label>
                             </div>
                             <div class='input-field col s12'>
-                                <input class='validate' type='text' name='lastname' id='lastname'/>
+                                <input class='validate' type='text' name='lastname' id='lastname'
+                                       autocomplete="one-time-code"/>
                                 <label for='lastname'>Last Name:</label>
                             </div>
                         </div>
-
                         <div class='row'>
                             <div class='input-field col s12'>
-                                <input class='validate' type='email' name='contactemail' id='contactemail'/>
+                                <input class='validate' type='email' name='contactemail' id='contactemail'
+                                       autocomplete="one-time-code"/>
                                 <label for='contactemail'>Email:</label>
                             </div>
                         </div>
-
                         <div class='row'>
                             <div class='input-field col s12'>
                                 <textarea id="message" name='message' class="materialize-textarea validate"></textarea>
                                 <label for="message">Message:</label>
                             </div>
                         </div>
-
                         <br/>
                         <center>
                             <div class='row'>
                                 <button type='submit' name='btn_login'
+                                        onclick="M.toast({html: 'Message Submitted Successfully', classes: 'green darken-4'})"
                                         class='col s12 btn btn-large waves-effect indigo'>Send Message
                                 </button>
                             </div>
@@ -98,7 +107,6 @@
             <!-- Compiled and minified JavaScript -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
         </center>
-
         <div class="section"></div>
         <div class="section"></div>
     </main>
@@ -106,13 +114,12 @@
 </body>
 <footer class="page-footer-fixed indigo darken-1">
     <div class="footer-copyright">
-        <div class="container" style="color:#cfd8dc">
+        <div class="container" style="color:#f5f5f5">
             © 2020 Carter Haid
             <a class="grey-text text-lighten-4 right" href="https://www.linkedin.com/in/carterhaid/">| Linkedin</a>
             <a class="grey-text text-lighten-4 right" href="https://github.com/Carter-Haid">| Github&nbsp</a>
             <a class="grey-text text-lighten-4 right" href="https://carterhaid.com">Website&nbsp</a>
         </div>
-    </div>
     </div>
 </footer>
 <!--  Scripts-->

@@ -18,10 +18,10 @@ def portlandmap():
     commuterlots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Portland/Commuter Lots"
     stafflots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Portland/Staff Lots"
 
-    commuterstyle = {'fillColor': 'red', 'color': 'black', 'fillOpacity': '0.4'}
-    residentialstyle = {'fillColor': 'green', 'color': 'black', 'fillOpacity': '0.4'}
-    staffstyle = {'fillColor': 'blue', 'color': 'black', 'fillOpacity': '0.4'}
-    closedstyle = {'fillColor': 'black', 'color': 'black', 'fillOpacity': '0.4'}
+    commuterstyle = {'fillColor': 'red', 'color': 'black', 'fillOpacity': '0.5'}
+    residentialstyle = {'fillColor': 'green', 'color': 'black', 'fillOpacity': '0.6'}
+    staffstyle = {'fillColor': 'blue', 'color': 'black', 'fillOpacity': '0.6'}
+    closedstyle = {'fillColor': 'black', 'color': 'black', 'fillOpacity': '0.6'}
 
     portlandbancounter = 0
 
@@ -114,5 +114,6 @@ def portlandmap():
 
     m.fit_bounds([[43.6589, -70.2777], [43.6656, -70.27427]])
     m.save("/home/carter/PycharmProjects/campusParkingMap/flaskr/static/PortlandMap.html")
-    return(portlandbancounter)
+    return portlandbancounter
+
 # In[ ]:

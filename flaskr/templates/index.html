@@ -5,24 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0"/>
     <meta name="description" content="Interactive Campus Parking Map for The University of Southern Maine - Gorham">
     <title>Campus Parking Project</title>
-    <link rel="preload" as="font" href="/static/fonts/roboto/Roboto-Medium.woff2" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" as="font" href="/static/fonts/roboto/Roboto-Regular.woff2" type="font/woff2" crossorigin="anonymous">
-    <link rel="stylesheet preload" media="screen,projection" href="{{ url_for('static', filename='css/materialize.css') }}" as="style">
+    <link rel="preload" as="font" href="/static/fonts/roboto/Roboto-Medium.woff2" type="font/woff2"
+          crossorigin="anonymous">
+    <link rel="preload" as="font" href="/static/fonts/roboto/Roboto-Regular.woff2" type="font/woff2"
+          crossorigin="anonymous">
+    <link rel="stylesheet preload" media="screen,projection"
+          href="{{ url_for('static', filename='css/materialize.css') }}" as="style">
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons&display=swap">
-    <link rel="manifest" href="/asset-manifest.json">
+    <link rel="manifest" href="./manifest.json">
     <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/apple-touch-icon-iphone-60x60.png') }}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{ url_for('static', filename='images/apple-touch-icon-ipad-76x76.png') }}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ url_for('static', filename='images/apple-touch-icon-ipad-retina-152x152.png') }}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ url_for('static', filename='images/apple-touch-icon-iphone-retina-120x120.png') }}">
+    <link rel="apple-touch-icon" sizes="60x60"
+          href="{{ url_for('static', filename='images/apple-touch-icon-ipad-76x76.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114"
+          href="{{ url_for('static', filename='images/apple-touch-icon-ipad-retina-152x152.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144"
+          href="{{ url_for('static', filename='images/apple-touch-icon-iphone-retina-120x120.png') }}">
     <meta name="theme-color" content="#B71C1C">
 </head>
 <body style="display: flex; min-height: 100vh;flex-direction: column;">
 <ul id="dropdown1" class="dropdown-content">
-    <li><a href="/portland">Portland</a></li>
-    <li><a href="/">Gorham</a></li>
-</ul>
-<ul id="dropdown2" class="dropdown-content">
     <li><a href="/portland">Portland</a></li>
     <li><a href="/">Gorham</a></li>
 </ul>
@@ -38,9 +40,9 @@
                     <li><a href="/login">Login</a></li>
                 </ul>
 
-                <ul id="nav-mobile" class="side-nav edge left draggable true">
-                    <li><a class="dropdown-trigger" href="#!" data-activates="dropdown2">Select Campus<i
-                            class="material-icons right">arrow_drop_down</i></a></li>
+                <ul id="nav-mobile" class="side-nav" class="edge left" class="draggable true">
+                    <li><a href="/">Gorham Campus</a></li>
+                    <li><a href="/portland">Portland Campus</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/contact">Contact</a></li>
                     <li><a href="/login">Login</a></li>
@@ -50,7 +52,8 @@
         </nav>
     </div>
     <object data="{{url_for('static', filename='GorhamMap.html')}}"
-            style="width:100%;height:100%;margin:0;position: fixed;flex-direction: column; z-index:3">Gorham Campus Map</object>
+            style="width:100%;height:100%;margin:0;position: fixed;flex-direction: column; z-index:3">Gorham Campus Map
+    </object>
 
     <div class="fixed-action-btn">
         <a class="btn-floating btn-large indigo darken-1" href="#modal_box">
@@ -61,70 +64,118 @@
     <div id="modal_box" class="modal bottom-sheet">
         <div class="modal-content">
             <h4>Closings & Parking Bans:</h4>
-            <ul class="collection">
-                <li class="collection-item avatar">
-                    <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/USMGorham.jp2?raw=true"
-                         alt="" class="circle">
-                    <span class="title"><u>Gorham Campus</u></span>
-                    <p>- Campus is Currently:
-                        <span style="color: {{ usmgorcolor }}"> {{ gorhamopen }} </span>
-                    <p>- Parking Lots Closed:
-                        <span style="color:{{ gorbancolor }}"> {{ gorhambancounter }} </span>
-                    </p>
-                    <a href="#!" class="secondary-content"><i style="color: {{ usmgorhamiconcolor }}"
-                                                              class="material-icons">{{ usmgorhamicon }}</i></a>
+            <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header">
+                        <ul class="collection">
+                            <li class="collection-item avatar">
+                                <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/USMGorham.jp2?raw=true"
+                                     alt="" class="circle">
+                                <span class="title"><u>Gorham Campus</u></span>
+                                <p>- Campus is Currently:
+                                    <span style="color: {{ usmgorcolor }}"> {{ gorhamopen }} </span>
+                                <p>- Parking Lots Closed:
+                                    <span style="color:{{ gorbancolor }}"> {{ gorhambancounter }} </span>
+                                </p>
+                                <a href="#!" class="secondary-content"><i style="color: {{ usmgorhamiconcolor }}"
+                                                                          class="material-icons">{{ usmgorhamicon }}</i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="collapsible-body"><span>{{ pogobaninfo }}</span></div>
                 </li>
-                <li class="collection-item avatar">
-                    <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/USMPortland.jp2?raw=true"
-                         alt="" class="circle">
-                    <span class="title"><u>Portland Campus</u></span>
-                    <p>- Campus is Currently:
-                        <span style="color:{{ usmporcolor }}"> {{ portlandopen }} </span>
-                    </p>
-                    <p>- Parking Lots Closed:
-                        <span style="color:{{ porbancolor }}"> {{ portlandbancounter }} </span>
-                    </p>
-                    <a href="#!" class="secondary-content"><i style="color: {{ usmportlandiconcolor }}"
-                                                              class="material-icons">{{ usmportlandicon }}</i></a>
+                <li>
+                    <div class="collapsible-header">
+                        <ul class="collection">
+                            <li class="collection-item avatar">
+                                <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/USMPortland.jp2?raw=true"
+                                     alt="" class="circle">
+                                <span class="title"><u>Portland Campus</u></span>
+                                <p>- Campus is Currently:
+                                    <span style="color:{{ usmporcolor }}"> {{ portlandopen }} </span>
+                                </p>
+                                <p>- Parking Lots Closed:
+                                    <span style="color:{{ porbancolor }}"> {{ portlandbancounter }} </span>
+                                </p>
+                                <a href="#!" class="secondary-content"><i style="color: {{ usmportlandiconcolor }}"
+                                                                          class="material-icons">{{ usmportlandicon
+                                    }}</i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="collapsible-body"><span>{{ pogobaninfo }}</span></div>
                 </li>
-                <li class="collection-item avatar">
-                    <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/USMLewiston.jp2?raw=true"
-                         alt="" class="circle">
-                    <span class="title"><u>Lewiston Campus</u></span>
-                    <p>- Campus is Currently:
-                        <span style="color: {{usmlewcolor}}"> {{ lewistonopen }} </span>
-                    <p>- Parking Lots Closed:
-                        <span style="color: green"> 0 </span>
-                    </p>
-                    <a href="#!" class="secondary-content"><i style="color: {{ usmlewistoniconcolor }}"
-                                                              class="material-icons">{{ usmlewistonicon }}</i></a>
+                <li>
+                    <div class="collapsible-header">
+                        <ul class="collection">
+                            </li>
+                            <li class="collection-item avatar">
+                                <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/USMLewiston.jp2?raw=true"
+                                     alt="" class="circle">
+                                <span class="title"><u>Lewiston Campus</u></span>
+                                <p>- Campus is Currently:
+                                    <span style="color: {{usmlewcolor}}"> {{ lewistonopen }} </span>
+                                <p>- Parking Lots Closed:
+                                    <span style="color: green"> 0 </span>
+                                </p>
+                                <a href="#!" class="secondary-content"><i style="color: {{ usmlewistoniconcolor }}"
+                                                                          class="material-icons">{{ usmlewistonicon
+                                    }}</i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="collapsible-body"><span>{{ lewbaninfo }}</span></div>
                 </li>
-                <li class="collection-item avatar">
-                    <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/Gorham.jp2?raw=true"
-                         alt="" class="circle">
-                    <span class="title"><u>Town of Gorham</u></span>
-                    <p>- Parking Ban:
-                        <span style="color:{{ gorcolor }}"> {{ gorhamstreetstatus }} </span></p>
-                    <a href="#!" class="secondary-content"><i style="color: {{ gorhamstreeticoncolor}}"
-                                                              class="material-icons">{{ gorhamstreeticon }}</i></a>
+                <li>
+                    <div class="collapsible-header">
+                        <ul class="collection">
+                            <li class="collection-item avatar">
+                                <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/Gorham.jp2?raw=true"
+                                     alt="" class="circle">
+                                <span class="title"><u>Town of Gorham</u></span>
+                                <p>- Parking Ban:
+                                    <span style="color:{{ gorcolor }}"> {{ gorhamstreetstatus }} </span></p>
+                                <a href="#!" class="secondary-content"><i style="color: {{ gorhamstreeticoncolor}}"
+                                                                          class="material-icons">{{ gorhamstreeticon
+                                    }}</i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="collapsible-body"><span>{{ gorhambaninfo }}</span></div>
                 </li>
-                <li class="collection-item avatar">
-                    <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/Portland.jp2?raw=true"
-                         alt="" class="circle">
-                    <span class="title"><u>City of Portland</u></span>
-                    <p>- Parking Ban:
-                        <span style="color:{{ porcolor }}"> {{ portlandstreetstatus }} </span></p>
-                    <a href="#!" class="secondary-content"><i style="color: {{ portlandstreeticoncolor }}"
-                                                              class="material-icons">{{ portlandstreeticon }}</i></a>
+                <li>
+                    <div class="collapsible-header">
+                        <ul class="collection">
+                            <li class="collection-item avatar">
+                                <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/Portland.jp2?raw=true"
+                                     alt="" class="circle">
+                                <span class="title"><u>City of Portland</u></span>
+                                <p>- Parking Ban:
+                                    <span style="color:{{ porcolor }}"> {{ portlandstreetstatus }} </span></p>
+                                <a href="#!" class="secondary-content"><i style="color: {{ portlandstreeticoncolor }}"
+                                                                          class="material-icons">{{ portlandstreeticon
+                                    }}</i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="collapsible-body"><span>{{ portlandbaninfo }}</span></div>
                 </li>
-                <li class="collection-item avatar">
-                    <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/Lewiston.jp2?raw=true"
-                         alt="" class="circle">
-                    <span class="title"><u>City of Lewiston</u></span>
-                    <p>- Parking Ban:
-                        <span style="color: {{ lewcolor }}"> {{ lewistonstreetstatus }} </span></p>
-                    <a href="#!" class="secondary-content"><i style="color: {{ lewistonstreeticoncolor }}"
-                                                              class="material-icons">{{ lewistonstreeticon }} </i></a>
+                <li>
+                    <div class="collapsible-header">
+                        <ul class="collection">
+                            <li class="collection-item avatar">
+                                <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/Lewiston.jp2?raw=true"
+                                     alt="" class="circle">
+                                <span class="title"><u>City of Lewiston</u></span>
+                                <p>- Parking Ban:
+                                    <span style="color: {{ lewcolor }}"> {{ lewistonstreetstatus }} </span></p>
+                                <a href="#!" class="secondary-content"><i style="color: {{ lewistonstreeticoncolor }}"
+                                                                          class="material-icons">{{ lewistonstreeticon
+                                    }} </i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="collapsible-body"><span>{{ lewistonbaninfo }}</span></div>
                 </li>
             </ul>
         </div>
@@ -133,7 +184,7 @@
 </body>
 <footer style="z-index:3" class="page-footer-fixed indigo darken-1">
     <div class="footer-copyright">
-        <div class="container" style="color:#cfd8dc">
+        <div class="container" style="color:#f5f5f5">
             © 2020 Carter Haid
             <a class="grey-text text-lighten-4 right" href="https://www.linkedin.com/in/carterhaid/">| Linkedin</a>
             <a class="grey-text text-lighten-4 right" href="https://github.com/Carter-Haid">| Github&nbsp</a>

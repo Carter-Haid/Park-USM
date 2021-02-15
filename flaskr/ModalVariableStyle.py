@@ -2,130 +2,142 @@ from banDetection import *
 from GorhamMap import *
 from PortlandMap import *
 
-
 # Color of "Parking Lots Closed: #" for Gorham Campus
-def gorbancolorfunction():
-    if gorhammap() > 0:
-        gorbancolor = "red"
-    else:
-        gorbancolor = "green"
-    return gorbancolor
-
+if gorhammap() > 0:
+    gorbancolor = "red"
+else:
+    gorbancolor = "green"
 
 # Color of "Parking Lots Closed: #" for Portland Campus
-def porbancolorfunction():
-    if portlandmap() > 0:
-        porbancolor = "red"
-    else:
-        porbancolor = "green"
-    return porbancolor
-
+if portlandmap() > 0:
+    porbancolor = "red"
+else:
+    porbancolor = "green"
 
 # Gorham Campus
-def gorhamcampus():
-    baninfo = pogo_status("University of Southern Maine")
-    if not baninfo:
-        status = "Open"
-        usmgorcolor = "green"
-        if gorhammap() <= 0:
-            usmgorhamicon = "check_circle_outline"
-            usmgorhamiconcolor = "green"
-        else:
-            usmgorhamicon = "warning"
-            usmgorhamiconcolor = "red"
-    else:
-        status = "Closed"
-        usmgorcolor = "red"
-        usmgorhamicon = "warning"
-        usmgorhamiconcolor = "red"
-    gorhamopen = status
-    return usmgorcolor, usmgorhamicon, usmgorhamiconcolor, gorhamopen
+usmgorcolor = ""
+usmgorhamicon = ""
+usmgorhamiconcolor = ""
+gorhamopen = ""
 
+pogobaninfo = pogo_status("University of Southern Maine")
+if not pogobaninfo:
+    status = "Open"
+    usmgorcolor += "green"
+    pogobaninfo = "No Current Ban Info"
+    if gorhammap() <= 0:
+        usmgorhamicon += "check_circle_outline"
+        usmgorhamiconcolor += "green"
+    else:
+        usmgorhamicon += "warning"
+        usmgorhamiconcolor += "red"
+else:
+    status = "Closed"
+    usmgorcolor += "red"
+    usmgorhamicon += "warning"
+    usmgorhamiconcolor += "red"
+gorhamopen += status
 
 # Portland Campus
-def portlandcampus():
-    baninfo = pogo_status("University of Southern Maine")
-    if not baninfo:
-        status = "Open"
-        usmporcolor = "green"
-        if portlandmap() <= 0:
-            usmportlandicon = "check_circle_outline"
-            usmportlandiconcolor = "green"
-        else:
-            usmportlandicon = "warning"
-            usmportlandiconcolor = "red"
-    else:
-        status = "Closed"
-        usmporcolor = "red"
-        usmportlandicon = "warning"
-        usmportlandiconcolor = "red"
-    portlandopen = status
-    return usmporcolor, usmportlandicon, usmportlandiconcolor, portlandopen
+usmporcolor = ""
+usmportlandicon = ""
+usmportlandiconcolor = ""
+portlandopen = ""
 
+pogobaninfo = pogo_status("University of Southern Maine")
+if not pogobaninfo:
+    status = "Open"
+    usmporcolor += "green"
+    pogobaninfo = "No Current Ban Info"
+    if portlandmap() <= 0:
+        usmportlandicon += "check_circle_outline"
+        usmportlandiconcolor += "green"
+    else:
+        usmportlandicon += "warning"
+        usmportlandiconcolor += "red"
+else:
+    status = "Closed"
+    usmporcolor += "red"
+    usmportlandicon += "warning"
+    usmportlandiconcolor += "red"
+portlandopen += status
 
 # Lewiston Campus Info
-def lewistoncampus():
-    baninfo = lac_status("University of Southern Maine")
-    if not baninfo:
-        status = "Open"
-        usmlewcolor = "green"
-        usmlewistonicon = "check_circle_outline"
-        usmlewistoniconcolor = "green"
-    else:
-        status = "Closed"
-        usmlewcolor = "red"
-        usmlewistonicon = "warning"
-        usmlewistoniconcolor = "red"
-    lewistonopen = status
-    return usmlewcolor, usmlewistonicon, usmlewistoniconcolor, lewistonopen
+usmlewcolor = ""
+usmlewistonicon = ""
+usmlewistoniconcolor = ""
+lewistonopen = ""
 
+lewbaninfo = lac_status("University of Southern Maine")
+if not lewbaninfo:
+    status = "Open"
+    usmlewcolor += "green"
+    usmlewistonicon += "check_circle_outline"
+    usmlewistoniconcolor += "green"
+    lewbaninfo = "No Current Ban Info"
+else:
+    status = "Closed"
+    usmlewcolor += "red"
+    usmlewistonicon += "warning"
+    usmlewistoniconcolor += "red"
+lewistonopen += status
 
 # Everything for Gorham Street Parking Ban
-def gorstreetbancolor():
-    baninfo = gorham_status("Gorham Parking Ban")
-    if not baninfo:
-        status = "Not In Effect"
-        gorcolor = "green"
-        gorhamstreeticon = "check_circle_outline"
-        gorhamstreeticoncolor = "green"
-    else:
-        status = "In Effect"
-        gorcolor = "red"
-        gorhamstreeticon = "warning"
-        gorhamstreeticoncolor = "red"
-    gorhamstreetstatus = status
-    return gorhamstreeticon, gorhamstreeticoncolor, gorhamstreetstatus, gorcolor
+gorhamstreeticon = ""
+gorhamstreeticoncolor = ""
+gorhamstreetstatus = ""
+gorcolor = ""
 
+gorhambaninfo = gorham_status("Gorham Parking Ban")
+if not gorhambaninfo:
+    status = "Not In Effect"
+    gorcolor += "green"
+    gorhamstreeticon += "check_circle_outline"
+    gorhamstreeticoncolor += "green"
+    gorhambaninfo = "No Current Ban Info"
+else:
+    status = "In Effect"
+    gorcolor += "red"
+    gorhamstreeticon += "warning"
+    gorhamstreeticoncolor += "red"
+gorhamstreetstatus += status
 
 # Everything for Portland Street Parking Ban
-def porstreetbancolor():
-    baninfo = portland_status("Portland Parking Ban")
-    if not baninfo:
-        status = "Not In Effect"
-        porcolor = "green"
-        portlandstreeticon = "check_circle_outline"
-        portlandstreeticoncolor = "green"
-    else:
-        status = "In Effect"
-        porcolor = "red"
-        portlandstreeticon = "warning"
-        portlandstreeticoncolor = "red"
-    portlandstreetstatus = status
-    return portlandstreeticon, portlandstreeticoncolor, portlandstreetstatus, porcolor
+portlandstreeticon = ""
+portlandstreeticoncolor = ""
+portlandstreetstatus = ""
+porcolor = ""
 
+portlandbaninfo = portland_status("Portland Parking Ban")
+if not portlandbaninfo:
+    status = "Not In Effect"
+    porcolor += "green"
+    portlandstreeticon += "check_circle_outline"
+    portlandstreeticoncolor += "green"
+    portlandbaninfo = "No Current Ban Info"
+else:
+    status = "In Effect"
+    porcolor += "red"
+    portlandstreeticon += "warning"
+    portlandstreeticoncolor += "red"
+portlandstreetstatus += status
 
 # Everything for Lewiston Street Parking Ban
-def lewstreetbancolor():
-    baninfo = lewiston_status("Lewiston Parking Ban")
-    if not baninfo:
-        status = "Not in Effect"
-        lewcolor = "green"
-        lewistonstreeticon = "check_circle_outline"
-        lewistonstreeticoncolor = "green"
-    else:
-        status = "In Effect"
-        lewcolor = "red"
-        lewistonstreeticon = "warning"
-        lewistonstreeticoncolor = "red"
-    lewistonstreetstatus = status
-    return lewcolor, lewistonstreeticon, lewistonstreeticoncolor, lewistonstreetstatus
+lewcolor = ""
+lewistonstreeticon = ""
+lewistonstreeticoncolor = ""
+lewistonstreetstatus = ""
+
+lewistonbaninfo = lewiston_status("Lewiston Parking Ban")
+if not lewistonbaninfo:
+    status = "Not in Effect"
+    lewcolor = "green"
+    lewistonstreeticon = "check_circle_outline"
+    lewistonstreeticoncolor = "green"
+    lewistonbaninfo = "No Current Ban Info"
+else:
+    status = "In Effect"
+    lewcolor = "red"
+    lewistonstreeticon = "warning"
+    lewistonstreeticoncolor = "red"
+lewistonstreetstatus = status

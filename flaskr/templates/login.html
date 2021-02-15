@@ -3,11 +3,14 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0"/>
-    <meta name="description" content="Univeristy of Southern Maine - Campus Parking Project - Login">
-    <title>Login</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" media="screen,projection" href="{{ url_for('static', filename='css/materialize.css') }}">
+    <meta name="description" content="Interactive Campus Parking Map for The University of Southern Maine - Gorham">
+    <title>Campus Parking Project</title>
+    <link rel="preload" as="font" href="/static/fonts/roboto/Roboto-Medium.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/static/fonts/roboto/Roboto-Regular.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet preload" media="screen,projection" href="{{ url_for('static', filename='css/materialize.css') }}" as="style">
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons&display=swap">
+    <link rel="manifest" href="/asset-manifest.json">
     <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/apple-touch-icon-iphone-60x60.png') }}">
     <link rel="apple-touch-icon" sizes="60x60" href="{{ url_for('static', filename='images/apple-touch-icon-ipad-76x76.png') }}">
     <link rel="apple-touch-icon" sizes="114x114" href="{{ url_for('static', filename='images/apple-touch-icon-ipad-retina-152x152.png') }}">
@@ -61,7 +64,7 @@
 
                         <div class='row'>
                             <div class='input-field col s12'>
-                                <input class='validate' type='email' name='name' id='email'/>
+                                <input class='validate' type='email' name='name' id='email' autocomplete="off"/>
                                 <label for='email'>Email:</label>
                             </div>
                         </div>
@@ -72,7 +75,7 @@
                                 <label for='password'>Password:</label>
                             </div>
                             <label style='float: right;'>
-                                <a class='pink-text' href='/passwordreset'><b>Forgot Password?</b></a>
+                                <a class='pink-text' href='/passwordreset'><b>Forgot Password</b></a>
                             </label>
                         </div>
 
