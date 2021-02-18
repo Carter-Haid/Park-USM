@@ -8,10 +8,10 @@
 
 
 <!-- PROJECT LOGO -->
-<br />
+<br/>
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="http://parkusm.com:5000/">
+    <img src="blob/master/flaskr/static/images/parking_192x192.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Campus Parking Map</h3>
