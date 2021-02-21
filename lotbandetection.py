@@ -1,6 +1,6 @@
 import re
 
-name = 'example.txt'
+name = '/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/emailtext.txt'
 
 
 with open(name, 'r') as file:
@@ -20,7 +20,7 @@ for each in range(len(text)):
     matches3 = re.search(pattern3, text[each])
     matches4 = re.search(pattern4, text[each])
     if matches:
-        index_prohibited = each+1
+        index_prohibited = each + 1
     elif matches2:
         index_available = each + 1
     if matches3:
@@ -51,5 +51,6 @@ for x in range(index_available, len(text)):
 if len(day) == 2 and len(time) == 2:
     print(f"\n\nStarting : {day[0]} {time[0]}")
     print(f"Ending   : {day[1]} {time[1]}")
+    print(time)
 else:
-    print("\n\nDays and time couldn't be extracted properly, contact developer with sample file.")
+    print("\n\nDays and time couldn't be extracted properly, contact Carter Haid for help.")
