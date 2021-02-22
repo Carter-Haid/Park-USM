@@ -72,6 +72,6 @@ def get_inbox():
 
 if __name__ == "__main__":
     my_inbox = get_inbox()
-    with open("", "w") as text_file:
+    with open("/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/emailtext.txt", "w") as text_file:
         text_file.write(str(my_inbox))
     print(my_inbox)
