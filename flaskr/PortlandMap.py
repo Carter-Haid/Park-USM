@@ -11,7 +11,8 @@ def portlandmap():
     m = folium.Map(location=[43.6622, -70.2755],
                    tiles='OpenStreetMap',
                    prefer_canvas=True,
-                   zoom_control=False
+                   zoom_control=False,
+                   min_zoom=10,
                    )
 
     residentiallots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Portland/Residential Lots"

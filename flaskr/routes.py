@@ -5,10 +5,11 @@
 
 import pyrebase
 from flask_compress import Compress
-from flask import Flask, render_template, request, redirect, send_from_directory, flash
+from flask import Flask, render_template, request, redirect, send_from_directory
 from ModalVariableStyle import *
 from contactForm import *
 from PortlandMap import portlandmap
+
 
 app = Flask(__name__,
             static_folder="/home/carter/PycharmProjects/campusParkingMap/flaskr/static",
@@ -121,16 +122,12 @@ def passwordreset():
 @app.route('/admincontrols')
 def admincontrols():
     return render_template('AdminControls.html', value=email)
-    # TODO: Verify the user is logged in before rendering this page.
 
 
-@app.route('/sw.js', methods=['GET'])
-def sw():
-    return app.send_static_file('sw.js')
-
-
+@app.route('/sw.js')
 @app.route('/robots.txt')
 @app.route('/manifest.json')
+@app.route('/asset-manifest.json')
 def static_files():
     return send_from_directory(app.static_folder, request.path[1:])
 

@@ -11,8 +11,8 @@ def gorhammap():
     m = folium.Map(location=[43.6819, -70.4490],
                    tiles='OpenStreetMap',
                    prefer_canvas=True,
-                   zoom_control=False
-                   )
+                   zoom_control=False,
+                   min_zoom=10)
 
     residentiallots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Gorham/Residential Lots"
     commuterlots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Gorham/Commuter Lots"

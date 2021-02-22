@@ -789,7 +789,6 @@ if (jQuery) {
   $(document).ready(function(){
     $('.dropdown-button').dropdown();
     $('.modal').modal();
-    $('.fixed-action-btn').floatingActionButton();
     $('.collapsible').collapsible();
   });
 
@@ -7756,8 +7755,6 @@ Picker.extend( 'pickadate', DatePicker )
         });
 
       });
-
-
 
     },
     next : function(n) {
