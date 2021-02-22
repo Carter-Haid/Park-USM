@@ -1,6 +1,6 @@
 import re
 
-name = '/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/emailtext.txt'
+name = ''
 
 
 with open(name, 'r') as file:

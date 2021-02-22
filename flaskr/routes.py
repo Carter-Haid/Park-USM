@@ -12,8 +12,8 @@ from PortlandMap import portlandmap
 
 
 app = Flask(__name__,
-            static_folder="/home/carter/PycharmProjects/campusParkingMap/flaskr/static",
-            template_folder="/home/carter/PycharmProjects/campusParkingMap/flaskr/templates")
+            static_folder="",
+            template_folder="")
 Compress(app)
 
 config = {
