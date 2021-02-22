@@ -10,7 +10,7 @@
 <!-- PROJECT LOGO -->
 <br/>
 <p align="center">
-  <a href="http://parkusm.com/">
+  <a href="http://parkusm.com:5000/">
     <img src="flaskr/static/images/parking_192x192.png" alt="Logo" width="80" height="80">
   </a>
 
