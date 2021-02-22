@@ -10,7 +10,7 @@
 <!-- PROJECT LOGO -->
 <br/>
 <p align="center">
-  <a href="http://parkusm.com:5000/">
+  <a href="http://parkusm.com/">
     <img src="flaskr/static/images/parking_192x192.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -19,7 +19,7 @@
   <p align="center">
     A project developed to help mitigate parking issues on campuses. 
     <br />
-    <a href="http://parkusm.com:5000/">View Demo</a>
+    <a href="http://parkusm.com/">View Demo</a>
     ·
     <a href="https://github.com/Carter-Haid/campusParkingMap/issues">Report Bug</a>
     ·
