@@ -1,4 +1,4 @@
-# Park USM
+# Park University of Southern Maine
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
