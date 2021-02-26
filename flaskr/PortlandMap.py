@@ -28,7 +28,6 @@ def portlandmap():
 
     # Residential Lots
     resdirectory = os.fsencode(residentiallots)
-
     for file in os.listdir(resdirectory):
         filename = os.fsdecode(file)
         if filename.endswith(".json5"):
@@ -57,7 +56,6 @@ def portlandmap():
 
     # Commuter Lots
     commdirectory = os.fsencode(commuterlots)
-
     for file in os.listdir(commdirectory):
         filename = os.fsdecode(file)
         if filename.endswith(".json5"):
@@ -86,7 +84,6 @@ def portlandmap():
 
     # Staff Lots
     staffdirectory = os.fsencode(stafflots)
-
     for file in os.listdir(staffdirectory):
         filename = os.fsdecode(file)
         if filename.endswith(".json5"):

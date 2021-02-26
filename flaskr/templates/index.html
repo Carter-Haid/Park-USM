@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0, viewport-fit=cover"/>
     <meta name="description" content="Interactive Campus Parking Map for The University of Southern Maine - Gorham">
     <title>Campus Parking Project</title>
     <link rel="preload" as="font" href="/static/fonts/roboto/Roboto-Medium.woff2" type="font/woff2"
@@ -57,15 +57,12 @@
     </object>
 
     <div class="fixed-action-btn">
-        <a class="btn-floating btn-large indigo darken-1">
-            <i class="large material-icons">info</i>
+        <a class="btn-floating btn-large indigo darken-1" href="#helpmodal">
+            <i class="large material-icons">help_outline</i>
         </a>
-        <ul>
-            <li><a class="btn-floating indigo darken-1" href="/"><i class="material-icons">refresh</i></a></li>
-            <li><a class="btn-floating indigo darken-1" href="#helpmodal"><i class="material-icons">help_outline</i></a></li>
-            <li><a class="btn-floating indigo darken-1" href="#modal_box"><i
-                    class="material-icons">format_list_bulleted</i></a></li>
-        </ul>
+        <a class="btn-floating btn-large indigo darken-1" href="#modal_box">
+            <i class="large material-icons">format_list_bulleted</i>
+        </a>
     </div>
     <!-- Modal Structure -->
     <div style="z-index:1000" id="helpmodal" class="modal modal-fixed-footer">
@@ -74,7 +71,7 @@
             <p>A bunch of text</p>
         </div>
         <div class="modal-footer">
-            <a class="modal-close waves-effect waves-green btn-flat">Close </a>
+            <main class="modal-close waves-effect waves-green btn-flat">Close</main>
         </div>
     </div>
     <!-- Modal Structure -->
@@ -87,7 +84,7 @@
                         <ul class="collection">
                             <li class="collection-item avatar">
                                 <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/USMGorham.jp2?raw=true"
-                                     alt="" class="circle">
+                                     alt="Gorham Campus Logo" class="circle">
                                 <span class="title"><u>Gorham Campus</u></span>
                                 <p>- Campus is Currently:
                                     <span style="color: {{ usmgorcolor }}"> {{ gorhamopen }} </span>
@@ -106,7 +103,7 @@
                         <ul class="collection">
                             <li class="collection-item avatar">
                                 <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/USMPortland.jp2?raw=true"
-                                     alt="" class="circle">
+                                     alt="Portland Campus Logo" class="circle">
                                 <span class="title"><u>Portland Campus</u></span>
                                 <p>- Campus is Currently:
                                     <span style="color:{{ usmporcolor }}"> {{ portlandopen }} </span>
@@ -120,14 +117,14 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="collapsible-body"><span>{{ pogobaninfo }}</span></div>
+                    <div class="collapsible-body"><span> {{ pogobaninfo }} </span></div>
                 </li>
                 <li>
                     <div class="collapsible-header">
                         <ul class="collection">
                             <li class="collection-item avatar">
                                 <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/USMLewiston.jp2?raw=true"
-                                     alt="" class="circle">
+                                     alt="Lewiston Campus Logo" class="circle">
                                 <span class="title"><u>Lewiston Campus</u></span>
                                 <p>- Campus is Currently:
                                     <span style="color: {{usmlewcolor}}"> {{ lewistonopen }} </span>
@@ -147,7 +144,7 @@
                         <ul class="collection">
                             <li class="collection-item avatar">
                                 <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/Gorham.jp2?raw=true"
-                                     alt="" class="circle">
+                                     alt="Town of Gorham Logo" class="circle">
                                 <span class="title"><u>Town of Gorham</u></span>
                                 <p>- Parking Ban:
                                     <span style="color:{{ gorcolor }}"> {{ gorhamstreetstatus }} </span></p>
@@ -164,7 +161,7 @@
                         <ul class="collection">
                             <li class="collection-item avatar">
                                 <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/Portland.jp2?raw=true"
-                                     alt="" class="circle">
+                                     alt="City of Portland Logo" class="circle">
                                 <span class="title"><u>City of Portland</u></span>
                                 <p>- Parking Ban:
                                     <span style="color:{{ porcolor }}"> {{ portlandstreetstatus }} </span></p>
@@ -181,7 +178,7 @@
                         <ul class="collection">
                             <li class="collection-item avatar">
                                 <img src="https://github.com/Carter-Haid/campusParkingMap/blob/master/flaskr/static/images/Lewiston.jp2?raw=true"
-                                     alt="" class="circle">
+                                     alt="City of Portland Logo" class="circle">
                                 <span class="title"><u>City of Lewiston</u></span>
                                 <p>- Parking Ban:
                                     <span style="color: {{ lewcolor }}"> {{ lewistonstreetstatus }} </span></p>

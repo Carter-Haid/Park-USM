@@ -2,6 +2,10 @@
 # coding: utf-8
 
 # In[1]:
+"""
+TODO:
+    - Center GeoJsonPopup on folium choropleth
+"""
 
 def gorhammap():
     import folium
@@ -27,7 +31,6 @@ def gorhammap():
 
     # Residential Lots
     resdirectory = os.fsencode(residentiallots)
-
     for file in os.listdir(resdirectory):
         filename = os.fsdecode(file)
         if filename.endswith(".json5"):
@@ -56,7 +59,6 @@ def gorhammap():
 
     # Commuter Lots
     commdirectory = os.fsencode(commuterlots)
-
     for file in os.listdir(commdirectory):
         filename = os.fsdecode(file)
         if filename.endswith(".json5"):
@@ -85,7 +87,6 @@ def gorhammap():
 
     # Staff Lots
     staffdirectory = os.fsencode(stafflots)
-
     for file in os.listdir(staffdirectory):
         filename = os.fsdecode(file)
         if filename.endswith(".json5"):

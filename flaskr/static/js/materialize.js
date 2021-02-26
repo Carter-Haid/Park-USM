@@ -525,6 +525,7 @@ if (jQuery) {
     $('.dropdown-button').dropdown({ hover: false });
     $('.modal').modal();
     $('.tabs').tabs();
+
   });
 }( jQuery ));;(function ($) {
 
