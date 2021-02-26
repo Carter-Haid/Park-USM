@@ -1,4 +1,4 @@
-# Park USM
+# Park University of Southern Maine
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -19,7 +19,7 @@
   <p align="center">
     A project developed to help mitigate parking issues on campuses. 
     <br />
-    <a href="http://parkusm.com:5000/">View Demo</a>
+    <a href="http://parkusm.com/">View Demo</a>
     ·
     <a href="https://github.com/Carter-Haid/campusParkingMap/issues">Report Bug</a>
     ·
