@@ -2876,8 +2876,8 @@ footer.page-footer {
 
 footer.page-footer .footer-copyright {
   overflow: hidden;
-  height: 20px;
-  line-height: 20px;
+  height: 50px;
+  line-height: 50px;
   color: rgba(255, 255, 255, 0.8);
   background-color: rgba(51, 51, 51, 0.08);
 }
@@ -4190,7 +4190,7 @@ nav .input-field label.active {
 }
 
 .navbar-fixed nav {
-  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  position: fixed;
 }
 
 @media only screen and (min-width: 601px) {
@@ -8578,8 +8578,4 @@ html {
 @keyframes type{
 	  from{box-shadow: inset -3px 0px 0px #888;}
 	  to{box-shadow: inset -3px 0px 0px transparent;}
-}
-
-.footer-fixed footer {
-	padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
