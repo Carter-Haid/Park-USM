@@ -1,7 +1,7 @@
 {
     "name": "Campus Parking Project",
     "short_name": "Campus Parking App",
-    "theme_color": "#2196f3",
+    "theme_color": "#3949AA",
     "background_color": "#ffffff",
     "display": "standalone",
     "orientation": "portrait",
@@ -9,17 +9,18 @@
     "start_url": "/",
     "prefer_related_applications": "flase",
     "description": "A web based parking management system built for large campuses.",
-    "icons": [
+    "icons":
+    [
     {
       "src": "static/images/parking_192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "static/images/parking_1_512x512.png",
+      "src": "static/images/parking_512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     }
   ]
 }

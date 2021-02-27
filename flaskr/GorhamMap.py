@@ -7,6 +7,7 @@ TODO:
     - Center GeoJsonPopup on folium choropleth
 """
 
+
 def gorhammap():
     import folium
     import os
