@@ -75,12 +75,11 @@ def get_inbox():
 
 if __name__ == "__main__":
     my_inbox = get_inbox()
-    with open("/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/emailtext.txt", "w") as text_file:
+    with open("./Resources/emailtext.txt", "w") as text_file:
         text_file.write(str(my_inbox))
 
-name = '/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/emailtext.txt'
 
-with open(name, 'r') as file:
+with open("./Resources/emailtext.txt", 'r') as file:
     text = file.readlines()
 
 index_prohibited = 0
@@ -123,9 +122,9 @@ for x in range(index_available, len(text)):
     except:
         pass
 
-residentiallots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Gorham/Residential Lots"
-commuterlots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Gorham/Commuter Lots"
-stafflots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Gorham/Staff Lots"
+residentiallots = "./Resources/GeoJSON/Gorham/Residential Lots"
+commuterlots = "./Resources/GeoJSON/Gorham/Commuter Lots"
+stafflots = "./Resources/GeoJSON/Gorham/Staff Lots"
 
 prohibited_with_filename = [x + ".json5" for x in prohibited_lots]
 

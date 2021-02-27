@@ -19,9 +19,9 @@ def gorhammap():
                    zoom_control=False,
                    min_zoom=10)
 
-    residentiallots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Gorham/Residential Lots"
-    commuterlots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Gorham/Commuter Lots"
-    stafflots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Gorham/Staff Lots"
+    residentiallots = "./Resources/GeoJSON/Gorham/Residential Lots"
+    commuterlots = "./Resources/GeoJSON/Gorham/Commuter Lots"
+    stafflots = "./Resources/GeoJSON/Gorham/Staff Lots"
 
     commuterstyle = {'fillColor': 'red', 'color': 'black', 'fillOpacity': '0.5'}
     residentialstyle = {'fillColor': 'green', 'color': 'black', 'fillOpacity': '0.6'}
@@ -115,6 +115,6 @@ def gorhammap():
         continue
 
     m.fit_bounds([[43.6785, -70.4521], [43.6856, -70.4455]])
-    m.save("/home/carter/PycharmProjects/campusParkingMap/flaskr/static/GorhamMap.html")
+    m.save("./static/GorhamMap.html")
     return gorhambancounter
 # In[ ]:
