@@ -53,7 +53,7 @@ def login():
 
 @app.route('/')
 def home():
-    exec(open("banDetection.py").read())
+    exec(open("/home/carter/PycharmProjects/campusParkingMap/flaskr/banDetection.py").read())
     return render_template('index.html', gorhamopen=gorhamopen, portlandopen=portlandopen,
                            lewistonopen=lewistonopen, gorhamstreetstatus=gorhamstreetstatus,
                            portlandstreetstatus=portlandstreetstatus, lewistonstreetstatus=lewistonstreetstatus,
@@ -74,7 +74,7 @@ def home():
 
 @app.route('/portland')
 def portland():
-    exec(open("banDetection.py").read())
+    exec(open("/home/carter/PycharmProjects/campusParkingMap/flaskr/banDetection.py").read())
     return render_template('portlandmap.html', gorhamopen=gorhamopen, portlandopen=portlandopen,
                            lewistonopen=lewistonopen, gorhamstreetstatus=gorhamstreetstatus,
                            portlandstreetstatus=portlandstreetstatus, lewistonstreetstatus=lewistonstreetstatus,

@@ -75,11 +75,10 @@ def get_inbox():
 
 if __name__ == "__main__":
     my_inbox = get_inbox()
-    with open("./Resources/emailtext.txt", "w") as text_file:
+    with open("/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/emailtext.txt", "w") as text_file:
         text_file.write(str(my_inbox))
 
-
-with open("./Resources/emailtext.txt", 'r') as file:
+with open("/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/emailtext.txt", "r") as file:
     text = file.readlines()
 
 index_prohibited = 0
@@ -122,9 +121,9 @@ for x in range(index_available, len(text)):
     except:
         pass
 
-residentiallots = "./Resources/GeoJSON/Gorham/Residential Lots"
-commuterlots = "./Resources/GeoJSON/Gorham/Commuter Lots"
-stafflots = "./Resources/GeoJSON/Gorham/Staff Lots"
+residentiallots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Gorham/Residential Lots"
+commuterlots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Gorham/Commuter Lots"
+stafflots = "/home/carter/PycharmProjects/campusParkingMap/flaskr/Resources/GeoJSON/Gorham/Staff Lots"
 
 prohibited_with_filename = [x + ".json5" for x in prohibited_lots]
 
@@ -139,7 +138,7 @@ for file in os.listdir(residentiallots):
     if filename in prohibited_with_filename:
         with open(residentiallots + "/" + filename, 'r') as f:
             data = json.load(f)
-            data['features'][0]['properties']['lot_status'] = "closed"
+            data['features'][0]['properties']['lot_status'] = "d"
 
         with open(residentiallots + "/" + filename, 'w') as f:
             f.write(json.dumps(data))
