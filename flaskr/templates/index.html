@@ -51,7 +51,7 @@
             </div>
         </nav>
     </div>
-     <object data="{{url_for('static', filename='GorhamMap.html')}}"
+    <object data="{{url_for('static', filename='GorhamMap.html')}}"
             style="width:100%;height:100%;margin:0;position: fixed;flex-direction: column; z-index:4">Portland Campus
         Map
     </object>
@@ -67,7 +67,59 @@
     <div style="z-index:1000" id="helpmodal" class="modal modal-fixed-footer">
         <div class="modal-content">
             <h4><u>How To Use:</u></h4>
-            <p>A bunch of text</p>
+            <p>Every lot on the map corresponds to the color of your parking pass. To purchase a parking pass please
+                visit the<a target="_blank" href="https://usmparking.t2hosted.com/cmn/auth_ext.aspx"> USM Parking
+                    Portal</a>.</p>
+            <style>
+* {
+   box-sizing: border-box;
+}
+.imageColumn {
+   float: left;
+   width: 25%;
+   padding: 10px;
+}
+h1{
+   text-align: center;
+}
+            </style>
+            <div class="alignRow">
+                <div class="imageColumn">
+                    <figure>
+                        <img src="{{ url_for('static', filename='images/Residential.png') }}" alt="Residential Lot"
+                             style="width:100%">
+                        <figcaption style="text-align: center;">Residential Parking</figcaption>
+                    </figure>
+                </div>
+                <div class="imageColumn">
+                    <figure>
+                        <img src="{{ url_for('static', filename='images/Commuter.png') }}" alt="Commuter Lot"
+                             style="width:100%">
+                        <figcaption style="text-align: center;">Commuter Parking</figcaption>
+                    </figure>
+                </div>
+                <div class="imageColumn">
+                    <figure>
+                        <img src="{{ url_for('static', filename='images/Staff.png') }}" alt="Staff Lot"
+                             style="width:100%">
+                        <figcaption style="text-align: center;">Staff Parking</figcaption>
+                    </figure>
+                </div>
+                <div class="imageColumn">
+                    <figure>
+                        <img src="{{ url_for('static', filename='images/Closed.png') }}" alt="Closed Lot"
+                             style="width:100%">
+                        <figcaption style="text-align: center;">Closed Parking Lot</figcaption>
+                    </figure>
+                </div>
+                <br><br><br><br><br><br>
+            </div>
+            <p><u>For additional support please contact University Parking Services:
+            </u></p>
+            <p><b>Email:</b> <a target="_blank"
+                                href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=usmparkingservices@maine.edu">usmparkingservices@maine.edu</a>
+            </p>
+            <p><b>Phone:</b> (207) 780-4718</p>
         </div>
         <div class="modal-footer">
             <main class="modal-close waves-effect waves-green btn-flat">Close</main>

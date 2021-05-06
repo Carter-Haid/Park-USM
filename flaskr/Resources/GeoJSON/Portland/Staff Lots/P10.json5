@@ -7,7 +7,8 @@
         "lot_id": "0001",
         "lot_name": "p10",
         "lot_type": "staff",
-        "lot_status": "open"
+        "lot_status": "open",
+        "handicapped_spots": "2"
       },
       "geometry": {
         "type": "Polygon",

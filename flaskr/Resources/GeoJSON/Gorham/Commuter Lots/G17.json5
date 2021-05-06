@@ -7,7 +7,8 @@
         "lot_id": "0005",
         "lot_name": "g17",
         "lot_type": "commuter",
-        "lot_status": "open"
+        "lot_status": "open",
+        "handicapped_spots": 4
       },
       "geometry": {
         "type": "Polygon",

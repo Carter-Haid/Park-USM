@@ -7,7 +7,8 @@
         "lot_id": "0013",
         "lot_name": "g13c",
         "lot_type": "residential",
-        "lot_status": "open"
+        "lot_status": "open",
+        "handicapped_spots": 4
       },
       "geometry": {
         "type": "Polygon",

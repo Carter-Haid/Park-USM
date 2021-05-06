@@ -42,8 +42,8 @@ def gorhammap():
                         os.path.join(residentiallots, filename),
                         style_function=lambda x: closedstyle,
                         highlight_function=lambda x: {'weight': 3, 'color': 'black', 'fillColor': 'grey'},
-                        popup=folium.GeoJsonPopup(fields=['lot_name', 'lot_type', 'lot_status'],
-                                                  aliases=['Lot Name:', 'Lot Type:', 'Lot Status:'],
+                        popup=folium.GeoJsonPopup(fields=['lot_name', 'lot_type', 'lot_status', 'handicapped_spots'],
+                                                  aliases=['Lot Name:', 'Lot Type:', 'Lot Status:', 'Handicapped Spots:'],
                                                   class_name="respopup")
                     ).add_to(m)
                     gorhambancounter += 1
@@ -52,8 +52,8 @@ def gorhammap():
                         os.path.join(residentiallots, filename),
                         style_function=lambda x: residentialstyle,
                         highlight_function=lambda x: {'weight': 3, 'color': 'green', 'fillColor': 'grey'},
-                        popup=folium.GeoJsonPopup(fields=['lot_name', 'lot_type', 'lot_status'],
-                                                  aliases=['Lot Name:', 'Lot Type:', 'Lot Status:'],
+                        popup=folium.GeoJsonPopup(fields=['lot_name', 'lot_type', 'lot_status', 'handicapped_spots'],
+                                                  aliases=['Lot Name:', 'Lot Type:', 'Lot Status:', 'Handicapped Spots:'],
                                                   class_name="respopup")
                     ).add_to(m)
             continue
@@ -70,8 +70,8 @@ def gorhammap():
                         os.path.join(commuterlots, filename),
                         style_function=lambda x: closedstyle,
                         highlight_function=lambda x: {'weight': 3, 'color': 'black', 'fillColor': 'grey'},
-                        popup=folium.GeoJsonPopup(fields=['lot_name', 'lot_type', 'lot_status'],
-                                                  aliases=['Lot Name:', 'Lot Type:', 'Lot Status:'],
+                        popup=folium.GeoJsonPopup(fields=['lot_name', 'lot_type', 'lot_status', 'handicapped_spots'],
+                                                  aliases=['Lot Name:', 'Lot Type:', 'Lot Status:', 'Handicapped Spots:'],
                                                   class_name="commpopup")
                     ).add_to(m)
                     gorhambancounter += 1
@@ -80,8 +80,8 @@ def gorhammap():
                         os.path.join(commuterlots, filename),
                         style_function=lambda x: commuterstyle,
                         highlight_function=lambda x: {'weight': 3, 'color': 'red', 'fillColor': 'grey'},
-                        popup=folium.GeoJsonPopup(fields=['lot_name', 'lot_type', 'lot_status'],
-                                                  aliases=['Lot Name:', 'Lot Type:', 'Lot Status:'],
+                        popup=folium.GeoJsonPopup(fields=['lot_name', 'lot_type', 'lot_status', 'handicapped_spots'],
+                                                  aliases=['Lot Name:', 'Lot Type:', 'Lot Status:', 'Handicapped Spots:'],
                                                   class_name="commpopup")
                     ).add_to(m)
             continue
@@ -98,8 +98,8 @@ def gorhammap():
                         os.path.join(stafflots, filename),
                         style_function=lambda x: closedstyle,
                         highlight_function=lambda x: {'weight': 3, 'color': 'black', 'fillColor': 'grey'},
-                        popup=folium.GeoJsonPopup(fields=['lot_name', 'lot_type', 'lot_status'],
-                                                  aliases=['Lot Name:', 'Lot Type:', 'Lot Status:'],
+                        popup=folium.GeoJsonPopup(fields=['lot_name', 'lot_type', 'lot_status', 'handicapped_spots'],
+                                                  aliases=['Lot Name:', 'Lot Type:', 'Lot Status:', 'Handicapped Spots:'],
                                                   class_name="staffpopup")
                     ).add_to(m)
                     gorhambancounter += 1
@@ -108,8 +108,8 @@ def gorhammap():
                         os.path.join(stafflots, filename),
                         style_function=lambda x: staffstyle,
                         highlight_function=lambda x: {'weight': 3, 'color': 'blue', 'fillColor': 'grey'},
-                        popup=folium.GeoJsonPopup(fields=['lot_name', 'lot_type', 'lot_status'],
-                                                  aliases=['Lot Name:', 'Lot Type:', 'Lot Status:'],
+                        popup=folium.GeoJsonPopup(fields=['lot_name', 'lot_type', 'lot_status', 'handicapped_spots'],
+                                                  aliases=['Lot Name:', 'Lot Type:', 'Lot Status:', 'Handicapped Spots:'],
                                                   class_name="staffpopup")
                     ).add_to(m)
         continue

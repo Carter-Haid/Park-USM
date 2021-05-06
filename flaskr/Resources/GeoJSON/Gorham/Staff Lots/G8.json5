@@ -5,9 +5,10 @@
       "type": "Feature",
       "properties": {
         "lot_id": "0018",
-        "lot_name": "g6",
+        "lot_name": "g8",
         "lot_type": "staff",
-        "lot_status": "open"
+        "lot_status": "open",
+        "handicapped_spots": 2
       },
       "geometry": {
         "type": "Polygon",
