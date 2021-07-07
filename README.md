@@ -1,4 +1,4 @@
-# Park University of Southern Maine
+# University of Southern Maine - Parking Management
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
